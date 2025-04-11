@@ -1,0 +1,1001 @@
+transaction_id,user_id,date,amount,merchant_category,description
+3eeb9aea-ff03-4417-880d-7f5bc6978837,user_073,2023-07-08,121.99,entertainment,sintetiza entregables de misión crítica
+12c27755-c835-49d4-b024-72fa2a8fe94a,user_082,2023-03-18,111.14,shopping,optimiza métricas llave en mano
+16727a91-4fbb-4e9d-a5ea-ba22dfb9974b,user_070,2023-09-18,59.3,transport,Uber ride
+fbc8c68e-a8f2-4a1e-980e-516ca0ea9587,user_041,2023-03-15,115.41,food,transiciona redes punto-com
+e888320f-ccb4-4d77-a91b-c9b6e8a271e1,user_029,2023-05-29,6.06,shopping,cultiva comercio electrónico integrado
+ce0cad21-93a6-472b-86e4-c8a82eba9ccf,user_068,2023-11-22,115.93,travel,crea marca communidades integrado
+ebf86aa9-ff85-4a0e-bd44-90773f71b7d5,user_062,2023-08-30,89.93,transport,Subway fare
+56219140-d0b3-409a-90c5-f6b761427e02,user_078,2023-01-26,27.54,shopping,escala ancho de banda personalizado
+2dd4df22-8764-462e-89f1-bafa56e84d44,user_086,2023-12-07,133.38,entertainment,sintetiza servicios web transparentes
+52a2155b-c833-4841-9e5e-a4f5602c622b,user_001,2023-12-26,546.8,travel,utiliza tecnologías lo último
+e12753f0-560e-428d-a3cd-02d91ebf75d6,user_064,2023-12-31,71.47,entertainment,sinergiza arquitecturas extensibles
+7f2339f8-395d-4caa-bf8f-d63faf0e7e0c,user_052,2023-02-13,125.92,supermarket,Purchase at Malave-Serna S.A. de C.V.
+a3f67781-db00-4aa1-a98e-530d92f6095c,user_090,2023-08-30,17.4,transport,Train ticket
+62c59395-577b-4966-9b80-21cf74799368,user_062,2023-09-21,171.03,health,maneja modelos ubicuas
+3042140e-822b-495a-be19-9cba400331d7,user_031,2023-09-15,88.61,entertainment,abraza marcados virales
+d45fdfe3-5c50-4cde-b370-1332b931bebc,user_035,2023-10-30,167.57,supermarket,"Purchase at Club Patiño, Villarreal y Enríquez"
+2159b184-70bc-4eef-b64d-6ded7b5baa80,user_056,2023-11-05,186.56,supermarket,"Purchase at Corporacin Meraz, Aguirre y Mercado"
+0b986d30-8480-406e-93f1-da91c5fd252d,user_094,2023-05-05,54.92,shopping,extiende communidades punto-com
+0bc6eadb-e619-48d6-bf64-85b8042a30b0,user_057,2023-05-21,16.35,shopping,utiliza metodologías intuitivas
+f537bade-4d70-4a02-8763-d0197d32f3a6,user_029,2023-08-21,85.64,supermarket,"Purchase at Club Cantú, Aponte y Díaz"
+763b7a8e-bca3-4a6c-803e-dccea2377217,user_022,2023-08-09,79.2,transport,Uber ride
+42f5931d-ffa4-44ba-9f51-598f6f4173ea,user_047,2023-08-20,78.82,supermarket,Purchase at Alva-Castañeda
+4f171045-e8fe-4038-a633-a322defb25f3,user_049,2023-04-13,276.62,health,incentiva relaciones intuitivas
+4651e527-d80d-4488-949f-6618e89ab65b,user_012,2023-11-04,8.39,food,reinventa esquemas integrado
+8cb99c18-7f2a-4903-8d22-d9f3fc734de5,user_015,2023-06-30,15.77,food,crea marca nichos de siguiente generación
+62e70ca5-9412-44f5-98b8-cb6d90d2be6b,user_048,2023-05-18,121.86,shopping,transiciona usuarios extensibles
+dd91c452-5496-4af4-a8f1-fd0f0ee2d620,user_020,2023-04-27,185.22,supermarket,"Purchase at Corporacin Soria, Valverde y Domínguez"
+c46f1a5b-e0f1-45f4-9da1-fa11bb017513,user_081,2023-05-31,310.25,health,extiende sistemas llave en mano
+8551862f-e8ec-44b4-bf45-3cfe0b802a3d,user_087,2023-08-07,104.58,entertainment,revoluciona nichos estratégicas
+619b6968-1016-4f66-b400-3cd05df5bfc0,user_053,2023-03-09,14.26,transport,Subway fare
+54e5123f-fa9d-4a82-a318-ca9b1ff631b5,user_004,2023-01-27,145.67,supermarket,"Purchase at Industrias Quezada, Frías y Acuña"
+21c696b1-4541-4865-85c3-87f90658f65c,user_068,2023-05-23,89.12,shopping,integra experiencias 24/365
+555b0e79-eb8d-4310-a16a-d33a7da46338,user_052,2023-10-09,100.23,supermarket,Purchase at Arguello y Abrego S.C.
+9b020664-8a6a-42ba-b60f-246bf59b735c,user_075,2023-03-12,68.25,transport,Subway fare
+21ea5f25-89eb-4338-8eae-d91f7d40c9c0,user_024,2023-03-29,86.07,shopping,mezcla socios de paquete
+6e0b661b-d074-4de8-9c8d-40e623c38ea4,user_054,2023-01-11,63.57,shopping,empodera modelos interactivas
+41117d1b-b312-4923-bb53-0a9a732a961c,user_050,2023-09-25,117.1,health,evoluciona aplicaciones eficientes
+a2094654-35ab-4789-8f89-3d2da1c24641,user_073,2023-09-22,114.84,transport,Train ticket
+34ad29ac-33fd-4714-9673-61121804d052,user_006,2023-01-26,124.06,shopping,redefine nichos lo último
+d8025eb0-5fdb-4d72-ac28-3d911f243a7e,user_032,2023-11-12,681.83,travel,empodera entregables de clase mundial
+2d580b6a-bd67-47fc-85c5-0075ae592a13,user_071,2023-04-02,61.03,food,cultiva contenido de siguiente generación
+17e1323d-df48-4459-ba35-91a57b5677a7,user_099,2023-02-15,408.34,travel,mezcla redes B2C
+e2a4bbf3-d63f-4ea6-acee-52b5d858c044,user_089,2023-06-05,34.71,food,crece infraestructuras estratégicas
+2618ced3-7e58-49d4-9fb5-ed623a1c45e7,user_085,2023-12-16,251.68,health,sinergiza ancho de banda innovadoras
+780a9feb-e2cb-4a3c-8388-66cff1ee597d,user_010,2023-12-21,31.87,shopping,entrega contenido 24/7
+53982216-2a8f-4185-8e77-66c9ce129968,user_012,2023-07-21,99.01,food,empodera esquemas end-to-end
+3be09658-ece1-4680-9969-ace1730ac946,user_015,2023-05-30,166.99,supermarket,Purchase at Gómez y Vargas S.C.
+fc8531e8-613a-42f9-bc42-79ad25369432,user_034,2023-03-11,110.6,supermarket,"Purchase at Corporacin Balderas, Garza y Calderón"
+c76f8d6a-a629-4755-8856-5072b66bb454,user_065,2023-01-13,88.36,supermarket,Purchase at Corporacin Lerma y Montoya
+eacf8ec8-72ea-4d8d-9a38-afc8b62b8a1b,user_036,2023-10-10,114.73,transport,Subway fare
+52f0342b-eee7-4478-ada1-b5f4077fa5f6,user_076,2023-04-03,389.45,health,modifica convergencia punto-com
+302e737b-36b4-49d3-ac54-238e1657744f,user_026,2023-10-11,72.14,shopping,extiende cadena de producción distribuidas
+69745171-fda9-4ef4-b77b-e65a667e27f8,user_007,2023-03-29,39.27,transport,Subway fare
+5c622546-eaa9-443b-85ec-21ad64431413,user_065,2023-04-04,82.59,transport,Uber ride
+4b2313e0-d429-4836-91fd-a6d183080e74,user_058,2023-02-27,277.62,health,agrega marcados de punta
+d60ecbb7-65ca-40cd-aefd-dead6a932175,user_065,2023-07-09,30.85,food,agrega usuarios llave en mano
+0d739d75-3ec3-4891-be55-36a634f5c37c,user_011,2023-09-30,1356.98,travel,extiende iniciativas estratégicas
+a355e10e-ae67-4b68-a29e-6af0a681b701,user_010,2023-08-09,47.33,supermarket,Purchase at Torres-Ayala S.C.
+b0a522c5-3169-408e-bb19-aa6acdfc331e,user_007,2023-12-21,183.14,supermarket,"Purchase at Despacho Roldán, Angulo y Patiño"
+0d5c3294-b343-43a0-b824-5cfb0910c922,user_064,2023-01-31,38.03,supermarket,Purchase at Chávez-Herrera S. R.L. de C.V.
+d3b81842-ad22-490a-b13c-78070011aaa1,user_020,2023-10-27,30.33,food,modifica plataformas proactivas
+6ed1dd5a-46c8-4aae-906d-d7349cfdc2c1,user_094,2023-02-28,87.79,transport,Subway fare
+ec1d1b72-7a01-489c-8c34-fcf382062846,user_044,2023-07-21,116.95,shopping,optimiza usuarios B2B
+9e69680a-db4e-4c47-9c8d-bbdf6477d9ce,user_077,2023-07-16,105.52,shopping,implementa plataformas de punta
+b9bc4edf-98e6-4758-8745-3b14f044e6ac,user_047,2023-09-30,104.03,shopping,genera metodologías listo para la web
+12d1bbc1-f221-41e7-ad8e-8ed31547ea4d,user_099,2023-02-12,133.78,entertainment,itera marcados en tiempo real
+006e6471-93b5-49f6-a743-dba4a859202e,user_013,2023-04-25,123.13,food,transforma cadena de producción plataforma cruzada
+13c9e9a4-c3ad-40c8-a930-bfac3cc76449,user_011,2023-11-07,95.78,transport,Uber ride
+f6871fbf-d6d5-4aa2-b6ff-f9eb82569fd4,user_062,2023-06-13,138.99,entertainment,abraza tecnologías B2C
+2266b41a-64e2-4d3b-8fb4-f44d712133d5,user_058,2023-01-27,8.07,transport,Train ticket
+d2b5a97a-d280-4656-83e9-e44c3da59c32,user_067,2023-04-23,13.34,shopping,optimiza contenido integrado
+020ce776-825b-452c-a857-aece15b42436,user_079,2023-07-20,82.09,supermarket,Purchase at Reyna S.C.
+250af074-b2aa-4e52-8d2d-de508eaa3152,user_087,2023-11-18,118.41,supermarket,Purchase at Proyectos Peña y Limón
+55b0d608-6002-42ef-b428-f0db0de97a6e,user_029,2023-05-08,124.19,food,revoluciona marcados escalables
+6435049c-6bca-4993-b617-e9dd24d7fa57,user_054,2023-03-06,33.62,health,reinventa entregables intuitivas
+2665f88a-c740-4fa3-9040-364c22cbccdd,user_036,2023-06-25,120.97,supermarket,Purchase at Grupo Oquendo-Guevara
+70a077f6-5885-4e28-89ee-164248e9fc3f,user_062,2023-06-10,15.84,transport,Uber ride
+fd3f5e65-a64f-47f9-99c8-12e4620a8134,user_004,2023-03-29,102.42,food,transforma metodologías 24/7
+11f3eebe-ffa5-43ef-b7b7-264af3b6b248,user_089,2023-06-06,24.28,transport,Train ticket
+69ac00bd-e2c9-4c96-b3a4-b49d98f222c4,user_024,2023-09-02,114.33,food,transiciona ancho de banda ricas
+d93af09d-6eee-40dc-a8f4-d2f141862bcd,user_084,2023-03-28,69.27,shopping,modifica usuarios sexi
+4995606b-0981-4adb-812d-a0e983f261b3,user_089,2023-12-22,9.07,shopping,reinventa sistemas globales
+8aa88810-4440-4aaf-9e7f-f7d1ca4e2573,user_027,2023-08-25,142.84,transport,Train ticket
+693409b3-7e16-4d36-936f-54e200c4c2e6,user_040,2023-09-14,328.57,health,agrega servicios web dinámicas
+87e2054d-d53c-48b0-a712-78d27b0b1799,user_048,2023-05-07,106.43,health,entrega comercio electrónico intuitivas
+4eb6273c-2367-4c6e-9ee8-6dc0f8c7c616,user_041,2023-09-23,10.16,shopping,crea marca communidades 24/365
+2f0551d6-d483-499c-b5a8-7cb8924fc55f,user_020,2023-12-10,494.79,health,incuba sinergias punto-com
+55e14ba1-f702-42b7-a1c9-b4bd3fcca7da,user_043,2023-11-15,87.41,health,empodera metodologías virtuales
+2dffa91c-df8b-46be-b73a-3319e3f454ae,user_001,2023-03-19,155.64,supermarket,Purchase at Gurule y Apodaca S. R.L. de C.V.
+8bf3a5f9-0749-4833-a1a8-c105e9dc6465,user_014,2023-12-25,45.58,supermarket,"Purchase at Corporacin Ruiz, Maldonado y Uribe"
+211ab1f9-354f-4dcf-ac2a-e7c0454a3659,user_058,2023-09-02,653.22,travel,fortalece soluciones eficientes
+a453bd05-f7f5-437b-b841-7771de0d2670,user_003,2023-01-12,138.74,transport,Uber ride
+6fe59e97-38c6-4921-b9b5-faed97a0c6f3,user_018,2023-12-27,36.59,food,crea marca experiencias de misión crítica
+bb020944-f9ca-484f-80c7-8132b9b9f2b7,user_047,2023-08-31,7.43,transport,Uber ride
+95a26f16-2772-4c9e-afb9-a36dbdba005e,user_044,2023-10-28,105.78,food,sintetiza interfaces front-end
+1259a97b-b29c-4431-a221-6016ff104b43,user_087,2023-10-28,32.04,shopping,crece entregables de siguiente generación
+ac9d1473-1d48-410c-b5aa-2b32c3a7c8aa,user_094,2023-06-22,37.65,transport,Uber ride
+a271f6e7-67cd-442c-99d2-25530d9e1144,user_048,2023-02-19,108.42,transport,Uber ride
+af562bfe-53fd-48c5-8eca-550621f38614,user_080,2023-02-09,93.67,shopping,orquesta paradigmas distribuidas
+ebdb9978-cab1-468e-b3f2-fc7f04da9750,user_007,2023-12-05,35.12,transport,Train ticket
+0141a8c6-216a-476b-b1cf-8276a8657709,user_080,2023-08-22,15.39,entertainment,recontextualiza entregables transparentes
+2892331d-5448-4e58-b2e6-45ac8f6bc43d,user_039,2023-01-16,118.48,food,cultiva communidades ubicuas
+d3ec8cbd-8bea-45e1-87c7-21f2cefee93b,user_079,2023-04-01,86.46,supermarket,Purchase at Proyectos Padilla-Ledesma
+030cc711-2f41-4c0a-93e6-65a943468d7e,user_049,2023-01-22,77.07,transport,Train ticket
+e26bbbee-cc82-4e1f-922a-5b3ba3bdba93,user_028,2023-05-18,133.97,transport,Uber ride
+510ff158-c05b-42f6-b8ac-8218f156f161,user_018,2023-11-20,109.13,entertainment,redefine socios revolucionarias
+ba41b16a-017f-4f6b-a76e-edf21eb6bbda,user_060,2023-01-22,30.66,supermarket,Purchase at Casárez y Cepeda y Asociados
+1e2d7700-c9d4-49ba-94ff-b24523c86321,user_069,2023-02-23,40.97,supermarket,Purchase at de la Crúz-Preciado e Hijos
+75c69ff2-27c8-49ce-9cd2-7e9b4f74ea51,user_081,2023-08-27,99.79,shopping,agrega entregables ubicuas
+ff0cdcca-9878-48c5-9007-313befc7027e,user_053,2023-02-23,71.85,food,utiliza relaciones end-to-end
+38574f78-a67b-4b2c-822a-c41b4da7739a,user_093,2023-04-25,75.02,transport,Train ticket
+61b1ec17-0907-4368-ace0-cc43b7da5688,user_035,2023-12-28,7.5,food,transiciona marcados escalables
+4034f424-c9d5-4997-a560-ecc505910132,user_080,2023-11-24,145.07,entertainment,crea marca interfaces 24/7
+c9f2a508-44f0-4db0-9151-569e83f4fbc2,user_053,2023-04-03,97.0,supermarket,Purchase at Proyectos Cervantes-Magaña
+1a50ef53-edef-44b1-961b-f7c939c89649,user_016,2023-10-01,33.61,supermarket,Purchase at Sanches e Hijos
+258f0e1c-7d5b-4bb0-9f04-095b8ca2c24d,user_054,2023-05-17,39.64,supermarket,Purchase at Rico S.C.
+8583fd44-cbca-437c-a3dc-ecc9d26ed696,user_057,2023-05-23,109.65,supermarket,"Purchase at Club Nevárez, Godoy y Cepeda"
+09a8b2a5-1bf0-4b3c-8c9a-8793e94d6823,user_034,2023-07-19,111.1,supermarket,"Purchase at Flórez, Cintrón y Muñoz"
+8beab7ea-c805-44f2-b370-147b966cee7b,user_048,2023-08-06,48.34,transport,Uber ride
+506e77c2-77e3-44d0-9e16-34009cbcdae5,user_038,2023-03-06,50.23,shopping,mejora soluciones robustas
+4b0648f8-ce32-4166-afd0-3ba20c3cae51,user_070,2023-01-09,141.25,travel,genera convergencia B2B
+54a24606-7c67-4e9f-93cf-170958577aa9,user_077,2023-03-24,71.77,shopping,extiende convergencia innovadoras
+a7086096-6ca3-483d-bce1-f9ccc95e904b,user_091,2023-06-02,142.65,shopping,incentiva esquemas B2B
+3358b49e-4b1c-448d-a641-b754eff964bc,user_046,2023-06-10,53.7,food,recontextualiza infraestructuras granulares
+4c7dadae-b995-4ae9-9427-47c38fdece72,user_068,2023-02-08,165.98,supermarket,"Purchase at Corporacin Alejandro, Véliz y Arellano"
+29dcd3f1-dd33-4884-9782-38e575cd6553,user_011,2023-10-14,310.46,health,crea marca plataformas uno-a-uno
+ee15b6be-495f-4774-954b-deb3e92bd09e,user_079,2023-10-05,38.96,supermarket,Purchase at Guajardo S. R.L. de C.V.
+b311bd8b-abc2-444a-b37c-bbb816b7955c,user_011,2023-07-20,52.78,food,optimiza iniciativas virales
+8289d7b6-caf0-4ee7-ba64-4efae5148dc9,user_061,2023-08-17,87.37,health,genera ancho de banda globales
+d26b882f-f0e7-4116-8ecb-389ad0c44a28,user_050,2023-01-07,36.12,food,genera arquitecturas distribuidas
+f6cbdaaa-4e37-4d7d-ab81-75014ceb5128,user_004,2023-11-11,24.02,transport,Uber ride
+8d633e7d-c3e1-41d8-a8b7-0757ddd9877b,user_042,2023-04-22,44.47,transport,Subway fare
+2f0dcb66-c060-4d2a-8328-4ccad18bdcfa,user_032,2023-02-11,37.25,shopping,cultiva soluciones proactivas
+d6116124-55c2-447e-8e77-72365ad20cbc,user_077,2023-03-27,71.75,food,empodera iniciativas en tiempo real
+d0e60ce9-bbff-4e69-8f9f-715b5f81cb50,user_061,2023-03-25,15.55,shopping,implementa aplicaciones escalables
+8abb5302-0d80-4361-9c69-ef3b32e27e1a,user_048,2023-09-08,1332.07,travel,genera nichos distribuidas
+453b98ec-93e5-4433-b765-602eb9e0b3ea,user_022,2023-09-20,56.68,supermarket,Purchase at Despacho Zarate-Medina
+a02c436e-4f6b-44ce-ac51-bd55a9e99432,user_064,2023-07-18,33.8,shopping,escala iniciativas empresariales
+85553c37-bd10-4773-b576-8caf72bc2a02,user_012,2023-01-24,42.28,supermarket,Purchase at Colunga-Domínguez
+496f4c7e-8a70-4a7a-b3a6-2197571ed936,user_028,2023-11-30,50.27,transport,Train ticket
+1c46a13f-07ca-478a-8c36-cda81bdf863d,user_035,2023-04-07,795.66,travel,crece entregables plataforma cruzada
+88b26f99-316c-4efe-9adc-fa4975fb2e81,user_007,2023-07-20,51.71,food,incentiva relaciones de siguiente generación
+bdde1d10-d0b3-4fb5-97fb-37e521e316c4,user_052,2023-07-24,29.32,supermarket,Purchase at Despacho Barela-Dávila
+0d1996ba-bbff-462f-967b-c8881186ffd1,user_005,2023-11-15,94.13,supermarket,"Purchase at Industrias Jáquez, Saldaña y Munguía"
+a2c16e08-f205-4e23-a33d-6ee500d00b67,user_028,2023-11-09,36.82,entertainment,utiliza metodologías 24/365
+d9d38efc-d612-44ce-888d-d3382c143f19,user_024,2023-08-02,93.26,food,sinergiza ancho de banda uno-a-uno
+922be3ee-e9b5-4cfe-b548-b91185849623,user_074,2023-06-03,57.77,transport,Subway fare
+0a8f0b32-23fc-4c24-b3b6-d7a65310cde8,user_016,2023-09-23,58.23,transport,Subway fare
+295ccb53-d2e9-4630-9e83-434798df747d,user_055,2023-02-13,19.11,food,crece modelos listo para la web
+571f7b54-07c5-4eaf-917c-fd2f4e4a5ca2,user_089,2023-02-28,43.35,supermarket,Purchase at Quiñónez-Casanova
+e5fb2f16-c030-4d4b-97f0-83c2b7ccabbc,user_076,2023-01-18,61.21,food,visualiza interfaces 24/365
+81d6d179-321b-40eb-9516-395f993e5e32,user_044,2023-07-09,147.59,shopping,visualiza paradigmas ricas
+508405ef-0bfe-47b9-ba06-b55561165980,user_035,2023-10-26,338.56,health,itera redes empresariales
+09ae3382-595d-4ac2-ab29-380e3eb8067e,user_078,2023-10-05,78.33,shopping,reinventa modelos open-source
+3f3444b2-0483-49ca-9375-624050b19db9,user_073,2023-04-08,128.35,food,escala portales innovadoras
+2fcb5976-3064-4ac4-88ed-44206fc47d0b,user_091,2023-03-17,81.41,entertainment,revoluciona tecnologías extensibles
+046123da-feb4-4883-bb88-1de452e952b9,user_088,2023-10-31,154.53,supermarket,Purchase at Proyectos Barraza y Candelaria
+350dd77e-cf13-4ba7-8f20-6f589d9adb3d,user_097,2023-09-04,98.22,food,genera relaciones en tiempo real
+dd3ad8a9-f0ac-478a-ae76-e2c418bac8f5,user_007,2023-01-29,25.69,transport,Subway fare
+7a37cc05-a425-4734-9f27-b65273950e28,user_089,2023-09-05,506.43,travel,reinventa esquemas intuitivas
+97621fb5-0487-4535-9174-db3671092c38,user_034,2023-01-21,144.03,food,implementa usuarios plataforma cruzada
+0bd296f2-50fe-47b7-be76-eb858bf2b837,user_045,2023-04-24,141.0,supermarket,Purchase at Velázquez-Ávila S.C.
+1935d05e-bf6f-41e1-98f7-4c6430a40688,user_090,2023-05-14,111.34,shopping,empodera communidades de misión crítica
+0e308521-0ad5-4363-9126-b23f1e2da03e,user_055,2023-12-29,23.67,supermarket,"Purchase at Club Magaña, Ruiz y Gastélum"
+871a20c3-bb5c-4ccf-9825-ffe3e22a3132,user_095,2023-01-09,145.91,shopping,empodera portales verticales
+ce60844c-1c00-4a48-8943-d0cc9a3d3dde,user_046,2023-07-18,32.82,shopping,escala sistemas de misión crítica
+d975bea1-9e0f-46b1-a224-e9066356b66b,user_085,2023-03-04,127.35,food,integra esquemas sin fricciones
+4d21426b-bb9a-400f-b7c1-68c81811766f,user_039,2023-06-07,141.16,supermarket,Purchase at Sandoval-Orellana
+3dc76f24-319e-4cde-b5b1-b4e93ea8f435,user_091,2023-06-24,10.34,entertainment,entrega usuarios plataforma cruzada
+dccd816e-fe93-4aca-9a90-4d39afe8d7a2,user_026,2023-03-15,1867.99,travel,utiliza funcionalidades de misión crítica
+4c0553a4-32cf-4e58-9dbf-174c66e49c10,user_042,2023-06-21,49.84,entertainment,mejora funcionalidades personalizado
+5f3683f6-4c07-40d6-8d04-cb20573a3e95,user_003,2023-11-04,88.01,transport,Subway fare
+dc338238-417a-4d26-95cf-8915705833a2,user_063,2023-09-20,19.28,food,empodera funcionalidades integrado
+73e2dd28-2d24-46f5-8370-dcccfe047c5b,user_070,2023-08-07,189.13,supermarket,Purchase at Rolón-Garrido A.C.
+4957e517-3c98-4c3b-9dac-5df456c58620,user_012,2023-02-08,123.25,supermarket,"Purchase at Acuña, Carrero y Lucio"
+fb7dc472-6c38-4506-bea1-6633e67f3441,user_037,2023-09-15,402.48,health,sinergiza iniciativas plug-and-play
+b437f9fc-2cf7-4539-bc7c-ed0f8a3e12ab,user_002,2023-07-21,40.37,supermarket,Purchase at Laboratorios Márquez-Soria
+e971f3f8-b21e-453b-9e97-7c55ac90a447,user_071,2023-06-12,1642.42,travel,transforma infraestructuras colaborativas
+df4c6444-6c9e-466e-a593-4baccfa5c422,user_029,2023-05-08,86.06,food,sinergiza paradigmas revolucionarias
+87badcbc-c6a4-4abe-97e2-eb247a3fb617,user_048,2023-05-02,60.73,health,maximiza paradigmas open-source
+b1b18b71-dc46-462d-8af5-3fd2bc5681ba,user_029,2023-01-26,53.33,food,implementa infraestructuras intuitivas
+aa72bb8d-5d2a-4e41-8790-3521a10dea2d,user_005,2023-05-29,112.25,shopping,implementa esquemas intuitivas
+14623cad-3968-4146-bd76-f828d017b18f,user_028,2023-12-27,55.29,entertainment,monetiza marcados transparentes
+80405386-77ac-44e6-bcc3-4e5a1355d61e,user_031,2023-05-22,140.58,entertainment,compromete socios visionarias
+cdedb262-43af-4320-82e2-3502a0a12ab0,user_085,2023-12-05,206.0,health,crece marcados globales
+b97122ee-7c9d-4d69-b494-0ac42d98b63a,user_016,2023-02-21,40.36,supermarket,Purchase at Proyectos Preciado-Echeverría
+0ee862f8-d1d1-4402-9b36-468f281699d0,user_013,2023-07-25,122.36,food,extiende portales inalámbrica
+108512f5-b754-4593-a95d-4cd6814ea00a,user_007,2023-12-09,32.05,food,compromete métricas uno-a-uno
+77a1accd-e774-4879-9e0d-ee353df72022,user_021,2023-08-16,525.79,travel,crea marca usuarios virtuales
+8a6f8ec0-d79a-476c-b2b6-47adf8a80045,user_064,2023-12-06,170.34,supermarket,Purchase at Santillán y Elizondo S.A. de C.V.
+82fdcbe8-221d-4bf0-ae4b-7f09357338f6,user_045,2023-10-15,121.71,entertainment,visualiza infraestructuras integrado
+f64f9dc2-8b0f-4072-8148-7d215f9fc019,user_053,2023-11-08,91.03,transport,Subway fare
+17d24beb-3c79-4d77-8f5c-50681a1a7f21,user_043,2023-07-30,102.44,transport,Subway fare
+b834f929-fa88-44d7-8085-097c3b63fa30,user_074,2023-02-27,180.44,supermarket,Purchase at Laboratorios Casares-Carreón
+5d8cfc28-bd7b-402a-8030-51667e151daf,user_093,2023-06-10,24.72,food,maximiza metodologías de paquete
+c5ff9772-253b-4260-ae7f-41902606d3ef,user_089,2023-07-09,34.67,transport,Uber ride
+6ea821fd-a0a4-4e02-b48f-5737973604fc,user_053,2023-02-22,116.22,entertainment,utiliza tecnologías globales
+0aa5fc8f-2a31-431e-b35a-7e0a99b323ea,user_041,2023-08-21,53.27,transport,Uber ride
+3970da5b-eb6a-4357-ad13-2637dd47bcde,user_082,2023-12-09,82.5,supermarket,"Purchase at Echeverría, Villa y Ocampo"
+9dec7c81-92bb-4f75-86d4-0717d5c8f202,user_072,2023-08-20,35.48,supermarket,Purchase at Núñez-Benítez S.A.
+e0279c37-335f-447e-8db0-3dd00f34a3c3,user_088,2023-09-30,118.56,entertainment,transiciona canales B2C
+90e28164-2c79-47e9-b887-84d56c724e16,user_076,2023-07-28,91.9,supermarket,Purchase at Mejía S.A.
+72cf2906-99ef-4531-af8d-fcf109dc5415,user_065,2023-01-12,41.23,food,mezcla paradigmas plataforma cruzada
+599f6280-bbed-4e36-999d-20b153996929,user_006,2023-12-26,68.87,entertainment,redefine cadena de producción eficientes
+a0a45029-b8cf-4b58-a879-ccc6f0abe68a,user_063,2023-04-21,117.78,health,modifica comercio electrónico colaborativas
+212bc798-ccf4-4c2c-84af-f994e45ef37d,user_001,2023-02-22,111.39,shopping,modifica nichos punto-com
+d926aea6-d433-4709-98ac-eaeeb0267fd8,user_079,2023-12-07,94.97,supermarket,Purchase at Industrias Alonzo-Raya
+ecf51b71-7110-46ef-89f1-d4593b5ab7f7,user_044,2023-01-19,188.47,supermarket,Purchase at Casillas S.A.
+d1e5830b-b35f-4398-aad1-865574dee66b,user_044,2023-09-12,123.39,food,libera contenido ricas
+dd09553e-6996-46f6-a93b-e5e0a4cb0888,user_048,2023-01-29,168.65,health,compromete portales de misión crítica
+2b5a2c8c-b4ce-4949-9457-8e9e6903a1c3,user_070,2023-01-28,55.54,transport,Subway fare
+be63b05e-47f9-462b-a8d1-6ff6c58ee861,user_031,2023-06-26,30.9,entertainment,maneja infraestructuras ubicuas
+594f218d-a7b2-46d5-af4d-0daa46b1f054,user_001,2023-06-11,115.46,transport,Uber ride
+49301dba-ead2-4582-8790-977fb7202c41,user_064,2023-09-15,198.73,supermarket,Purchase at Treviño S.C.
+e9f798b4-dda4-4615-bc23-45463c9e524e,user_043,2023-11-25,110.5,food,mejora sistemas plug-and-play
+d99893ca-858b-47ac-b0bd-cce10a6acd4c,user_006,2023-09-18,144.95,transport,Uber ride
+4fcb8180-6b47-4bb4-aa60-b95b02029000,user_030,2023-01-18,128.48,supermarket,Purchase at Villalobos-Montañez S. R.L. de C.V.
+888b4323-86a6-4d32-a0b1-46adf80d7174,user_061,2023-10-20,419.12,health,incentiva plataformas de siguiente generación
+3cdc5b5f-41d8-4d06-86ae-4721bbbaccfe,user_035,2023-02-12,79.59,entertainment,utiliza metodologías ricas
+af4d3dff-9685-452a-a4de-0d60f5eaf63d,user_031,2023-04-14,147.76,supermarket,Purchase at Club Escobedo y Colunga
+30b435ac-f83b-4bcc-a46b-19e17d92d33c,user_048,2023-11-26,105.68,supermarket,"Purchase at Solano, Soto y Casanova"
+f767ec3d-8656-4843-bee8-b27f5f2a069e,user_034,2023-03-21,98.73,supermarket,Purchase at Samaniego y Asociados
+1f134006-7b4a-415b-9a77-6628d90cec9c,user_038,2023-11-12,51.07,food,monetiza sistemas sexi
+773da091-d721-408b-abfc-63f302503f10,user_023,2023-01-05,11.84,food,extiende contenido e-business
+5f4d699a-e9ff-4cb5-a01b-4774870690c3,user_047,2023-04-01,224.83,health,modifica experiencias virtuales
+f27af46d-9218-4a36-a671-dc625e9cd724,user_077,2023-06-29,188.68,supermarket,Purchase at Laboratorios Vázquez y Quintana
+3015198a-c4d0-46aa-a685-f44deaa2396b,user_016,2023-08-17,100.42,transport,Uber ride
+e9bbe4af-8948-4f19-9d9e-ebd70b5570a7,user_043,2023-07-22,75.12,supermarket,Purchase at Despacho Santacruz-Cardenas
+1669541a-1ba3-4525-b433-f907efefb9b2,user_081,2023-07-20,945.45,travel,explota soluciones de siguiente generación
+ccc4de03-61a5-4594-b3d5-835645befd9b,user_019,2023-06-02,10.18,food,orquesta sistemas eficientes
+872b23ee-b86b-4075-92f7-a2347b231cc3,user_005,2023-03-04,1497.61,travel,monetiza sinergias virtuales
+8da4e00f-4da9-40d9-afee-3e0df6eb46fb,user_025,2023-01-27,111.57,entertainment,mezcla usuarios dinámicas
+893db2a0-9587-4471-984a-a70e3e6184be,user_033,2023-08-18,246.45,health,entrega contenido plug-and-play
+66fa79f2-a8b7-4052-86da-633e2b921e9b,user_019,2023-10-17,473.18,health,fortalece servicios web impacto total
+e08de8b3-deb5-41c6-b89f-78e3166aa4ad,user_082,2023-02-14,18.11,entertainment,crea marca cadena de producción globales
+820fd2d1-c3ae-414a-bd11-3e390716e150,user_030,2023-03-22,71.27,shopping,recontextualiza iniciativas transparentes
+72c32ed9-d7a7-4b13-9026-241f1c69e8bc,user_082,2023-06-05,92.38,supermarket,Purchase at Bañuelos-Dávila
+cf2a8a41-b069-433a-b271-7b2e75579bcf,user_072,2023-07-14,118.7,food,visualiza servicios web escalables
+443bef49-7c09-4899-bbe5-273cd0346ef7,user_036,2023-07-26,149.16,entertainment,abraza arquitecturas sin fricciones
+7e296bc8-3534-4ec6-b205-d33287829aa3,user_039,2023-06-28,37.96,transport,Uber ride
+119d48c1-b398-42c2-88e7-6602d2d34233,user_047,2023-03-06,1945.84,travel,agrega socios eficientes
+6473768b-43ae-4f57-8e08-c31286b35a59,user_078,2023-07-12,32.14,transport,Train ticket
+f50efcdb-8fa8-4a4d-8898-16ff3753afbf,user_062,2023-03-02,120.65,entertainment,implementa socios punto-com
+6f25880e-cb90-4067-9744-831cf040dbad,user_048,2023-03-21,66.57,food,redefine iniciativas front-end
+edc26e77-8610-49bf-a938-637f8af0a64a,user_073,2023-07-01,33.35,supermarket,"Purchase at Grupo Zepeda, Nava y Hernádez"
+8b159aba-f5eb-4ab7-8a76-bda333955892,user_025,2023-07-23,82.48,food,integra canales de paquete
+34b71610-0c3f-417e-8def-8c13d3368843,user_023,2023-02-07,82.47,supermarket,"Purchase at Zarate, Fierro y Matías"
+b7c3a7f8-546e-4ad6-b0d3-8d4409086c2e,user_003,2023-02-06,133.24,supermarket,"Purchase at Vera, Quiñones y Moreno"
+d1b9f857-642d-430f-8bb3-c5a4ca312a06,user_036,2023-06-02,36.7,supermarket,Purchase at Rangel-Casas
+1693202e-39bc-417c-b690-45a3cbab7dc0,user_080,2023-04-14,1989.25,travel,utiliza comercio electrónico robustas
+aee895af-97c0-4b34-ac64-34bc6853a558,user_064,2023-02-11,130.33,shopping,sintetiza convergencia uno-a-uno
+d9643e35-eb9f-4319-bb0f-9105eb3c1ce4,user_022,2023-11-18,12.13,shopping,agrega nichos granulares
+d300e5b7-64af-42fb-88a0-8ce15f4283ef,user_071,2023-09-04,60.3,food,incuba nichos proactivas
+93dd1982-0290-4b70-84a1-d59f8a35c7c9,user_001,2023-07-14,25.16,food,empodera metodologías extensibles
+ef246894-fc00-4159-97ee-1bb17941a9dc,user_077,2023-07-31,199.43,supermarket,Purchase at Valles-Lucio
+1e86dc5e-e949-4ba8-a7ca-884ae63cbd0e,user_070,2023-10-06,1524.31,travel,cultiva paradigmas de clase mundial
+32dcecf2-4a63-411e-b7ce-9bebe6bd6a11,user_052,2023-10-03,122.02,food,incuba socios de paquete
+112e00dd-879c-4b8b-b312-d55f4aae35a1,user_066,2023-04-27,180.79,health,incentiva sinergias verticales
+fbe29d10-2f87-4ac9-8d59-502099e561c2,user_092,2023-12-10,95.64,shopping,mejora marcados magnéticas
+c09ffeac-6892-430e-9bc0-ac7679e8faa2,user_024,2023-06-10,51.06,food,abraza nichos ubicuas
+4f2c0931-3062-45f8-bd40-739ecc9f01ee,user_006,2023-03-02,35.38,transport,Subway fare
+320503c6-79a0-4e55-add8-0e18d847ee3c,user_087,2023-02-10,148.38,shopping,compromete redes transparentes
+ba544e94-8e01-49ea-a8a4-9a2b10050286,user_096,2023-12-27,1243.69,travel,monetiza metodologías 24/7
+568706be-3b4a-4025-99fc-43aeb4bb44ad,user_002,2023-06-27,34.03,food,optimiza soluciones integrado
+9c14b3ad-6b91-48f4-991a-48199e3f3f0b,user_075,2023-07-27,446.14,health,integra redes intuitivas
+c28da4ae-2139-4e89-a0c6-0a245c524909,user_040,2023-04-28,189.98,supermarket,"Purchase at Proyectos Lucero, Valverde y Mireles"
+dab3fa1a-38b4-4a6c-938e-8b8af295d645,user_025,2023-05-14,114.83,supermarket,Purchase at Cornejo S. R.L. de C.V.
+2fb64d13-7a92-4568-9eb4-cfe74d537f37,user_009,2023-11-25,13.59,food,reinventa esquemas dinámicas
+e34fa6f5-dedd-4696-a2fd-3021c668763c,user_054,2023-04-06,75.32,food,escala aplicaciones estratégicas
+9ca4d15d-3d63-4851-8ba8-909afaea8718,user_076,2023-01-17,13.82,entertainment,recontextualiza interfaces estratégicas
+5154ecaa-e6aa-48aa-9ff5-16069b6b680a,user_009,2023-10-03,6.52,entertainment,compromete aplicaciones e-business
+590302df-7694-4210-b251-252e147e7bc9,user_064,2023-03-24,141.76,shopping,cultiva metodologías llave en mano
+89df89db-f950-4def-ad66-ba6dcb771cde,user_077,2023-07-20,105.94,shopping,evoluciona ancho de banda de punta
+1c8c3ec4-999c-426e-8825-7ce607358bb5,user_094,2023-11-24,1384.51,travel,cultiva experiencias listo para la web
+8b72e8b1-1a7d-44f5-983b-fdb63d0d5171,user_053,2023-02-08,11.7,entertainment,compromete paradigmas interactivas
+81727a7d-a4a6-4751-b981-cc8549c881da,user_053,2023-03-21,93.72,transport,Uber ride
+6c1d8504-2173-4f99-addd-ea4a9a15544e,user_074,2023-12-11,186.16,supermarket,"Purchase at Industrias Carreón, Arevalo y Bañuelos"
+1a3751d1-b777-496c-8f5c-c31e97845ffd,user_085,2023-11-07,63.47,food,reinventa contenido transparentes
+e288aade-d949-4cef-b980-36e7c65097eb,user_072,2023-03-27,82.91,shopping,reinventa entregables personalizado
+07dd07c0-a4e1-416f-b0de-e5bdc4b5602d,user_032,2023-07-07,31.66,food,monetiza ROI punto-com
+28ffc011-7fc9-4d1a-9c4d-1f969887c8dc,user_080,2023-05-24,136.82,food,innova comercio electrónico robustas
+2032bb01-5bc6-4f67-8b02-48e5a134571d,user_049,2023-01-15,357.68,health,recontextualiza marcados proactivas
+8dd3f097-8e7d-4ac4-a841-6b20c735e73c,user_045,2023-11-03,98.67,supermarket,Purchase at Espinal A.C.
+cdfa6e92-275c-476c-af2c-c762f0780853,user_081,2023-03-24,191.25,health,cultiva redes valor agregado
+8a60004f-f2a3-46db-959c-4400a33826e4,user_069,2023-04-13,379.81,health,modifica interfaces integrado
+a6bb4155-3b76-415b-93b7-bd39828ec360,user_073,2023-12-03,132.29,food,implementa ROI valor agregado
+b033a2b4-ae47-4365-950b-6a1adbcc6d40,user_090,2023-05-19,89.92,food,extiende communidades ricas
+b6cf14e4-0cb5-401b-8d49-ee8a7a86632c,user_008,2023-03-08,112.63,food,recontextualiza nichos interactivas
+37f4cbaa-db0b-448c-9af1-35a478710ffe,user_040,2023-07-24,157.81,travel,transforma relaciones intuitivas
+13f6e848-6340-49be-b187-df6d8eba4141,user_080,2023-01-17,42.35,shopping,innova sinergias centrado al usuario
+38ec70ac-6a6f-41ad-86c3-3992b0e94030,user_015,2023-05-26,88.42,food,modifica soluciones distribuidas
+c0056099-37f6-4be5-a47d-1822b4dcc306,user_085,2023-09-26,110.65,shopping,genera sistemas B2C
+9e2ba778-ca6f-4a18-b28c-3a657ec3c68e,user_005,2023-11-20,88.64,entertainment,empodera métricas de clase mundial
+9a2c2721-28c7-4114-8c7f-042cba2e9bfb,user_018,2023-12-25,129.21,supermarket,"Purchase at Despacho Varela, Ávila y Garica"
+aa648784-f291-45de-b28b-c73d03fa6552,user_092,2023-02-02,199.78,supermarket,"Purchase at Grupo Amador, Montoya y Solano"
+8529e10a-7792-4bed-9c18-4a1ed6e4d994,user_050,2023-05-26,1495.08,travel,visualiza métricas transparentes
+a28e448b-ed58-4672-afbf-127a09a69dbb,user_024,2023-12-24,406.59,health,crea marca portales sin fricciones
+2b447d9e-f204-4a4f-a1cc-5b577c6ec9ef,user_048,2023-08-29,125.89,supermarket,Purchase at Mateo S.A. de C.V.
+1c32e5b1-5543-4dc9-b72a-becf8c2e7826,user_079,2023-02-04,49.38,food,utiliza infraestructuras visionarias
+cbd80b60-ea05-44d8-bdc9-dbeb31390d49,user_064,2023-07-12,6.16,food,incuba nichos plataforma cruzada
+baf07c2b-71fb-4c0b-80c2-d9405e1d0a21,user_026,2023-05-21,248.09,health,visualiza canales lo último
+59d9afe9-a909-49bc-9d7c-11a669d517c7,user_055,2023-05-16,96.08,entertainment,sinergiza metodologías valor agregado
+29b91616-5674-4df5-b230-085a9b0ee7aa,user_020,2023-09-21,53.22,transport,Subway fare
+54bd4841-2ec1-429f-a844-63641ab83f57,user_061,2023-04-02,360.59,health,redefine entregables colaborativas
+f3df355f-b55e-4ae5-b3ec-6e4e68bdbce2,user_088,2023-03-12,6.39,shopping,transiciona iniciativas proactivas
+38574dde-7e0e-49b6-9897-c665aa0b00ee,user_087,2023-08-26,105.44,supermarket,Purchase at Arce y Villarreal e Hijos
+0648e728-5328-4dc5-80ab-46506e11b6f9,user_092,2023-07-16,180.2,health,reinventa aplicaciones punto-com
+22b92942-2856-4df2-b992-7d816e5e5e67,user_018,2023-08-03,85.9,shopping,transforma usuarios proactivas
+e4dacfae-c34f-4f25-89df-6ad7981f673e,user_043,2023-03-02,719.34,travel,fortalece ancho de banda de clase mundial
+ac093398-8c97-4701-9987-02acc6d1c2e0,user_064,2023-08-08,12.08,food,crece ancho de banda valor agregado
+ed5a1cde-1864-460f-bdd7-e164608ac312,user_059,2023-05-28,103.93,shopping,sintetiza paradigmas listo para la web
+ec10e0d3-0ea8-4144-9bf5-f9a60af628d5,user_084,2023-12-24,170.78,supermarket,"Purchase at Grupo Pedraza, Zaragoza y Escalante"
+d4cc6f4f-81c7-4977-8b3d-a69a4f82061b,user_045,2023-02-13,143.04,food,extiende nichos B2B
+e3fe73fa-b781-4fa7-8cc6-4b0bb07e1ddb,user_043,2023-11-22,166.79,supermarket,Purchase at Rodarte y Páez e Hijos
+c9c980f3-8996-4cd0-9a86-30c08ed36532,user_046,2023-05-18,146.1,entertainment,escala interfaces centrado al usuario
+4b0f5e5d-c835-4f4f-9c36-088e86bcdaec,user_054,2023-07-29,44.27,health,itera cadena de producción personalizado
+f53cb7e2-f990-45a0-9a7c-8d2723f6cfad,user_076,2023-04-27,121.09,health,extiende ROI de punta
+38c613c6-1221-4ab0-9fc1-df21b83f1c0b,user_072,2023-02-17,126.11,entertainment,entrega communidades en tiempo real
+54f93b38-6cd8-4a93-902d-1fd0e0b8d6eb,user_075,2023-04-20,180.08,health,itera cadena de producción llave en mano
+530f864d-d14d-483a-a3e8-c98e1bd3b5e0,user_069,2023-12-13,67.12,supermarket,"Purchase at Industrias Vargas, Quesada y Mercado"
+2fc762e9-8aa9-41b9-9753-817244a90815,user_049,2023-03-18,49.4,supermarket,Purchase at Rivero y Vanegas S.C.
+a8c68667-0ef8-4960-85e1-56229c58e75b,user_078,2023-12-15,79.27,transport,Uber ride
+21b99b67-1399-4f2c-b780-7aa462cf3f24,user_055,2023-07-06,85.91,shopping,fortalece tecnologías plug-and-play
+7fe3a2cd-1824-4ffb-9ac0-8a2441002b42,user_089,2023-02-21,130.84,transport,Subway fare
+022a3d55-4f47-4751-9385-da50cf926fe5,user_085,2023-05-27,142.56,entertainment,genera contenido uno-a-uno
+421eb2d5-b496-42e3-962f-20b0f199ac09,user_098,2023-03-10,57.5,health,sintetiza servicios web virales
+bdb39b5a-14bb-4185-a9c8-f29db66383ab,user_015,2023-10-08,91.96,supermarket,Purchase at Carrera-Badillo
+94140163-a8c0-400c-8020-495d370193d7,user_019,2023-02-05,136.85,supermarket,Purchase at Magaña S.C.
+4c835ff0-a692-4059-8383-6f56fb87cad0,user_018,2023-03-26,271.08,health,maneja socios distribuidas
+37baf4e0-5d94-4370-ac49-2b18fb10bdad,user_069,2023-04-05,54.81,entertainment,empodera plataformas distribuidas
+2761cef3-c365-48e0-99af-c867fba522a0,user_096,2023-04-04,103.09,food,redefine plataformas granulares
+f83d023e-8461-4cf5-858d-d9b47e966553,user_001,2023-06-30,49.48,shopping,crea marca experiencias visionarias
+206fd7da-b7e4-4d2d-be65-2487eb9e104e,user_094,2023-04-18,53.74,food,transiciona contenido personalizado
+cd27f28d-e956-4f4e-9dd8-20c5008c7ed4,user_022,2023-09-08,43.77,shopping,agrega paradigmas integrado
+07185a87-a28a-4038-abaf-29b342535548,user_057,2023-09-09,121.34,entertainment,cultiva convergencia de paquete
+a16ad5e9-ea2e-4a06-99b4-2a04c65a3b36,user_041,2023-10-24,45.88,entertainment,agrega contenido lo último
+8d55b076-6278-49f9-95e0-93619e24aafc,user_026,2023-06-14,13.22,transport,Subway fare
+40ddffda-5dd3-43d3-a731-101eb301ef87,user_055,2023-06-11,23.11,food,modifica portales sin fricciones
+c9d2b2e5-42aa-482a-a022-1260db62156d,user_017,2023-11-09,115.35,health,crece socios dinámicas
+60b62207-92e9-4727-89a0-e9ad92376e1e,user_029,2023-03-19,150.28,supermarket,Purchase at Laboratorios de Anda y Quintana
+fe98d2b8-210f-43ae-b409-3d5064ea867a,user_022,2023-07-14,122.55,food,innova metodologías plataforma cruzada
+83cb2262-5e04-4f11-a554-b1722b616071,user_088,2023-12-18,1920.85,travel,facilita aplicaciones innovadoras
+3af59b30-7c78-4e4f-8015-6a487022fbba,user_084,2023-02-27,190.39,supermarket,"Purchase at Grupo Espinosa, Santiago y Preciado"
+dedf4d1d-1904-4df4-8955-ce7ba384f915,user_001,2023-04-23,79.47,transport,Subway fare
+12e29ab9-011d-4610-a244-5a65ab9f97a0,user_018,2023-11-04,127.38,shopping,implementa esquemas eficientes
+13c837a9-bbb9-415f-a56b-069ee418dd29,user_008,2023-07-18,94.71,transport,Uber ride
+16dcf7b8-190c-4c29-a7a9-fe314ef27fc3,user_048,2023-07-22,23.8,supermarket,Purchase at Pineda y Ayala e Hijos
+08ac0a62-a3a2-4bfd-a329-3275140036e4,user_023,2023-11-03,84.46,supermarket,Purchase at Alarcón-Acuña S.A. de C.V.
+cc3c2aa2-2c45-4bba-bcc8-269c623ddc2f,user_052,2023-10-09,28.29,food,genera arquitecturas virales
+b0a59a70-6fcd-4bd1-a3e0-1c7438d66359,user_085,2023-07-31,53.52,supermarket,Purchase at Grupo Viera y Ponce
+db24111b-8bf7-4e6a-a296-0a2c3a9a1828,user_009,2023-05-19,70.07,entertainment,sintetiza cadena de producción estratégicas
+6381f547-f882-4e4f-8e63-a214b710844b,user_085,2023-12-20,48.82,supermarket,Purchase at Negrón-Olivares S.C.
+340f5c7b-3b22-4b81-9c6b-3de38c0bfb96,user_085,2023-07-04,52.68,transport,Train ticket
+9c220fa7-939b-473f-9620-06dc92bef097,user_074,2023-01-01,20.59,supermarket,"Purchase at Casares, Zúñiga y Gollum"
+aa6b4712-4b1f-4b68-8570-ff3b3e5c184e,user_093,2023-10-21,294.77,health,cultiva sinergias en tiempo real
+22f34ae9-1c24-475b-a6ad-2a3e6b352bcc,user_092,2023-01-25,172.92,health,itera interfaces 24/7
+f4d3923d-4708-453a-a46f-bd4826cef2af,user_077,2023-12-17,173.07,health,redefine convergencia estratégicas
+a58f19e9-97b1-422c-a723-a52f18d83b16,user_075,2023-07-21,56.33,supermarket,Purchase at Barrientos-Reyes S.C.
+de9daf45-ee43-41e9-a229-99afa05e4c1d,user_084,2023-12-23,41.0,food,extiende servicios web B2C
+e12491a1-391e-46bf-8998-d77b12b54fa8,user_061,2023-12-14,156.03,supermarket,Purchase at Despacho Romo y Véliz
+1c80a2e2-9c5f-416e-bdff-9777917c1c11,user_074,2023-10-04,230.01,health,escala ancho de banda virtuales
+55c4a14f-9b15-4133-a178-d06831178312,user_095,2023-01-26,115.09,shopping,redefine communidades en tiempo real
+6a056303-df22-4588-9252-847fcaf778a6,user_089,2023-11-24,135.5,supermarket,Purchase at Perea y Tello y Asociados
+eafea044-d937-4a78-a286-7a7e1c898c7f,user_017,2023-05-11,32.2,supermarket,Purchase at Despacho Piña y Padilla
+3799a1e9-71c8-42a5-a2f6-8e4c3e565e5c,user_080,2023-12-12,341.75,health,incuba portales revolucionarias
+7f549ce2-3583-43e6-8a55-e3edc3b8a9b2,user_058,2023-10-09,59.7,supermarket,Purchase at Laboratorios Acuña-Griego
+47daa4d2-d4ac-4c4f-a9d5-ccd5fd49cead,user_065,2023-11-06,41.34,shopping,transiciona communidades robustas
+63028a14-0811-41b6-a7bf-827058b19c41,user_050,2023-04-13,106.64,shopping,entrega communidades en tiempo real
+e2af5886-9d25-4434-a04a-e5d779a741c1,user_012,2023-02-14,64.7,food,orquesta ancho de banda 24/365
+4be619af-1b32-48d6-a749-a5db5e66b23d,user_038,2023-05-18,116.81,health,abraza comercio electrónico 24/365
+818534d6-359d-4a5d-bc62-e3653ad4fcda,user_098,2023-08-06,33.34,entertainment,transforma métricas visionarias
+c6d9380c-3295-4bd6-8e8a-2d5b786a74a9,user_031,2023-01-30,172.21,health,innova nichos holísticas
+e40e6452-84a6-4c20-94bb-f65378608886,user_014,2023-12-19,149.4,transport,Subway fare
+ed8d327e-d2b4-41c6-9c42-b52c84690d0a,user_012,2023-10-07,41.52,shopping,habilita iniciativas holísticas
+d3009d42-ec32-4b21-9e77-8fd2f5fcec6e,user_092,2023-10-28,64.63,shopping,incuba infraestructuras distribuidas
+a41365fa-9850-4907-9f15-d1718793cb41,user_027,2023-01-17,149.02,food,orquesta paradigmas 24/7
+6ea333b8-645c-4fce-9f5a-b204e2ba3771,user_054,2023-05-11,83.12,shopping,libera plataformas llave en mano
+6f86f524-e815-44b2-bcc4-147500a591b8,user_033,2023-01-19,103.13,supermarket,Purchase at Despacho Cortés y Hurtado
+f1915441-35cc-471f-a5f5-dd8d3bcbedaf,user_055,2023-08-28,71.25,food,agrega paradigmas open-source
+cda2bc16-3e48-41de-82b5-a590af1f1aa4,user_057,2023-07-27,126.46,entertainment,sintetiza communidades impacto total
+6947dad6-b357-4ef2-8ade-c622634376c0,user_007,2023-02-23,102.44,food,revoluciona redes sexi
+8ffe7f23-d23c-4d55-b11a-603e7fd3972c,user_095,2023-04-29,110.78,supermarket,Purchase at Guerrero-Gurule S.A. de C.V.
+d7280c89-a2e6-46d7-8479-b10e8052accd,user_024,2023-10-23,61.79,supermarket,"Purchase at Corporacin Soto, Razo y Farías"
+5e10505a-ca4d-4d3d-8df7-c7279a6416b1,user_091,2023-03-05,116.78,supermarket,Purchase at Olivárez-Adame S.A.
+bdfaba2e-6847-44bb-9031-c03d0ac3a7d9,user_046,2023-03-15,223.08,travel,integra tecnologías inalámbrica
+4c7cbfa0-7072-4d75-baec-dd0e61ba463d,user_049,2023-09-01,125.68,entertainment,sintetiza soluciones magnéticas
+a3ea5d1c-52f2-4597-a512-541dfb57ccab,user_047,2023-02-14,154.28,supermarket,Purchase at Grupo Gonzales-Carmona
+656807b6-7a0b-458e-bb23-c2b0b89dd39c,user_032,2023-10-06,67.37,transport,Subway fare
+8aa80880-380e-4d6a-bbe6-64a67216f197,user_080,2023-04-19,45.04,food,abraza ROI listo para la web
+70588d97-38cb-43d8-aba8-54e87585056b,user_025,2023-04-13,120.0,food,maneja ancho de banda de misión crítica
+04662c34-b0e6-405b-8fee-f69ee0311dd1,user_060,2023-11-01,77.91,supermarket,Purchase at Lerma-Rivas
+cb45f2ae-04c5-47bb-bfcd-ada7e5632bca,user_096,2023-07-04,118.91,shopping,incentiva modelos globales
+7cf99a8f-d6ea-466d-97ca-d312815acc8c,user_093,2023-10-19,23.12,entertainment,recontextualiza ROI distribuidas
+c9e46391-2ff0-494b-aa91-407153a7bb89,user_030,2023-03-27,69.84,food,transforma modelos de siguiente generación
+574c94c9-5273-4d1a-aab4-219a59f749de,user_047,2023-10-15,99.39,food,visualiza esquemas transparentes
+de15e1ab-6b05-443e-a5ba-a117f0159b18,user_099,2023-06-20,142.84,transport,Train ticket
+2420dca7-72dd-457d-8684-cd5ebc64146e,user_039,2023-02-07,101.57,entertainment,optimiza servicios web robustas
+cafe34e9-9bdc-42a4-8b93-735455b9d642,user_061,2023-01-12,94.46,transport,Train ticket
+8c28a400-985e-480f-8944-4eedc1c83c24,user_010,2023-10-24,121.43,supermarket,Purchase at Corporacin Tamez y Gamez
+f8f89527-ca90-4909-9633-f99fd7278f0e,user_070,2023-02-15,128.2,supermarket,Purchase at Valles y Lira e Hijos
+9fc4a843-d72e-419c-9d78-ff3c7f801614,user_024,2023-12-31,137.77,entertainment,transiciona funcionalidades interactivas
+3448ca90-5257-42a8-b013-cf3400a0e54c,user_075,2023-07-09,29.8,shopping,modifica usuarios 24/7
+79f0c16c-42df-42ad-b5fd-dfdc281ba53f,user_087,2023-11-23,98.16,health,incuba relaciones plataforma cruzada
+b66b819a-be5a-4a1e-ac5e-502d8a683b35,user_051,2023-10-08,15.48,food,crece canales de siguiente generación
+cc588088-8766-44ff-8e13-78a52e72d606,user_083,2023-12-09,143.32,shopping,orquesta ROI granulares
+d9fe3935-eb75-4994-b31f-d5bd2e4598e2,user_074,2023-10-10,51.48,transport,Uber ride
+cdf03a48-f8fb-467c-8673-10673bc81694,user_083,2023-12-10,141.64,travel,recontextualiza canales revolucionarias
+cac60a2a-11cd-444b-95df-4dd26e7deea5,user_088,2023-03-15,70.41,supermarket,Purchase at Club Verdugo-Estrada
+3f92a76f-7006-4976-aa06-a47f82721c07,user_096,2023-08-13,112.16,health,crea marca aplicaciones globales
+a8f7fe65-f8fc-40f6-93fc-a0aa7b244add,user_006,2023-06-10,313.25,health,sintetiza interfaces sexi
+7ee383aa-802a-48b8-a95a-84fe1f8fafb4,user_024,2023-10-06,54.65,entertainment,cultiva soluciones integrado
+e293994b-aa75-4f26-8d99-28e23f71da8b,user_042,2023-03-14,133.15,shopping,explota metodologías eficientes
+4586bd30-7c9a-4dfc-a6e5-6b8695615168,user_032,2023-02-21,53.79,shopping,visualiza marcados de siguiente generación
+8666cdba-6e58-472c-9b35-32efa5e2b798,user_039,2023-12-27,1969.87,travel,reinventa funcionalidades magnéticas
+2a8b6450-2aa5-4649-b867-d0e4c2f40e2e,user_060,2023-07-10,136.67,shopping,entrega metodologías punto-com
+33356155-153d-4e20-805b-e3c44c0f5a86,user_063,2023-07-03,145.63,food,abraza modelos de punta
+bcae93d1-07e4-431b-9789-e17ef775874f,user_073,2023-06-15,162.65,health,libera relaciones colaborativas
+52828c13-a09f-4841-bed8-6a7b0d402637,user_057,2023-02-20,129.33,travel,mejora arquitecturas magnéticas
+71cac45d-480c-48dd-beab-65d49a31a434,user_033,2023-05-28,194.64,supermarket,"Purchase at Proyectos Merino, Zepeda y Montoya"
+090babba-6d23-4fba-a023-06285da9d251,user_051,2023-06-08,134.43,health,empodera contenido B2C
+9de926bf-f31b-4904-8b13-3d2bb24f79f0,user_017,2023-02-13,115.94,entertainment,crea marca entregables robustas
+cee39be3-85b7-4084-9bde-ebbe0fa5216f,user_054,2023-08-18,127.34,food,abraza paradigmas valor agregado
+54331f6a-442c-4efe-b5d2-6000ca2c57b2,user_035,2023-01-10,75.97,supermarket,Purchase at Córdova-Adame S.C.
+5745ea51-7de4-4381-ac8b-66a306605bf2,user_016,2023-02-10,318.58,health,sinergiza portales colaborativas
+84cfda71-a729-4da8-a999-939c38d3a14c,user_006,2023-07-17,44.89,transport,Subway fare
+ef52f539-e776-475c-aa61-1041fa73dda2,user_009,2023-12-17,51.41,supermarket,Purchase at Mares-Gamboa S.A. de C.V.
+4870f36a-dd18-4bfa-ab2f-e2eea474e04a,user_100,2023-05-01,108.35,shopping,redefine sistemas intuitivas
+d93ce08a-f0c1-4360-a788-f4dd130193a2,user_001,2023-04-05,141.62,food,transforma metodologías de paquete
+29a16acd-7784-4eaf-8d72-863792bb0f8f,user_029,2023-09-02,34.63,food,innova redes end-to-end
+79ed330d-7c11-413f-952a-912735104e90,user_008,2023-12-18,183.72,supermarket,"Purchase at Corporacin Villaseñor, Canales y Carrasco"
+41925d5d-3636-41d7-a40d-a98679613881,user_002,2023-08-23,190.2,supermarket,"Purchase at Corporacin Bañuelos, Grijalva y Marín"
+3280824e-e9a4-48bf-8085-08ebcaadbc2a,user_012,2023-09-02,43.03,supermarket,Purchase at Industrias Nieto y Santacruz
+5cebc8b7-e43a-427f-9641-dc37ff4d4579,user_036,2023-02-28,34.8,shopping,libera modelos inalámbrica
+911b1ffb-79c3-46fb-ae00-659774c2eca9,user_065,2023-12-21,137.35,entertainment,optimiza iniciativas e-business
+049748cd-ec8f-4cf1-be43-a9234bdd5238,user_024,2023-09-13,127.59,entertainment,crea marca interfaces sexi
+265e4ac1-f792-4374-ab45-ef398510b60a,user_067,2023-10-02,5.17,shopping,sinergiza arquitecturas de clase mundial
+ea927c1f-f343-4d44-b14d-967fb30da44b,user_023,2023-05-22,478.85,health,innova convergencia plug-and-play
+d109c7db-1bf6-4d39-b1fa-2af4c5cbd7cf,user_036,2023-06-12,242.96,health,innova iniciativas integrado
+1b97ebab-42c4-45c7-9ff9-07281db2b0c4,user_034,2023-09-08,99.97,entertainment,abraza esquemas virales
+a9651047-0b6e-4646-a75c-0dd3f2610b5b,user_064,2023-06-07,44.85,food,revoluciona paradigmas integrado
+1aecce92-4350-4f44-95b5-57e16e5f09c1,user_068,2023-12-08,124.18,shopping,empodera servicios web verticales
+c4662322-5df0-4425-832e-345a69bb0e8d,user_077,2023-03-17,30.09,transport,Train ticket
+57e377a5-d3f0-495c-9733-3c622a7371e4,user_008,2023-03-29,31.77,transport,Subway fare
+41f7e3b7-2172-4206-a83f-a090482e0bfb,user_014,2023-11-13,175.28,supermarket,"Purchase at Osorio, Bétancourt y Feliciano"
+bfe4012a-47ab-424b-94dc-b612d3e5fdfd,user_036,2023-02-19,83.34,health,orquesta relaciones empresariales
+da67298a-a31f-434e-a591-c1121e64bcb1,user_086,2023-09-14,49.18,entertainment,extiende infraestructuras sexi
+6b16441a-2200-4eef-8a2c-acb431853bf0,user_035,2023-04-23,183.74,supermarket,Purchase at Palomino-Mascareñas S.A. de C.V.
+79d618c1-87a5-4ddb-b628-797a33ec8ff9,user_062,2023-03-15,37.82,supermarket,Purchase at Valadez y Portillo y Asociados
+e0425d90-8764-4374-9b71-1c2cca5e18a9,user_095,2023-05-22,52.92,shopping,modifica redes estratégicas
+010f71b3-e5a2-48e9-8798-ddcaa969b674,user_043,2023-08-28,5.55,food,crece contenido listo para la web
+d4f940e6-65e8-454d-929b-8f2e25afd6ab,user_057,2023-03-28,340.27,health,libera metodologías granulares
+09b2046e-458e-4691-baad-06d22fb67b6c,user_044,2023-10-14,188.22,health,itera modelos de siguiente generación
+87ec667a-e822-4483-8da5-373a77687a47,user_095,2023-06-21,57.64,food,escala usuarios dinámicas
+c14f134b-8f49-44dd-8e37-c27308b81671,user_025,2023-09-04,118.92,shopping,maximiza tecnologías punto-com
+424bb6bb-a32b-4ef2-a2d8-603d88e5a220,user_007,2023-12-27,37.92,entertainment,fortalece sistemas B2B
+dd41151d-bbdf-4a0d-a09c-742d3a15f08e,user_041,2023-04-09,100.43,shopping,integra marcados visionarias
+703f2960-0e0a-4e6a-8cdf-b79dee1eaf89,user_052,2023-11-18,87.85,transport,Train ticket
+9bfbacb1-dd15-4b38-bbfe-b2c41094fe3c,user_071,2023-09-29,15.42,food,evoluciona modelos visionarias
+5da3fcb0-42af-4a6c-9aa2-4fa131a8848c,user_054,2023-10-14,63.97,supermarket,Purchase at Fonseca-Toledo S. R.L. de C.V.
+b510f78b-6cb8-4200-a0df-7b3d433f40db,user_067,2023-02-13,97.35,shopping,explota funcionalidades front-end
+78fc273f-6555-4c2a-aedd-6d81841952c6,user_025,2023-01-03,79.18,food,utiliza usuarios B2C
+4ef7f768-7b7b-4f69-9ccc-3a07d12877b9,user_033,2023-12-31,153.97,supermarket,Purchase at Soria-Rentería S. R.L. de C.V.
+1c5fb7a0-8d72-4878-815d-df94d7f67218,user_040,2023-03-25,1830.35,travel,modifica canales magnéticas
+f966ab72-d7cc-4f06-98f6-cdf2709cd013,user_021,2023-06-15,26.04,entertainment,monetiza canales de siguiente generación
+3aa78db7-885e-4942-99f2-422d010eb962,user_020,2023-08-14,33.56,supermarket,Purchase at Pérez y Aguayo S.C.
+206fc52a-66ba-4f4c-8ed0-a92883dc93f8,user_098,2023-11-09,281.86,health,genera modelos eficientes
+dec483c3-2c2b-4739-9e98-94f3dc8357c7,user_019,2023-10-19,138.2,transport,Train ticket
+90102f00-2cce-4a8f-b8a5-ec34eb633643,user_026,2023-05-22,57.64,supermarket,Purchase at Industrias Amador-Ramos
+8c521b82-d9df-4bfe-86bf-eabc7351d483,user_072,2023-07-12,177.88,supermarket,Purchase at Proyectos Nazario-Alcala
+a2bff69e-532a-4ede-81af-7bc69cc46c06,user_009,2023-03-01,137.62,health,explota relaciones inalámbrica
+25b4e617-e698-4596-a6d7-691197658df0,user_075,2023-05-25,113.22,food,transforma portales eficientes
+c8759144-8697-42b5-a791-8a63ed5b6c92,user_046,2023-04-28,214.66,health,extiende contenido de paquete
+d5cb8f28-c9d4-45c5-98db-42c0364a23e9,user_083,2023-12-30,59.1,transport,Subway fare
+b0e5926b-3222-4b3b-87f5-b00786fd898c,user_066,2023-01-30,51.15,food,itera socios revolucionarias
+7c64fb1d-84a7-4cf5-b2f7-789201ebd97e,user_038,2023-07-09,102.18,supermarket,Purchase at Dávila-Moreno S.A.
+8e5aba2a-9ef9-49e2-8566-9567b579e53f,user_075,2023-01-09,9.47,entertainment,genera tecnologías sin fricciones
+9cf62fd0-c6f5-452b-8a33-ae0d90cebe76,user_039,2023-04-21,1809.81,travel,mejora convergencia transparentes
+b86d5a4d-647c-42d9-b35c-bdf1935684e3,user_066,2023-08-08,50.85,transport,Subway fare
+a584955f-d560-437d-ab2a-7774095cdb57,user_079,2023-05-31,155.38,supermarket,"Purchase at Morales, Rodríquez y Navarrete"
+4f1d0076-c298-44d9-bc9b-0d65b2362e36,user_011,2023-04-09,47.39,transport,Uber ride
+4604519c-ae70-4d61-bead-3603780af8c7,user_031,2023-06-30,171.9,supermarket,Purchase at Quiroz y Asociados
+ae31c96a-8f63-400f-a2ca-d7697f069d25,user_075,2023-04-13,878.67,travel,incentiva usuarios extensibles
+3cebf756-827c-459b-b6d3-60406821c0de,user_001,2023-04-25,24.38,shopping,entrega ROI estratégicas
+8e91d99f-a06d-4ece-b24c-3593bea636cf,user_070,2023-12-10,123.44,shopping,orquesta iniciativas punto-com
+195da0bd-519d-4033-8a50-634ad4f45b7b,user_053,2023-07-25,45.95,food,abraza contenido innovadoras
+0c0832b8-7545-4af0-940d-91e9f26b773f,user_042,2023-09-23,133.07,entertainment,mejora plataformas de clase mundial
+6d9a12b1-f11a-453a-8644-3921a8420b9b,user_069,2023-10-29,332.1,travel,implementa convergencia magnéticas
+f71e90a8-c20d-4dd8-819f-12656948a1f7,user_040,2023-12-23,25.17,entertainment,visualiza aplicaciones plataforma cruzada
+551b84b3-bad3-4f6f-ab5d-59b208bad2cb,user_075,2023-11-06,114.56,supermarket,Purchase at Rodríguez y Asociados
+c69a3695-9853-4967-ba3d-683969bfbc1c,user_100,2023-11-20,67.43,transport,Subway fare
+f99b015a-5a88-49a5-baf9-3c55acd9a9fc,user_074,2023-12-18,184.97,supermarket,"Purchase at Despacho Rolón, Sáenz y Paredes"
+36e03ce9-a28b-4c13-8530-69288ab580aa,user_031,2023-02-06,88.15,supermarket,Purchase at Corporacin Sevilla y Acuña
+c4129828-22d0-41e2-9a17-8e57c27e9e8f,user_064,2023-11-02,188.18,supermarket,"Purchase at Proyectos Sosa, Vergara y Patiño"
+846fcdd0-5c85-4381-afc0-ce3f2c2b6d09,user_035,2023-12-21,25.56,shopping,incentiva metodologías eficientes
+39ebd7f1-c159-4d88-9ca6-a9faa7be741b,user_041,2023-07-02,140.84,entertainment,crece usuarios impacto total
+ae649311-53e0-4f9e-b5fe-772f14e3212d,user_015,2023-10-08,139.85,shopping,reinventa marcados listo para la web
+fd3b1177-210d-4c57-93c5-be4931f00974,user_016,2023-03-10,117.58,health,incentiva paradigmas listo para la web
+c6243abb-caa3-4f19-944a-5dd621c657e4,user_072,2023-11-30,140.95,supermarket,Purchase at Proyectos Carbajal y Méndez
+679775d3-cb8a-426c-8fd4-f28e2c19bf2f,user_027,2023-11-14,44.9,supermarket,"Purchase at Sánchez, Preciado y Porras"
+b22a4fd7-e484-4643-9f2d-aeb6d10d1920,user_084,2023-01-10,122.64,transport,Subway fare
+624d3de5-da28-4f0f-8e4d-31a8132da29f,user_028,2023-06-02,178.75,supermarket,"Purchase at Otero, Miramontes y Olivas"
+7694770f-ac87-4c2d-84a1-cfe2937e9c5c,user_012,2023-01-07,70.03,food,habilita socios impacto total
+43021e76-5b5a-44dc-a8b2-dc6539e47afb,user_036,2023-01-21,65.94,shopping,extiende métricas plug-and-play
+72e23884-a05a-43fb-a346-feee1db1d23c,user_100,2023-09-16,51.54,food,incentiva cadena de producción virtuales
+aa664c5c-0368-4fa4-ad73-6d5af1d8939a,user_074,2023-05-05,87.98,supermarket,Purchase at Bustamante-Barrios
+86bbfaeb-6af7-4fc1-9cff-32f729eddfc1,user_072,2023-01-02,402.34,health,maneja socios globales
+627db6b7-ca55-44a4-91b6-20dd15c5f055,user_057,2023-11-02,113.46,food,explota redes virtuales
+8682a755-7a15-454c-99eb-b3c80f00a3ae,user_051,2023-06-18,197.49,supermarket,Purchase at Grupo Mateo-Marrero
+c6ab6af3-857e-422b-887f-36fd08fe258d,user_004,2023-04-14,56.84,food,agrega paradigmas ubicuas
+14b962d8-6fbe-4347-81da-979f80872be5,user_022,2023-09-17,63.89,supermarket,Purchase at Proyectos Cazares y Cano
+a47de3de-2f1c-4018-8b1e-ab152bf17fe3,user_091,2023-01-08,128.61,supermarket,Purchase at Villagómez y Mendoza e Hijos
+26f944b6-5ae8-4caa-8ada-3d22885535aa,user_029,2023-04-04,111.76,food,integra convergencia impacto total
+f1b6d8ee-5324-4263-867d-be4b509de258,user_059,2023-05-27,104.66,entertainment,crea marca métricas revolucionarias
+53be0e46-2971-4e20-992b-1994b4ce6975,user_039,2023-05-11,16.72,transport,Uber ride
+862f0b52-16ed-487c-8729-e6c1a6f77ac1,user_003,2023-06-22,39.95,supermarket,Purchase at Lozada S.C.
+f7b46b8d-3f71-4a53-9f75-bcb574348d42,user_067,2023-04-30,103.13,entertainment,explota tecnologías distribuidas
+a73e3ff3-6ace-4b0a-a8b5-a544594ef227,user_022,2023-09-14,48.89,transport,Uber ride
+417e4d80-a24a-4ef6-8e17-914f522d1770,user_020,2023-05-07,33.58,shopping,sintetiza redes en tiempo real
+009541d3-09a3-4baf-b92f-b952279f79bc,user_023,2023-10-07,330.04,health,abraza entregables sexi
+9296df30-8938-4b9d-b852-51df96d63c6e,user_006,2023-09-01,92.37,supermarket,Purchase at Medrano e Hijos
+42ef818c-dd6d-43e1-913e-bb40ce43232d,user_057,2023-12-11,83.22,shopping,crea marca usuarios de punta
+3f9a3c6a-93af-4d2e-9d7b-b552ab642ebc,user_073,2023-12-30,13.86,transport,Uber ride
+380dd60b-1a88-479b-b729-a00d2c08d5e0,user_009,2023-05-10,41.7,food,cultiva metodologías integrado
+59564417-0e5a-44bd-a25e-3ff5894c77f6,user_072,2023-08-03,13.41,shopping,maximiza nichos ricas
+ff3c1b8a-f85d-44ef-80f9-64146027a0c5,user_031,2023-09-07,135.89,transport,Uber ride
+52a154e1-1053-4f51-9c52-bab1ac7ca00c,user_062,2023-01-19,79.65,shopping,utiliza cadena de producción B2B
+449ab783-284e-45f9-ac5d-21a0d359fac5,user_038,2023-12-30,138.51,entertainment,itera portales innovadoras
+f991b7dc-6fd0-4cd0-b2de-28b77a14e4ad,user_092,2023-06-15,170.77,supermarket,"Purchase at Fonseca, Mota y Nevárez"
+d29fb96d-cbbd-4a97-bcdb-b655dd5a2021,user_075,2023-01-07,44.66,supermarket,Purchase at Nieto-Ferrer S.A.
+eb1d73c3-91f3-4a8f-b120-7ecdb05d3d99,user_084,2023-12-22,67.97,health,modifica usuarios revolucionarias
+8d0515b0-d0a8-494a-be78-45f20e116f65,user_100,2023-01-02,157.95,supermarket,Purchase at de Anda-Acuña A.C.
+2c951ccc-b36d-4514-a904-cd05aa6c10a1,user_062,2023-09-18,88.82,supermarket,"Purchase at Club Garica, Mora y Concepción"
+e107d54e-7086-4333-8c6b-0a39b6bb9188,user_010,2023-08-21,141.63,shopping,entrega cadena de producción verticales
+f84900f0-10f5-4eea-be67-5eccff35bab0,user_035,2023-11-12,125.97,supermarket,Purchase at Cedillo-Mascareñas
+168ec123-b34e-4da5-9792-a23532d78489,user_049,2023-12-28,60.76,shopping,empodera comercio electrónico revolucionarias
+c89f663f-0088-497c-aaa7-c6adb2456a19,user_041,2023-09-11,140.76,supermarket,"Purchase at Navarrete, Rolón y Franco"
+be71db02-8581-4d28-9f8c-cd7ed6ce0ce0,user_086,2023-03-08,472.03,health,incuba iniciativas empresariales
+4e41f72b-d2ee-413a-83f8-f1d259b5acd5,user_036,2023-08-13,51.05,supermarket,Purchase at Melgar y Domínguez y Asociados
+c30bf606-7e9f-4054-b076-720dab06e2ef,user_060,2023-01-03,316.11,health,cultiva aplicaciones holísticas
+4d5e00f9-9a2e-407a-9447-c1da8cbebcf5,user_044,2023-04-14,29.58,transport,Train ticket
+5745e4f6-2a92-4c5d-98b1-49b36088e70c,user_013,2023-10-13,66.44,transport,Uber ride
+60b97d0d-2a86-46be-8c12-850f51ed27a2,user_089,2023-10-13,53.78,transport,Subway fare
+88b5e786-e306-43b3-9cf7-634c5e25e72d,user_007,2023-05-30,117.37,shopping,cultiva iniciativas revolucionarias
+3014507d-d6a9-496c-81da-335b7a344173,user_058,2023-08-24,356.19,health,optimiza usuarios llave en mano
+5551d9c3-56e8-415b-8f72-a4e1fd383236,user_057,2023-02-17,1336.84,travel,libera infraestructuras revolucionarias
+5f23c4a0-7780-4564-b89e-a67c9e65f986,user_096,2023-05-06,83.94,food,orquesta infraestructuras integrado
+08bc9991-858f-4013-a197-70277446a973,user_008,2023-09-05,54.27,shopping,visualiza métricas listo para la web
+4058f8ad-e1e4-4130-a7c4-43685caa2e6e,user_094,2023-08-17,664.22,travel,orquesta arquitecturas eficientes
+011f03be-376f-4365-8312-8469c3414b37,user_082,2023-08-18,170.04,supermarket,Purchase at Grupo Botello y Limón
+4a1e5aa9-e8d7-42b1-acb8-2469a10c04af,user_056,2023-03-06,50.78,supermarket,Purchase at García-de la Crúz y Asociados
+b3cfa0c6-7dff-49df-9fa8-3f2fcf75ad67,user_020,2023-10-18,93.32,shopping,visualiza plataformas virales
+2c544e79-de83-4e4b-921d-097fc6212233,user_064,2023-10-19,90.75,entertainment,optimiza usuarios robustas
+d665ea7e-7b4e-4b18-acf7-5e111fa4be35,user_054,2023-12-08,140.56,food,abraza servicios web ricas
+3a7983df-2e42-471d-82ce-93ca76ea6d29,user_005,2023-04-29,49.02,supermarket,"Purchase at Corporacin Tamayo, de la Garza y Caballero"
+39be2cb6-fa1f-4783-8d20-779da212e1fa,user_066,2023-12-11,21.57,shopping,genera iniciativas intuitivas
+b1aa68a5-d540-4ece-ba89-0561b093f752,user_074,2023-02-15,115.93,entertainment,entrega aplicaciones robustas
+7c0dea44-7a83-43ef-b7e9-758c2f106eb5,user_018,2023-08-18,234.27,health,incentiva entregables virales
+9836feb8-56cd-46d8-b05a-2269f6b0ce3f,user_005,2023-01-27,372.09,health,sintetiza soluciones 24/7
+738fe295-01b5-4b37-9004-07739aa81d44,user_032,2023-08-31,139.11,transport,Uber ride
+d7814b73-d7c4-4840-aace-e00ee3f18162,user_003,2023-03-13,106.46,shopping,optimiza tecnologías dinámicas
+07993af8-923d-4fc4-b68d-62735e74396f,user_054,2023-02-03,10.3,shopping,utiliza convergencia 24/7
+809aa164-8c02-4ac5-bff1-be51289d2b87,user_021,2023-04-26,124.12,transport,Uber ride
+6af4cdb8-a6f3-4925-9c43-e2da98143cc7,user_005,2023-07-31,142.23,supermarket,"Purchase at Collado, Caraballo y de Anda"
+207214c5-8f5c-4f5a-9364-353be13bd1ac,user_037,2023-11-22,93.79,food,innova comercio electrónico transparentes
+32073180-8269-4987-94de-9bc393cef88c,user_022,2023-12-22,90.98,food,integra comercio electrónico transparentes
+3b931fed-9d28-410a-a6bd-29374cccb351,user_073,2023-05-31,121.84,food,monetiza convergencia punto-com
+e7d9cc11-9c98-47a9-ac4a-18990aab2f56,user_084,2023-04-06,164.19,supermarket,"Purchase at Molina, Olivas y Espinosa"
+2bbd222c-1a99-4b9a-b4dd-2cb98896eb03,user_007,2023-04-17,69.32,shopping,agrega sinergias plug-and-play
+fe48c2ee-4e9e-4730-a5d9-17b7ce3fd801,user_001,2023-03-28,142.15,transport,Uber ride
+9eafb6ae-2ad4-4cc4-b948-92f29e6ae479,user_096,2023-07-05,57.59,entertainment,sintetiza comercio electrónico punto-com
+5d6c70a9-dae1-4559-b58d-1ce8286c7f91,user_052,2023-03-02,75.58,supermarket,Purchase at Despacho Hinojosa-Portillo
+7b8ae149-08cd-40c8-a26f-895a00c9f3e8,user_087,2023-10-17,77.19,shopping,fortalece redes interactivas
+75f1bac3-b1c7-4337-96c7-4329d97b3a54,user_100,2023-12-18,60.59,transport,Subway fare
+ed303844-c53e-40f3-bc92-7537f4907d34,user_051,2023-10-02,492.88,health,crea marca plataformas globales
+d83c04d3-f96f-4bd5-a660-feb37a6e988a,user_004,2023-12-31,197.09,health,mezcla métricas plug-and-play
+81c44de2-edd5-48b3-9d3f-743c0086c345,user_097,2023-11-28,499.48,travel,agrega contenido centrado al usuario
+874dd805-de83-477a-b4d8-8873b6965830,user_044,2023-02-02,44.72,supermarket,"Purchase at Barrera, Ramos y Cabrera"
+6b454894-ec75-4d03-a4bd-14e8957ee6e3,user_047,2023-05-01,54.65,transport,Train ticket
+2dde1017-2db7-4af8-88ce-5ad4cd308572,user_047,2023-07-16,13.72,shopping,compromete funcionalidades listo para la web
+14e2670a-2441-4114-9508-d47079431c38,user_082,2023-01-04,82.38,food,incentiva marcados holísticas
+b494040f-6002-4ec5-93e2-f520b7ff603e,user_082,2023-06-09,121.69,shopping,agrega comercio electrónico de siguiente generación
+aac424d6-5eee-4266-8858-69d2ec4c6a29,user_007,2023-04-07,64.99,supermarket,Purchase at Arroyo-Echeverría
+5425ad6d-5ce5-48c4-8879-377dba6ce776,user_005,2023-07-23,40.2,supermarket,Purchase at Corporacin Muñiz-Guzmán
+ad4829c8-8d63-4701-9f4c-39c1bece098c,user_092,2023-03-07,127.42,food,maximiza nichos lo último
+6bb08c1f-d30a-40b5-a5cb-50a761474b15,user_012,2023-11-13,71.62,shopping,redefine canales verticales
+7b4fafde-5ee1-41f3-be34-ac9487e9f200,user_005,2023-09-10,56.49,food,optimiza entregables llave en mano
+d0a1d5e4-3f70-4c91-8962-021689c26b85,user_035,2023-12-08,22.3,food,crea marca plataformas empresariales
+f978a9c4-484c-4e0e-98c0-86babf25529a,user_027,2023-02-21,36.47,supermarket,Purchase at Laboratorios Arroyo-Venegas
+ae57ec7f-cf2a-47ae-84b3-54e9b0b4a810,user_062,2023-08-13,219.66,health,modifica portales virales
+c58037b0-3f9b-488b-89ce-5dcafede1645,user_058,2023-03-22,163.39,supermarket,Purchase at Corporacin Alvarez y Delgadillo
+8474cbad-1991-4a33-b77a-d5bfcece1841,user_084,2023-07-14,1606.23,travel,cultiva ROI colaborativas
+cd8fe789-a968-4994-9508-1c3d75bbe8f3,user_029,2023-09-20,17.56,food,agrega ancho de banda impacto total
+be21d300-d9b3-43ed-b952-7c14b382598b,user_056,2023-09-08,25.46,shopping,libera redes punto-com
+c26bfb19-e1d8-4d8e-a617-d6c20b91176d,user_063,2023-11-06,1227.86,travel,libera modelos transparentes
+563bfe73-78c8-48e2-a861-b1399c573b38,user_088,2023-04-17,137.95,supermarket,Purchase at Dueñas-Aragón S.A.
+d952627f-1b00-4f17-b982-fcfedc7de729,user_060,2023-05-09,103.4,entertainment,optimiza redes innovadoras
+daf03abc-5c01-4207-b45f-dae47ff49017,user_089,2023-07-19,119.29,supermarket,Purchase at Becerra-Lomeli
+7be792fa-e4ba-489f-89ee-9a695fec1bcc,user_074,2023-06-15,83.28,food,explota métricas visionarias
+da9812dd-5d39-4982-a9eb-a1b52601190d,user_083,2023-01-08,72.0,supermarket,"Purchase at Proyectos Lara, Zepeda y Pabón"
+f882e1d8-ec0b-4788-8229-86bca7c34ec0,user_004,2023-12-05,75.53,transport,Uber ride
+b401e7ac-c89e-4f33-8de0-6a1881ccadbb,user_062,2023-06-06,74.11,entertainment,escala communidades plug-and-play
+66f9085f-567f-4014-8e4c-5734168e687e,user_093,2023-08-18,60.21,health,maneja paradigmas globales
+ec2d2953-3b35-44c2-b11c-bb247d939bb0,user_039,2023-10-25,325.33,health,agrega contenido listo para la web
+da58ef7c-8db7-46e5-ab66-c42e79d33f52,user_018,2023-02-23,64.36,supermarket,Purchase at Guardado-Nieves
+6a627afb-df63-4677-bbc5-a1058e5f1931,user_087,2023-12-18,50.45,food,facilita infraestructuras de punta
+0651d861-fb15-4b50-b453-a1f3f9087cc4,user_030,2023-08-11,285.32,health,implementa esquemas ricas
+acd0ed26-3119-4cb8-bbb8-8a6c7eec8036,user_073,2023-12-19,97.78,transport,Train ticket
+1ef28b6c-47b6-4441-8506-90d4b94b1d96,user_011,2023-10-21,480.4,health,entrega canales plug-and-play
+40bdcc52-420f-4e0b-ad9c-21b340119b59,user_071,2023-01-08,110.47,food,abraza arquitecturas de punta
+2cc95c29-6f92-4200-b310-8464b961091a,user_072,2023-04-21,74.16,food,genera plataformas colaborativas
+006da218-4d39-4a0d-bb32-94a635b0f703,user_047,2023-11-13,98.18,shopping,implementa funcionalidades inalámbrica
+e6b735b7-88dc-46c2-99cd-8bed2b445be1,user_038,2023-11-03,41.38,entertainment,recontextualiza cadena de producción distribuidas
+6a18a417-4b7b-4725-a83c-633ffe860994,user_014,2023-02-04,137.03,health,revoluciona aplicaciones innovadoras
+5da2059e-7f4a-43c2-baac-1f908877a80e,user_068,2023-03-18,1323.79,travel,evoluciona communidades visionarias
+e16892da-a11e-46c3-89d0-76b00c1a7f4c,user_069,2023-09-06,54.78,supermarket,Purchase at Grupo Rojo-Sánchez
+77e2e8b9-743d-4e0f-aae0-1799f9a1b514,user_026,2023-07-19,54.86,food,recontextualiza communidades ricas
+fa55423c-9ba3-4108-86d7-3f4d6bc4cf5d,user_011,2023-12-04,71.03,entertainment,cultiva arquitecturas granulares
+24123226-9b4d-4951-b1ba-674a19c54597,user_032,2023-02-26,9.8,food,cultiva aplicaciones revolucionarias
+b0781b7f-36a3-491f-a30c-3f625fbe6d87,user_033,2023-07-24,40.1,food,incuba nichos 24/365
+03dade64-ec00-463c-a370-781f2ceb2997,user_044,2023-02-16,49.06,shopping,innova soluciones distribuidas
+3d18707d-b35e-48c7-b343-746f2ceab952,user_012,2023-04-24,680.22,travel,implementa arquitecturas visionarias
+191adfe6-9dcd-47d0-a2a0-080810294535,user_093,2023-03-31,121.65,transport,Train ticket
+180b8efd-3190-4dc7-a849-8972c19f4f1a,user_030,2023-11-24,847.71,travel,facilita redes estratégicas
+491b127c-569d-427a-9232-605751402f33,user_085,2023-05-06,48.81,shopping,habilita convergencia front-end
+17958b63-5ff8-4bae-b63f-0755fa402d99,user_075,2023-07-17,7.4,food,fortalece plataformas de paquete
+37c0b16c-6914-4bd4-b229-88191fe420d0,user_054,2023-09-15,194.41,supermarket,Purchase at Corporacin Rivera-Zambrano
+4af774f1-eca0-45af-894d-79823d738c20,user_036,2023-11-17,90.17,transport,Subway fare
+485f85d3-b2fc-4c93-90dd-4b3ec48509e8,user_024,2023-11-02,86.18,transport,Uber ride
+41320e55-c9e0-419c-b883-be641fff0cd8,user_027,2023-05-18,149.5,shopping,evoluciona metodologías lo último
+a43e902e-df96-4f24-9386-9f08bdefd75a,user_037,2023-10-26,354.61,health,escala sistemas eficientes
+f0f0f637-576f-4b6a-b0fc-838166f33f37,user_061,2023-10-07,99.64,transport,Uber ride
+b842d340-5383-40c0-8fc5-95a735708fa4,user_052,2023-05-30,72.47,supermarket,Purchase at Griego-Mota A.C.
+a15890d5-be4e-482c-aef6-810e98d2e2b3,user_016,2023-05-11,43.05,supermarket,Purchase at Industrias Rodríquez y Ponce
+740a744c-e859-42bd-ba4d-757d513c2437,user_030,2023-02-04,14.74,food,agrega usuarios sexi
+03781222-38bc-449c-8193-285c1d9d2c93,user_080,2023-02-17,95.25,transport,Subway fare
+f72f03d7-da3d-4a1c-a537-d7af4e55c50b,user_071,2023-07-11,40.11,entertainment,habilita relaciones e-business
+eb112067-5f04-42fe-b89d-810a769a7835,user_061,2023-10-12,68.04,food,fortalece nichos ubicuas
+07785dc7-9132-4a3e-af8f-5cab15789f0c,user_083,2023-06-28,20.71,supermarket,"Purchase at Industrias Hernandes, Zamudio y Rico"
+85c63250-2162-4276-bb89-7040c88ee806,user_045,2023-09-22,56.29,food,entrega esquemas holísticas
+6913a9df-913e-4599-acb7-7e387735b10e,user_002,2023-12-14,51.94,supermarket,"Purchase at Grupo Portillo, Fuentes y Zambrano"
+2a7dc998-8244-4a59-be32-80b6d14bc9ad,user_091,2023-09-02,15.36,food,redefine convergencia integrado
+6949baad-1889-420c-8ec1-b7192de156af,user_060,2023-12-08,21.4,shopping,explota métricas revolucionarias
+6c4ea165-8ca3-42f1-92a9-67c6a4af5af8,user_064,2023-12-09,10.67,transport,Train ticket
+0f74a928-f143-49d6-b7e3-ad0f058d76f9,user_060,2023-07-17,120.02,supermarket,Purchase at Grupo Cruz y Laureano
+c77ae9b8-9f7f-433c-826c-158a384a68d5,user_057,2023-02-12,271.26,health,orquesta métricas en tiempo real
+4000db1f-1cbf-48a0-969c-a18feac0b201,user_068,2023-09-12,124.95,supermarket,Purchase at Escobar S. R.L. de C.V.
+2e88351d-07d3-4573-bccc-4e4500be964f,user_100,2023-11-21,130.93,shopping,monetiza nichos ubicuas
+886f7e2c-bdc0-4fc4-adaa-668b0f032429,user_044,2023-11-05,102.8,supermarket,Purchase at Grupo Vera y Raya
+92a630ca-55c7-4dbe-8e62-fa896d279011,user_018,2023-07-12,108.28,transport,Subway fare
+3bed714b-4d19-41ed-8423-be9e11b6c0fc,user_040,2023-12-16,46.22,entertainment,monetiza ROI transparentes
+6aee9749-4743-44df-adef-3a67b54b81ec,user_029,2023-01-25,7.07,shopping,cultiva servicios web estratégicas
+57da966e-d311-4ebb-a204-7a61472fa68e,user_030,2023-02-13,85.84,food,fortalece nichos inalámbrica
+d3d4f4ff-8ef3-4853-949a-13711256ba46,user_088,2023-01-13,178.0,supermarket,"Purchase at Gollum, Prado y Curiel"
+2481412c-7830-4b67-bdf9-d19ea8fe044f,user_099,2023-10-16,125.31,food,orquesta contenido inalámbrica
+91982efc-5bec-4bb0-be57-c1b7bfc0c5d7,user_091,2023-07-25,128.4,shopping,redefine plataformas estratégicas
+12324883-8a90-4f6b-86d6-0a88fdc386ae,user_009,2023-08-15,60.52,transport,Uber ride
+f236d8e4-26a8-4e9f-967a-2b084f34ac2c,user_012,2023-03-19,145.5,supermarket,Purchase at Industrias Amador-Granado
+aa76959d-0edf-45b5-9753-12bca3f2491d,user_026,2023-12-13,86.28,entertainment,recontextualiza tecnologías 24/7
+3c4aa943-5dcc-4a32-8f50-593a15691fd6,user_040,2023-01-26,141.91,supermarket,Purchase at Laboratorios Nájera-Angulo
+8ada0359-9f3d-4863-bdd2-f2bb177741e5,user_051,2023-09-20,59.86,shopping,itera contenido revolucionarias
+5384c697-ea47-48c0-b52e-2e7b7e16a10b,user_023,2023-07-19,157.63,supermarket,"Purchase at Negrón, Ontiveros y Lerma"
+f27856e8-e607-4789-a8ef-daf8dc1b5228,user_001,2023-03-10,77.48,supermarket,Purchase at de Anda-Godínez
+fc1ead3d-967e-48bf-b8f9-81c603338fd2,user_023,2023-04-22,26.3,shopping,implementa socios eficientes
+fe289329-99f8-4515-8eab-ba774b9184c3,user_025,2023-09-02,157.82,supermarket,Purchase at Tello e Hijos
+5e1eca1e-2143-4030-80b9-2cae8a3bf0c3,user_087,2023-05-12,48.31,supermarket,Purchase at Proyectos Tovar y Toledo
+b51534af-3185-43ca-9831-b2ec1f815829,user_014,2023-12-16,73.38,food,utiliza marcados magnéticas
+4f9bc8cd-c3d9-4421-b947-7db83cdd3597,user_065,2023-10-18,176.25,health,sinergiza esquemas inalámbrica
+5d60a9a8-7634-402d-a5af-d6c8b06ca3fb,user_094,2023-04-18,79.53,food,sinergiza soluciones de clase mundial
+c993a8a9-876c-4c6d-b399-ccb86f2d13d8,user_044,2023-01-06,62.11,transport,Uber ride
+f2fca18b-8cc5-46e3-866c-eab83dd59ded,user_081,2023-02-13,17.48,food,revoluciona sinergias open-source
+3230a0ad-0111-4083-9a05-206049952161,user_042,2023-10-25,23.71,shopping,reinventa sistemas valor agregado
+a10341c2-93f6-4554-98ea-9f4739bac770,user_057,2023-01-22,453.61,health,optimiza convergencia punto-com
+47e2add1-1f5b-4dbe-b1d9-37fc88eda5ff,user_048,2023-01-14,139.51,shopping,mejora experiencias escalables
+12c7dc52-3848-4758-b3ed-4e48ab2a88aa,user_034,2023-07-04,57.94,transport,Train ticket
+5af7e6c1-0c31-433b-a9af-b8b0dbf29770,user_082,2023-10-29,89.94,health,itera paradigmas colaborativas
+70dec472-150d-453f-8e4b-956ba5ed055e,user_069,2023-08-14,19.64,transport,Uber ride
+9d4d817f-24df-47b3-95f4-27dcc812778f,user_061,2023-08-30,37.88,supermarket,"Purchase at Concepción, Carrasco y Soria"
+bffc96aa-6aa3-4062-b82f-31f046349376,user_019,2023-05-22,128.6,supermarket,Purchase at Rosario y Carvajal y Asociados
+abd30b15-c339-480d-8a5b-90b8638aefab,user_037,2023-05-25,148.27,transport,Train ticket
+ce3b4e05-a8e9-445d-b399-acafbd7a4a6d,user_050,2023-06-30,135.73,shopping,orquesta portales inalámbrica
+1464697c-6f70-4a38-962c-6ed2a2fb94f0,user_067,2023-09-08,123.12,transport,Uber ride
+d25c7545-dab0-4a24-b02c-2e1dafeb5a4a,user_016,2023-09-22,23.93,transport,Subway fare
+b9a70fca-0e72-40f2-9cc3-888c31f8a02c,user_012,2023-05-28,81.13,supermarket,"Purchase at Despacho Aguirre, Irizarry y Venegas"
+b758f83c-fe75-4466-a768-95f6b3e19249,user_047,2023-05-23,30.06,food,abraza tecnologías centrado al usuario
+176bbd82-684d-483e-91d7-6237b7f61ff2,user_076,2023-12-25,36.9,entertainment,modifica paradigmas revolucionarias
+f60d94ea-b89b-4233-b8bc-ae0f69ba5d14,user_046,2023-11-05,197.52,supermarket,Purchase at Corporacin Hernández y Villalobos
+c51198b9-1038-4598-b6ce-d7235ef9f435,user_073,2023-08-02,196.24,supermarket,Purchase at Corporacin Lemus-Mireles
+b767b6f5-5612-4d0e-85ba-a61c4dd55bf4,user_088,2023-04-13,135.99,supermarket,Purchase at Altamirano S.A. de C.V.
+229e1fb0-376d-48f4-bf01-8447a14ee751,user_053,2023-12-12,47.41,food,revoluciona communidades extensibles
+71d29490-3e46-4199-b68d-c8404653ad02,user_075,2023-03-24,131.98,transport,Train ticket
+73526c4f-89c4-453b-8818-7eaf03b86c0a,user_080,2023-04-28,23.57,shopping,cultiva esquemas llave en mano
+bf7c0324-5ca3-464b-bb7a-36d8fc1a7152,user_098,2023-06-12,18.88,shopping,monetiza funcionalidades colaborativas
+c9748828-c3ee-4e4e-b4c8-9cccd2413f56,user_082,2023-08-09,10.52,transport,Uber ride
+081a71f9-8fc9-4fa2-b97d-53a3f9dfa5cf,user_065,2023-06-28,66.89,food,sinergiza tecnologías lo último
+d574ae65-e3c7-49b8-9322-520f94248950,user_050,2023-01-03,95.65,shopping,compromete arquitecturas intuitivas
+f7cf3134-8b8e-42c4-925a-576e83b9fb27,user_076,2023-01-11,21.45,food,reinventa interfaces revolucionarias
+f23b5daa-110b-49bd-a3b0-bcf61ec25806,user_031,2023-01-12,19.35,food,libera sistemas innovadoras
+b9a8a3c7-cf55-4390-a685-061bd83f2057,user_093,2023-07-02,90.16,food,innova convergencia de misión crítica
+f6365e1f-7317-44ec-b0dc-e417c605232b,user_037,2023-03-14,133.66,transport,Subway fare
+ec2d51b5-0a6c-480d-984e-7d0048e4d82d,user_033,2023-10-13,59.96,entertainment,maximiza tecnologías de punta
+887e25fc-07c3-4a30-a85a-586ba18d01a0,user_057,2023-03-20,95.49,supermarket,Purchase at Bermúdez-Mejía
+bd1f5bfb-21b3-43ab-bc12-34da7457c81a,user_057,2023-06-27,70.74,transport,Subway fare
+bb05cbc6-1f4c-4eb5-b28d-e7dbc6043311,user_059,2023-05-23,162.55,supermarket,Purchase at Hernádez-Ceballos e Hijos
+c56e698c-77f2-4de7-9f76-c8cc3acd159b,user_004,2023-02-08,150.55,supermarket,Purchase at Espinosa-Mendoza
+6615040a-be1f-491f-b27c-79ab8369e948,user_052,2023-01-16,100.18,supermarket,Purchase at Espinal S.A. de C.V.
+6b8b5865-f6d2-42fb-8817-375d54c2ced2,user_061,2023-07-30,6.12,shopping,genera paradigmas sexi
+f281c992-1a1d-4b66-9c9d-74624ab3a384,user_053,2023-01-26,16.71,transport,Train ticket
+4b73d676-d8a6-435c-b79c-4d98f7870fb4,user_063,2023-06-26,95.5,shopping,libera redes revolucionarias
+7696b0c0-9771-4dd3-b94e-db84ec14f044,user_007,2023-08-08,72.02,food,visualiza metodologías revolucionarias
+61c8b162-bcfd-4591-9910-992ab342fc91,user_079,2023-10-12,36.55,entertainment,mejora redes plug-and-play
+f47bb3d3-7edf-44a8-9125-2cd96175ab8a,user_024,2023-02-09,37.18,food,transforma métricas impacto total
+2ac1c943-9620-4a74-8708-44ef34d9d713,user_027,2023-04-03,136.93,supermarket,Purchase at Industrias Velasco y Peralta
+0bfeac80-4ba5-455a-b719-a9482d44ccf7,user_091,2023-07-03,133.35,health,entrega nichos front-end
+000fc481-b5de-421b-bf2d-e1947bd852f7,user_012,2023-04-28,101.63,food,genera interfaces B2B
+6e8cb5a4-085f-464d-a058-9c2284a94e82,user_049,2023-06-22,45.07,transport,Subway fare
+98328ff5-204d-4eae-b127-ef2e4b31f45d,user_076,2023-01-17,145.86,shopping,crece experiencias punto-com
+faec8a93-4a23-4ce8-9711-5a4f88aef455,user_093,2023-02-17,157.89,supermarket,Purchase at Corporacin Campos y Acosta
+b7657513-46c0-49cb-acb6-ea261378e2a6,user_066,2023-04-09,42.66,supermarket,"Purchase at Aparicio, Luevano y Cortez"
+9e1ddf81-6367-41e8-9f9c-1c4a1f922820,user_068,2023-11-07,108.45,supermarket,Purchase at Sandoval y Asociados
+442dcdd3-392a-46fd-93c6-9477fcc95bf3,user_074,2023-09-10,100.05,food,crea marca nichos ubicuas
+9e83efa8-b6e6-473c-9874-d188e94e5c77,user_024,2023-12-22,74.58,food,incentiva métricas empresariales
+9a84922d-e60a-4822-83f4-5632d542ba94,user_040,2023-07-27,217.55,health,redefine ROI virtuales
+64d6a13b-38e4-4736-a1bd-c5ecca518c78,user_064,2023-09-13,60.12,supermarket,Purchase at Apodaca S. R.L. de C.V.
+26cbddaa-44f6-4f43-ba10-5ffbf3223c07,user_090,2023-06-07,273.47,health,transiciona metodologías impacto total
+103c2cc5-1229-4393-a884-494632e01ed5,user_013,2023-11-28,91.02,shopping,crece cadena de producción plataforma cruzada
+66b53999-d623-40f1-87cd-a699db139a1e,user_097,2023-06-19,7.07,transport,Subway fare
+4015bf5f-a789-420e-8059-063be7ae8b33,user_004,2023-12-26,61.79,transport,Uber ride
+2f1785d7-89f5-4b45-be79-c3dfca2e12e2,user_005,2023-11-14,69.66,supermarket,Purchase at Gil y Rosas S.A. de C.V.
+c7d778da-da58-4e60-ad5b-22fc3cb965d3,user_076,2023-08-07,122.41,shopping,extiende soluciones dinámicas
+f27ba6f8-f88d-439e-bd8e-a85c4d1a93e0,user_009,2023-09-22,90.1,supermarket,"Purchase at Tamez, Salcido y Maya"
+6ba6781a-9cc5-4ccd-bf91-de1ed0163978,user_042,2023-10-27,178.44,supermarket,Purchase at Badillo-Mondragón
+e510dee5-36a5-48c5-9228-ad09a7fb03a8,user_021,2023-01-31,120.03,food,reinventa ROI de misión crítica
+f63efd02-2bcc-410d-b0d6-031ff605bd7f,user_091,2023-09-15,93.56,supermarket,Purchase at Club Cardenas-Rendón
+f384bb65-12bc-45eb-9ca8-016c635665fd,user_079,2023-02-26,54.21,supermarket,Purchase at Viera y Villareal e Hijos
+7318dbf9-0d39-4918-af8e-7d4fc4d59b72,user_043,2023-04-19,113.06,shopping,crea marca experiencias granulares
+c36591d9-253a-492a-93b6-5859d4a565ac,user_040,2023-09-10,28.65,entertainment,entrega convergencia proactivas
+b908b0c8-ac72-44db-a4fc-acccbbd7a583,user_092,2023-10-12,141.78,supermarket,Purchase at Quiroz-Leyva
+ba6fc5c4-85a0-4188-a7c9-c2e4530e4039,user_012,2023-03-25,59.03,food,utiliza nichos colaborativas
+f4de4a34-08bb-40b6-9083-a409eb08de6a,user_088,2023-12-19,95.84,supermarket,Purchase at Trujillo-Rolón y Asociados
+189fabc6-3ea4-4c3e-af57-59bd1624228f,user_064,2023-05-29,129.37,transport,Train ticket
+88ff8d5c-3974-48c9-9f0e-7d2a59674b6f,user_075,2023-10-25,149.47,food,genera sistemas revolucionarias
+facbcdb8-058b-4b45-a722-0dd85aee90db,user_029,2023-01-21,254.44,health,modifica arquitecturas ubicuas
+0277b535-ea8f-4a00-b521-9ca0726787b9,user_057,2023-01-12,350.58,health,genera convergencia visionarias
+8215e191-39c0-4969-b9c9-15a5dfec4f98,user_099,2023-02-12,134.53,shopping,fortalece comercio electrónico de punta
+25a9898f-8f0b-4529-a048-0df954699080,user_012,2023-08-18,109.92,transport,Subway fare
+09011d48-9145-43b6-a3e7-534e41694d96,user_029,2023-12-28,124.9,supermarket,Purchase at Medrano-Mejía
+8449dde4-9c3a-4255-b694-9dd3546e4b7d,user_026,2023-05-31,96.97,supermarket,Purchase at Casárez-Melgar A.C.
+39a22b4a-cfde-4dd4-99ae-4e9ae2b8efd5,user_085,2023-07-21,93.39,food,transiciona soluciones distribuidas
+029eee57-5834-40ed-9eeb-ee745c055fcc,user_076,2023-08-04,63.94,food,sinergiza aplicaciones verticales
+a4a63214-c6a9-4f2c-90d7-38922ea9a734,user_022,2023-03-22,1268.6,travel,fortalece communidades empresariales
+4a1c9400-2e85-4542-b605-104abd935333,user_004,2023-08-28,127.34,food,sintetiza plataformas eficientes
+4023a547-c11d-4b6d-9478-e37b36dc4c37,user_023,2023-06-14,168.09,supermarket,Purchase at Industrias Perales-de la O
+9a549c58-a12e-4d32-8e13-8917d35a89e4,user_077,2023-11-23,44.57,supermarket,Purchase at del Río-Morales
+743e7c8a-5eba-4c86-8ecd-a445cbef4944,user_004,2023-01-31,67.92,supermarket,"Purchase at Industrias Magaña, Galindo y Garza"
+c99e5cb3-bbc0-491c-8ba6-9c1a02911295,user_069,2023-11-09,210.1,health,maneja sinergias revolucionarias
+dbb75752-bee7-47f7-a54d-90a5ce44a281,user_074,2023-03-21,416.94,travel,fortalece ancho de banda visionarias
+3e182b21-66aa-4f4f-a967-15c202c00a88,user_070,2023-02-22,88.63,entertainment,reinventa experiencias integrado
+eae0442c-a966-42b7-a587-cc5f35949584,user_010,2023-03-09,43.91,food,cultiva comercio electrónico 24/365
+eebaf273-57bc-4069-8bab-8a83f2027bc6,user_065,2023-04-07,116.55,entertainment,innova entregables de clase mundial
+bfe4dddb-b617-4d85-84f2-1ab97c07ea09,user_061,2023-07-12,86.9,entertainment,sintetiza sinergias punto-com
+a7218708-c845-4078-a8ec-8f457b6653a8,user_061,2023-02-06,271.96,health,integra plataformas valor agregado
+b5de0815-9b5e-40db-be8c-b75dfe89ec32,user_029,2023-10-21,38.34,food,incuba sinergias globales
+c2a78243-dd6b-4285-951c-e0c65d3fb78e,user_079,2023-10-29,119.37,shopping,incuba funcionalidades de punta
+e71f6656-c9c4-4f4f-9afb-2d9244202e33,user_036,2023-09-25,84.96,entertainment,mejora comercio electrónico sexi
+aac5ddaa-498e-4529-a593-5fd3d5e8f3b6,user_065,2023-06-28,6.11,food,crea marca paradigmas valor agregado
+511eae55-80d6-4448-a3ff-df04a39d660f,user_014,2023-03-21,83.61,shopping,explota socios revolucionarias
+3e892601-4cf5-4fb8-b433-7da9aa677e9a,user_076,2023-07-09,126.59,transport,Uber ride
+493667b2-ad79-428f-be19-27b9e0b0fce1,user_069,2023-08-08,37.22,health,recontextualiza ROI transparentes
+63f54ba8-1c1f-4cbc-b849-d2e61186a8a2,user_010,2023-11-28,89.94,transport,Train ticket
+9a5c696a-3518-4a44-b6de-0c85de0682de,user_092,2023-05-02,30.26,food,revoluciona aplicaciones impacto total
+54b4cec1-f4a1-4ab1-bfd1-afff93baac24,user_055,2023-02-20,97.05,shopping,visualiza canales extensibles
+5974ac88-095d-4cc6-b443-a65a6c184988,user_076,2023-03-02,175.46,supermarket,Purchase at Proyectos Villaseñor-Reséndez
+c844cb4a-94d9-454a-a503-fd5f7f49d487,user_074,2023-09-29,177.92,supermarket,"Purchase at Corporacin Tirado, Zarate y Mejía"
+a30ee998-e7cb-43ff-a969-eb6a3bb74799,user_007,2023-06-16,6.35,transport,Train ticket
+840a8d40-a8ff-492b-b18b-e5f21c4915e0,user_013,2023-06-07,196.93,supermarket,Purchase at Magaña-Gaona
+6b156a8a-f1fc-4e49-bb4c-ad06262b2492,user_062,2023-07-28,58.14,food,maximiza comercio electrónico innovadoras
+0631f5bc-f860-46d3-94ef-7a1a6d11496a,user_047,2023-04-16,146.59,supermarket,Purchase at Despacho Cazares y Montoya
+36184d82-30ff-44f6-9be0-8740145a9808,user_075,2023-08-24,39.89,food,mejora funcionalidades colaborativas
+2b7f8630-4677-41ef-9a95-f54b5d9a3a6e,user_083,2023-03-18,22.18,shopping,abraza ancho de banda 24/365
+cb7a5bd5-2d57-421f-84ed-a32dc864d79a,user_053,2023-08-15,11.23,food,reinventa infraestructuras listo para la web
+de970111-62bb-4821-84a1-723b96c48889,user_055,2023-08-05,84.64,entertainment,empodera servicios web punto-com
+596de818-dd85-4108-ae77-c364134dc026,user_019,2023-09-01,100.0,shopping,sintetiza soluciones virales
+6b485e0a-14db-437b-a4e2-0f0a33d03d1d,user_072,2023-07-26,49.75,food,recontextualiza comercio electrónico plataforma cruzada
+079d86d6-ff07-4ed6-8ac2-92d6b12f1dc2,user_090,2023-01-31,100.88,shopping,compromete metodologías virtuales
+d92eeba7-bc7e-4692-9b24-d8a9006ccf76,user_098,2023-12-20,112.99,food,orquesta usuarios extensibles
+806baef6-d415-40a3-a80f-78a7aef41355,user_069,2023-11-02,112.01,supermarket,Purchase at Despacho Arevalo-Montalvo
+888b3a69-69cd-47e7-9bcc-af324d7af426,user_085,2023-01-28,33.44,food,redefine iniciativas holísticas
+d50b0389-0206-442a-8a4d-fd0f0278e6b7,user_014,2023-05-04,139.05,transport,Subway fare
+8c1ca618-4620-4a8f-8272-60772d46f2fa,user_020,2023-03-07,69.31,supermarket,Purchase at Alejandro A.C.
+d3213f17-a2ec-4065-a724-65ba40856814,user_016,2023-05-24,127.43,entertainment,incentiva esquemas e-business
+ff4e2d11-4360-4e3d-b899-16bd10f2468e,user_070,2023-12-07,129.26,supermarket,Purchase at Negrete A.C.
+4a2e7a18-56e2-44a0-952e-4048eeeece49,user_097,2023-12-23,29.73,food,modifica infraestructuras B2B
+c6fe1177-cbb4-4e9a-ae42-f6b7e3297af1,user_013,2023-05-29,1318.12,travel,habilita canales llave en mano
+dd93f52b-cae4-4efb-ab82-ac0e775292bb,user_034,2023-05-17,95.1,supermarket,Purchase at Arenas S. R.L. de C.V.
+3ffac307-cd79-4ced-b973-14aaadb9bb98,user_051,2023-08-19,61.69,entertainment,incuba marcados de paquete
+81182bb8-9c38-496a-9b0f-2eb80bd9be5b,user_047,2023-11-29,55.61,shopping,entrega relaciones lo último
+043a4938-8f4c-48a8-a22a-8473d259e91a,user_060,2023-06-19,269.91,health,facilita metodologías llave en mano
+a5cea094-f315-48ed-8611-6c2c1ef09a3c,user_002,2023-06-17,146.68,health,maximiza comercio electrónico interactivas
+e7ec7bd1-3adf-428d-8516-470a32da7647,user_079,2023-05-06,187.32,supermarket,"Purchase at Industrias Casares, Briones y Bustamante"
+e7037b1b-e3c9-4229-bd61-12ce9cf3533b,user_034,2023-07-11,199.09,supermarket,"Purchase at Corporacin Zambrano, Sarabia y Haro"
+8ab4549b-3edf-4990-83ef-fb9cbbe2cc45,user_001,2023-07-22,120.82,supermarket,Purchase at Carranza-Castro
+ffba4292-7cfc-492a-ac85-12f14e2312b4,user_063,2023-06-08,20.31,supermarket,"Purchase at Proyectos Casanova, Estrada y Zambrano"
+54935972-0ce0-46db-a2a5-fe600eb9f8f8,user_071,2023-01-02,96.88,entertainment,incentiva contenido transparentes
+728c5e93-3efa-43a6-ac90-99dfb6d60eb4,user_063,2023-10-28,486.72,health,agrega contenido dinámicas
+dc23f24d-340a-44b2-8449-8ef06e91530b,user_062,2023-01-10,75.35,supermarket,Purchase at Despacho Rodríguez y Vera
+eb88c238-a732-469b-8f9d-31c7eed62961,user_010,2023-08-26,9.96,entertainment,incuba arquitecturas uno-a-uno
+3411f81d-30ee-4350-8db7-20c9e2d2f8ce,user_011,2023-07-18,40.16,supermarket,Purchase at Grupo Ochoa y Mota
+dc0c7473-8e5a-45c4-9c05-ce894d000b51,user_004,2023-06-18,157.46,supermarket,"Purchase at Niño, Robledo y Miranda"
+cd4c3663-aa6c-4b1e-81da-d26141405c7e,user_038,2023-12-18,130.12,entertainment,monetiza sistemas en tiempo real
+a3ef1a3a-fc28-4f6c-bd2a-0fb5ee60e671,user_095,2023-08-25,70.33,entertainment,habilita ancho de banda extensibles
+bf740957-8dcd-4074-8d80-03f98e7e455a,user_068,2023-09-03,8.21,transport,Train ticket
+d1754a49-c853-48b4-a96d-8f604a0f7f74,user_037,2023-04-19,28.06,food,abraza marcados transparentes
+f02590a9-4de5-425e-bb09-54454118683e,user_041,2023-09-28,165.68,supermarket,"Purchase at García, Aparicio y Rojo"
+cf1ba945-28ef-41d8-984c-bfa8ad108ebe,user_002,2023-01-27,30.99,shopping,facilita redes end-to-end
+6c44e12f-36b2-4013-86e7-23b83e2da58d,user_087,2023-12-15,93.39,food,entrega comercio electrónico eficientes
+fd23d129-b209-44cd-b8a7-839e197284e5,user_037,2023-05-08,100.31,health,genera convergencia de clase mundial
+1494ee80-20f8-4bca-91f4-1cd0e9bd5195,user_037,2023-02-16,177.53,supermarket,Purchase at Lozada y de la Fuente S. R.L. de C.V.
+391b2005-d8bf-4a55-adb9-05279e039269,user_015,2023-02-25,49.81,supermarket,Purchase at Pedroza-Garibay e Hijos
+b60ef21c-f6e0-422b-ad18-fdcbbb4dbea1,user_096,2023-06-18,134.08,shopping,cultiva ancho de banda de punta
+dafc1f35-9c52-45cc-b41f-dd9e2ef483c6,user_063,2023-11-25,134.2,food,abraza cadena de producción granulares
+38d6e077-330a-45b1-a07e-4145eecb4317,user_097,2023-08-26,416.16,health,entrega métricas visionarias
+d23a7f6d-b275-4628-aaeb-a339b0ddaba2,user_064,2023-04-25,72.36,supermarket,Purchase at Despacho Rosario-Nava
+8c253266-8fa0-4da3-9764-dc9289dbe9e3,user_041,2023-02-08,158.97,supermarket,Purchase at Angulo-Casillas
+b05a2ce6-1bbe-46c2-91b9-459a4c4ab147,user_069,2023-06-18,172.08,supermarket,"Purchase at Proyectos Arce, Armas y Ávila"
+a25b55ee-5936-4e00-bf76-341ff6a50ef0,user_017,2023-03-27,21.87,entertainment,crece sinergias virtuales
+93503d8e-9bb8-49c5-90e1-96946387d1ec,user_073,2023-08-31,57.45,food,incentiva interfaces proactivas
+3bef4680-c518-4a86-a92c-2cafd8a8dfff,user_044,2023-12-16,69.77,entertainment,transiciona servicios web e-business
+91038d1c-9dba-4c1c-ab30-8ac286fc3c44,user_040,2023-07-27,92.27,shopping,habilita contenido de misión crítica
+ea5b8a9e-aabc-442b-aa52-443725cb5605,user_038,2023-10-20,54.21,transport,Subway fare
+6394b071-749d-4d0a-9e44-0ff979394b96,user_021,2023-03-18,106.9,food,redefine relaciones e-business
+f9f1b7bb-70b1-4f18-91b9-65361683dfb7,user_084,2023-01-22,40.34,entertainment,revoluciona canales intuitivas
+9b71ac1b-cf54-42ae-8d88-1013f364ce08,user_031,2023-10-13,45.74,transport,Uber ride
+69bbf9a4-4e23-43f2-9a73-c93ced0a24f8,user_059,2023-07-21,68.58,supermarket,Purchase at Terán-Quintanilla y Asociados
+ed026115-cd9e-456c-a897-10279c079bdd,user_059,2023-11-19,6.52,shopping,implementa nichos virtuales
+cf7ecef5-52d3-427a-9970-701b9131b642,user_027,2023-07-25,108.99,transport,Uber ride
+dd54c092-a7b3-489a-b919-6a5f63e93cb1,user_080,2023-01-05,41.62,entertainment,reinventa portales distribuidas
+1bff1853-b156-4d77-ac88-6db2b71eec62,user_063,2023-04-03,70.49,transport,Train ticket
+db079174-8903-45a6-ae08-9f3b9a576cd0,user_094,2023-12-21,116.88,food,fortalece ROI valor agregado
+8f4ec152-a382-42aa-8f23-47b15e3c6562,user_058,2023-10-02,95.62,food,facilita comercio electrónico holísticas
+af38995a-52be-4000-8fd9-38ea1e7904ad,user_021,2023-04-07,135.86,transport,Train ticket
+1800367d-88b9-45bc-bb83-c72a01f94a1b,user_063,2023-04-10,138.1,shopping,monetiza ROI dinámicas
+1d2c33e1-ce02-4184-a4da-714ac4b74c02,user_049,2023-03-24,133.88,shopping,fortalece ROI de siguiente generación
+d4b8e1af-0259-42e1-9efe-86e2e488c398,user_079,2023-04-20,96.06,transport,Subway fare
+1c3fb27e-ec68-4b8d-af15-c50dbfe675ca,user_038,2023-02-12,106.9,entertainment,entrega redes proactivas
+02e8bf0b-96ff-474c-a9c0-9d3213e06fbc,user_049,2023-02-28,175.1,supermarket,Purchase at Quintana y Botello e Hijos
+e8a1ca62-84cf-4beb-8b66-691b2ff36ad2,user_065,2023-05-24,86.01,transport,Train ticket
+381cda3f-e857-426e-833c-5c4e19d6396b,user_031,2023-10-05,34.45,supermarket,Purchase at Alarcón-Luna S.A. de C.V.
+ef857a67-7df9-40a6-abae-ce20861bb24b,user_043,2023-05-13,12.44,food,integra ROI robustas
+f42f7e3e-7fe9-49a2-9115-ffb8bd8b9d67,user_063,2023-04-27,99.1,shopping,incuba iniciativas uno-a-uno
+37cf5268-dc97-4415-833d-6431dc9a8f39,user_066,2023-07-23,79.07,supermarket,Purchase at Grupo Terrazas y Zambrano
+500924e6-1a71-4ed5-9406-42b0b3bfe4db,user_040,2023-07-09,156.63,supermarket,Purchase at León y Feliciano e Hijos
+550e9ef0-4116-45a4-b6ab-7afd04be03a6,user_100,2023-09-22,194.28,supermarket,"Purchase at Industrias Medina, Borrego y Contreras"
+e7d847d5-9ede-4d98-a706-7a91fb71ed2a,user_039,2023-09-07,141.07,food,habilita interfaces 24/365
+97a19466-8710-47f3-aa8a-91ea9f13eac0,user_058,2023-04-07,146.05,supermarket,"Purchase at Industrias Ruelas, Cervántez y Pichardo"
+488e80ce-6cca-4359-ba6e-9ec835579302,user_048,2023-02-27,23.61,transport,Subway fare
+ae74200a-ba34-4ea8-8be5-cb27a7c9b395,user_075,2023-03-24,143.35,entertainment,maneja socios granulares
+d00455d2-d0d7-4f19-87d2-2e91dea2dfa2,user_046,2023-02-13,26.82,supermarket,Purchase at Bonilla y Toledo y Asociados
+cec09586-eebd-4e05-9e58-87be800810a2,user_025,2023-03-30,1083.48,travel,sinergiza redes extensibles
+6b4e1e3a-5d2f-4db1-a9ef-cf5f02c0a87a,user_012,2023-09-02,113.82,transport,Uber ride
+0280e8ab-286d-4d59-99b2-b1600d302f7f,user_068,2023-01-11,100.12,transport,Uber ride
+91c225a1-ea29-47a4-adee-fb5f47cd7f17,user_031,2023-03-31,5.22,transport,Uber ride
+211e4c42-6cd1-461b-b5b6-74c93d059443,user_063,2023-01-11,294.78,health,incuba cadena de producción granulares
+3d9371af-617e-4eba-a2ac-054522d02648,user_029,2023-12-17,55.52,food,mejora portales sexi
+0066ea1f-4aa2-4ca6-aa86-12c82522e034,user_085,2023-07-03,184.98,supermarket,"Purchase at Despacho Lomeli, Gil y Arevalo"
+69a03d25-0bdd-4de7-943d-0e5b6f8bd79e,user_076,2023-10-11,62.98,supermarket,Purchase at Nava y Matías e Hijos
+66f5a3ca-aa57-40ec-9ff9-107a1a7d24b9,user_023,2023-12-16,50.53,food,escala comercio electrónico distribuidas
+7bb63dba-3af3-47c6-a7df-71a717641934,user_012,2023-03-16,77.05,supermarket,Purchase at Meléndez-Samaniego
+f24980fb-7634-41e9-b8e1-12fc86a3231e,user_015,2023-05-27,106.54,shopping,genera arquitecturas de paquete
+d2c3d70c-aa69-4136-92d2-7b86cdc141f7,user_033,2023-07-05,129.35,shopping,evoluciona usuarios uno-a-uno
+9913116e-f8aa-4422-a75e-33f1c0d17a73,user_027,2023-03-10,64.43,transport,Uber ride
+f4d16e21-c784-45fd-b7c1-bbd6234e30c9,user_064,2023-04-09,48.09,entertainment,agrega convergencia sin fricciones
+86512446-d9b9-43ef-b7ca-8c195fe66c37,user_038,2023-01-30,187.38,supermarket,Purchase at Corporacin Ortega-Olivas
+765e6824-8515-4286-bb77-dd2ee9d16c2a,user_013,2023-02-28,185.48,supermarket,Purchase at Zapata S.A. de C.V.
+9f1f5261-8c95-433f-b503-80af0bc58bab,user_092,2023-12-09,28.41,food,evoluciona infraestructuras de punta
+980e2ebf-4302-464f-b56c-9717c86953e4,user_036,2023-04-29,5.99,food,empodera interfaces impacto total
+8f21f1cf-7f15-4389-ac13-c693d4a4fa56,user_081,2023-01-03,84.84,shopping,explota interfaces sexi
+dcee6fcc-5e77-4356-873b-1cc0556e4781,user_091,2023-04-03,45.0,shopping,evoluciona contenido virtuales
+dca2bed2-b415-400a-a186-20295c88d048,user_022,2023-10-08,87.53,food,agrega experiencias interactivas
+d28fd71f-9f91-4887-a9e3-9d1b11e31016,user_005,2023-10-21,188.77,supermarket,"Purchase at Valentín, Valle y de la Fuente"
+8cb84df9-e9c4-42b5-a6a5-823e324e6da1,user_052,2023-10-31,332.94,health,optimiza communidades centrado al usuario
+3f0a7a45-cbdc-4e7f-a27f-e0fbc2a9e5d2,user_001,2023-02-21,122.44,food,redefine nichos empresariales
+8e1ad98d-1a2a-4281-a977-9c8e191162b4,user_098,2023-11-18,118.41,food,transforma cadena de producción lo último
+d2c6f253-e542-4fae-8d52-b80c48bd4df5,user_044,2023-08-05,1411.2,travel,mezcla metodologías virales
+f851f989-6492-4a2c-b6a5-4fd02c9bef01,user_052,2023-06-24,16.66,food,cultiva sistemas impacto total
+242c5f58-bf31-45ce-8867-3dfe45da62d8,user_032,2023-08-17,114.67,transport,Subway fare
+f888149b-5a03-4fa8-acd9-74976400e35f,user_081,2023-02-11,54.42,shopping,incuba cadena de producción proactivas
+8e84c485-20f2-4001-8307-f878ffefe982,user_042,2023-09-24,189.84,health,monetiza servicios web ubicuas
+391f5229-909c-4a44-b19f-938fcf57755a,user_021,2023-12-06,84.64,shopping,visualiza modelos colaborativas
+8ed3b9b0-e23d-45d6-8776-0c12a2dca0ed,user_075,2023-03-14,32.11,transport,Subway fare
+7656945c-7ba9-4834-ad6d-cd9d628616ab,user_036,2023-09-23,53.75,shopping,redefine cadena de producción estratégicas
+d44d8ffe-461b-4fe7-aaa2-32547d06cb65,user_070,2023-01-17,124.43,supermarket,Purchase at Montañez-Chacón S.A.
+251e0ffc-7e12-4852-853f-ef10f82450d5,user_060,2023-03-23,86.31,shopping,cultiva relaciones valor agregado
+d4ae38e0-21ac-46f0-a4e1-669ca5aa9ae3,user_039,2023-11-13,395.56,travel,redefine sinergias distribuidas
+0a139447-4dae-4495-bea6-dc2bd2b56512,user_069,2023-12-02,87.3,food,escala aplicaciones ubicuas
+3a3a1a7c-4061-4301-a2b6-3d21299fb356,user_036,2023-01-07,131.5,transport,Subway fare
+5779841a-bd79-4b14-af95-4f77d49f815f,user_049,2023-09-03,17.13,transport,Uber ride
+2a662cdb-5c02-4a0d-868a-f1f957f26a19,user_089,2023-01-01,14.21,transport,Uber ride
+858271eb-dce9-4d4b-b4bf-7f246c07e454,user_007,2023-07-20,85.03,transport,Subway fare
+b1dad03e-1e20-43d7-87fd-87026f169540,user_054,2023-10-22,40.12,food,mejora experiencias llave en mano
+f8ce5dd7-a609-4df9-bd4f-dcce51f85f2f,user_064,2023-12-29,139.16,transport,Train ticket
+93882dc4-3f4c-4d47-a29e-325cf86b453e,user_083,2023-03-12,7.34,transport,Train ticket
+06666dad-95a0-4ff5-912c-05e9ea25c784,user_027,2023-04-28,140.95,shopping,modifica contenido end-to-end
+37a38088-a4cf-40f8-becc-e06fcd19d006,user_055,2023-12-15,79.03,entertainment,mezcla redes empresariales
+c163407f-b85c-463e-93ff-2db469c9a52d,user_023,2023-01-01,180.33,supermarket,"Purchase at Despacho Merino, Barela y Carranza"
+43c61174-e00a-4641-b49b-c46a919f9a97,user_053,2023-03-02,83.63,food,implementa portales uno-a-uno
+b875643b-5bb3-4aac-8c4e-0b9a1d4e7645,user_066,2023-08-20,135.67,transport,Uber ride
+6f4f3c6c-7833-4dc1-b1ea-31b77bc24587,user_071,2023-12-28,21.92,supermarket,Purchase at Grupo Valadez y del Río
+d7b1c7d0-6587-45da-8e6a-96d35b6a60be,user_097,2023-05-20,54.75,shopping,optimiza redes end-to-end
+dcdfc8f9-1766-4773-9b8b-4697b4942ed3,user_051,2023-10-12,379.96,health,escala tecnologías integrado
+c3768bf2-df29-460d-a505-7bbd17001fac,user_095,2023-09-27,113.67,supermarket,Purchase at Club Hernádez y Rojo
+744e9750-5eba-4329-983c-42ccb2e35105,user_011,2023-06-16,102.06,entertainment,genera paradigmas robustas
+40e116ec-7236-40c5-a624-d3b4c11fad0a,user_011,2023-04-02,22.95,supermarket,Purchase at Cabrera S.C.
+6dc339ef-ec05-4173-bb98-c8e28cc528f8,user_014,2023-03-16,63.07,transport,Subway fare
+ba5b5db7-6737-4a67-8216-96b990495405,user_063,2023-06-11,187.64,health,abraza usuarios end-to-end
+7b1e94ec-373c-4389-aba7-fef6de48878e,user_016,2023-08-09,68.17,food,evoluciona modelos estratégicas
+7a8e85a6-0bc3-4be3-9738-820ed802578c,user_002,2023-02-07,50.67,entertainment,integra infraestructuras sexi
+b19deaf3-6c85-4e49-abc8-53fdf4078b1c,user_085,2023-02-11,364.27,health,redefine nichos 24/7
+06288135-b1ac-4b96-ade1-8936c83875b7,user_093,2023-11-11,26.21,shopping,facilita experiencias 24/7
+7a5c7a9f-9c1a-44cf-acf8-a11b56a7c681,user_066,2023-07-09,1473.93,travel,entrega interfaces de punta
+3b3a500d-cde4-4c19-833d-f757efbb6613,user_059,2023-01-17,133.95,food,evoluciona arquitecturas punto-com
+75228a11-c9c8-4f31-a107-e4d4f84a6afb,user_051,2023-02-28,163.3,supermarket,Purchase at Corporacin Guevara-López
+d587a1ea-37d9-405c-8d17-460b1a56ed49,user_008,2023-03-12,164.22,supermarket,Purchase at Club Anaya y Patiño
+f7224290-c849-4f22-acee-0ce506bbd84e,user_018,2023-06-17,39.9,food,crece ROI de siguiente generación
+fd7daa33-f69d-4dfb-98fc-118c26951d49,user_020,2023-06-16,90.88,supermarket,Purchase at del Valle-Trejo
+5d7da856-dbd0-42f1-9289-a8c82f75a889,user_081,2023-03-29,28.9,entertainment,escala experiencias sexi
+60f8fa25-91a1-4f8b-8e61-cfa288d63364,user_070,2023-05-07,1034.81,travel,mezcla portales inalámbrica
+d72a48d7-0ac1-4909-8921-472bcd9c7410,user_086,2023-10-04,145.0,transport,Uber ride
+9d69404c-055f-4ace-b016-704153cce5a9,user_061,2023-02-14,174.19,supermarket,Purchase at Arenas S.A. de C.V.
+c920bded-bc84-4a72-ad35-d4b7035fbf8a,user_020,2023-05-29,139.58,food,optimiza marcados e-business
+80a50a65-6ae3-4641-a475-330c6acac80e,user_064,2023-06-13,113.11,food,genera sinergias distribuidas
+3656e6bd-01ce-429f-acdb-5483dd4ad901,user_005,2023-03-03,74.64,entertainment,utiliza comercio electrónico interactivas
+b2750fd0-f0ae-433b-8e11-0fd5fe306445,user_040,2023-07-04,147.96,transport,Uber ride
+af289f47-a0e7-4d3e-bd1b-47c4e9e2d775,user_095,2023-01-24,134.75,food,sintetiza infraestructuras de clase mundial
+d46b6610-031d-44c0-baa8-8a634948fe8c,user_059,2023-07-11,122.81,food,agrega servicios web de punta
+645175eb-b6ea-43ab-9b26-a2bbd7ad59ae,user_086,2023-12-31,65.2,transport,Subway fare
+b2339315-17e7-4606-97b7-b7194dc86ed5,user_042,2023-07-21,145.4,entertainment,redefine redes listo para la web
+0bb4d1a6-265b-4bbd-9745-b27caaa78583,user_077,2023-07-22,49.21,food,abraza communidades transparentes
+6e91d7c3-ddc5-43b5-997a-f0d582f5553a,user_011,2023-11-29,42.08,shopping,cultiva portales inalámbrica
+99b0db99-d58b-4e23-9047-034055803031,user_050,2023-09-02,149.78,shopping,sinergiza cadena de producción distribuidas
+b869cb0d-b9de-4460-bf1c-c1110f56d94e,user_048,2023-09-25,8.18,entertainment,habilita marcados eficientes
+3b17c97d-1cb1-4385-9cea-24ffcbc964ff,user_055,2023-09-22,78.26,transport,Uber ride
+eb63aaef-f90c-4740-aa60-590338256e1a,user_054,2023-12-23,21.39,transport,Subway fare
+d758c309-00a2-4885-a484-86b883164ab6,user_074,2023-09-15,65.66,food,innova nichos intuitivas
+5ad329d3-5e06-44f8-a612-57561a1f2ca0,user_021,2023-06-20,54.4,entertainment,mejora modelos estratégicas
+9ae24c52-6390-44ec-9c69-50a8e6234567,user_029,2023-04-19,21.83,entertainment,facilita servicios web distribuidas
+5dff502f-c791-43fc-b845-785aae1786c2,user_009,2023-09-27,46.35,shopping,compromete socios plataforma cruzada
+bd5b1f8a-3a80-4cc8-b9c3-f1cb4b300cb1,user_056,2023-03-04,146.01,entertainment,maximiza paradigmas empresariales
+3aadd7d3-68b0-4ad6-b6a7-5c2a939bb70d,user_034,2023-04-23,116.51,food,sintetiza usuarios escalables
+28f3bbb3-7c97-45f3-87da-b3223208b3cf,user_028,2023-02-12,139.79,supermarket,Purchase at Grupo Arellano y Fierro
+cea6a805-aa76-4409-96d1-43f59043fea5,user_100,2023-08-13,73.26,entertainment,evoluciona relaciones virtuales
+71ca182e-b1f0-400d-a868-5fcb3323c96b,user_091,2023-03-18,100.9,supermarket,Purchase at Lucero y Treviño S.A.
+efd1b08b-a1fa-4ece-9132-3c943d82c273,user_100,2023-01-19,1793.3,travel,agrega usuarios innovadoras
+ba34dda3-e5a0-434b-8faa-74931cf96ad0,user_086,2023-06-17,72.27,transport,Subway fare
+4436c4ae-983d-4904-9eee-a79da51711c4,user_075,2023-11-13,123.16,transport,Train ticket
+68a1d0d0-0039-48eb-8e11-7dcfe6d29833,user_036,2023-06-10,78.95,entertainment,visualiza tecnologías valor agregado
+1b1379ce-05b1-4c30-ba77-0413d95dd158,user_100,2023-04-26,481.19,health,libera interfaces centrado al usuario
+f2c61d59-70ff-45c5-8716-e5a86782b661,user_048,2023-02-27,62.84,food,itera sistemas 24/365
+414c36a6-6e21-4b66-90b7-9ba4edacd1c4,user_005,2023-05-24,95.12,shopping,compromete funcionalidades escalables
+3416a419-9546-42df-9dfb-26275d3d6244,user_014,2023-03-10,48.15,supermarket,Purchase at Alonso-Ojeda e Hijos
+1e28553f-0e36-4dc9-91f6-45e98a6a8edf,user_098,2023-03-11,118.04,shopping,entrega aplicaciones plataforma cruzada
+6848c52f-eb1c-4a2f-83c5-fbd06084bf51,user_045,2023-01-11,18.08,food,cultiva communidades B2C
+aeb2694c-9332-4fee-9998-08fa657d68a6,user_078,2023-02-10,5.8,transport,Subway fare
+81722ff9-7799-4277-a8eb-74e8edd87ffb,user_044,2023-01-07,15.65,shopping,facilita canales 24/7
+6ece687f-f4cb-4f10-b2e1-69dcefa70ea1,user_094,2023-05-01,560.76,travel,visualiza paradigmas innovadoras
+834ecff5-54d4-448b-b820-510f9a287e33,user_087,2023-11-22,162.06,health,habilita métricas impacto total
+df4d8543-2180-47c6-90a7-2ff52ac989f2,user_084,2023-10-10,133.65,shopping,incentiva canales virtuales
+ce2e0f5d-ec30-43bf-905d-80363cad6139,user_032,2023-05-16,83.75,supermarket,Purchase at Proyectos Concepción y Solorzano
+4f95ec4d-abb0-45b2-aae8-143ce34b54ca,user_040,2023-08-21,21.81,food,redefine sistemas lo último
+9901edef-ee9c-42a4-b7d0-9f47f53d9404,user_024,2023-06-17,199.35,supermarket,Purchase at Laboratorios Montez y Montes
+6226ee4e-b9d0-484b-b52e-a0f8375355e6,user_070,2023-08-24,93.67,supermarket,Purchase at Industrias Cuellar y Armenta
+0e0c0323-c83f-4bb4-b4db-0abed821f29e,user_091,2023-01-30,121.6,entertainment,utiliza experiencias virales
+5e518a61-b685-4feb-8361-d1c97b729399,user_066,2023-04-23,42.35,food,crece entregables llave en mano
+2dd0fefd-6aa5-4e45-a52a-1f8eb3d18c40,user_015,2023-07-20,66.81,food,empodera plataformas virales
+06035248-de1a-4d8a-8340-df178bd31a31,user_044,2023-06-04,292.8,health,visualiza modelos proactivas
+052d2f82-3cef-4ca1-ac4d-3b97de3b4a4d,user_083,2023-04-10,141.09,supermarket,Purchase at Laboratorios Quezada y Chavarría
+e772fd2f-416b-4209-9dfe-1ee9a2e73a5c,user_049,2023-01-30,131.79,shopping,explota métricas escalables
+e6554ebf-8759-46a2-9e95-03296850e284,user_069,2023-07-25,1256.0,travel,genera convergencia integrado
+e4facf20-215f-414e-b34c-5e693eec6395,user_084,2023-07-14,278.49,health,entrega plataformas intuitivas
+6a8c0933-2c7b-4bd4-b445-a5c7e493dba5,user_034,2023-04-09,46.29,transport,Subway fare
+0883fc00-27c9-4863-9620-558e18d1e796,user_002,2023-06-27,85.05,health,itera experiencias ubicuas
+b54886be-0031-4020-9e0b-ddc7e3a5df60,user_027,2023-06-16,39.0,supermarket,Purchase at Industrias Muñiz-Laboy
+308d946b-cb6a-4062-9132-b721a0dd522b,user_031,2023-05-01,49.9,entertainment,visualiza funcionalidades ricas
+50740af1-fe5a-4581-8d04-9da5f2702eca,user_025,2023-07-01,91.35,transport,Uber ride
+ef8e5eea-89b5-4752-845c-345b2980472b,user_088,2023-11-25,605.39,travel,abraza soluciones punto-com
+e9e58235-ccac-423b-98e8-26abddfc11f3,user_004,2023-08-01,8.55,entertainment,redefine arquitecturas innovadoras
+7f78c7e2-f6ce-4e87-91fc-8ef40fe4841b,user_040,2023-03-24,174.93,health,facilita portales B2B
+b4cdbf8c-3ccc-482c-a6b2-d8e37ea6c1a2,user_040,2023-03-21,122.32,entertainment,facilita marcados open-source
+b043acb8-6412-4521-9e86-34ab1918f94f,user_033,2023-11-10,317.77,health,entrega interfaces open-source
+a9a4444c-cf14-4cca-8553-684c21a1265a,user_015,2023-04-06,81.5,entertainment,evoluciona sinergias inalámbrica
+a2b1e274-7a36-44a2-a53a-9af5b157ee20,user_011,2023-08-25,8.26,entertainment,recontextualiza paradigmas integrado
+b19312b0-507b-4d0a-8913-dab440fbd9a5,user_028,2023-02-06,40.2,entertainment,monetiza esquemas valor agregado
+1e4d0284-f06f-4966-89a0-3fb782a60620,user_033,2023-01-07,108.1,transport,Subway fare
+2186d697-64f7-4d1f-babc-3585cfa837b2,user_013,2023-06-11,48.85,supermarket,Purchase at Corporacin Briones y Yáñez
+f27f1d4c-3b5e-4d3a-93de-4fd0a345da8e,user_017,2023-11-28,341.38,travel,revoluciona soluciones dinámicas
+e93ed9b2-0287-4b3a-a8e8-b23aadc34f2c,user_088,2023-11-10,60.45,supermarket,"Purchase at Irizarry, Guajardo y Guerra"
+e961d636-2f86-47dd-aead-a142b1328257,user_083,2023-09-26,194.77,supermarket,Purchase at Hurtado-Puga e Hijos
+37c9b3f5-c856-4660-a0f8-73d97a84fbe4,user_060,2023-10-11,75.22,transport,Uber ride
+fd452996-8b9d-4560-9474-94741e3c6857,user_088,2023-04-14,53.63,transport,Train ticket
+c4edb39f-c17a-44ce-8524-d2081ddf0895,user_015,2023-10-08,134.53,supermarket,"Purchase at Cardenas, Cabán y Cardenas"
+ed7fd72b-fe2f-4a5c-8113-ea7a0685a440,user_075,2023-06-03,73.9,supermarket,Purchase at Despacho Mireles-Palomo

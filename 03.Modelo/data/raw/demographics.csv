@@ -1,0 +1,101 @@
+user_id,age,income_range,risk_profile,occupation
+user_001,19,30k-50k,conservative,Sericultor
+user_002,54,100k-150k,moderate,Agente de aduanas
+user_003,23,100k-150k,moderate,Conductor de autobús
+user_004,63,30k-50k,conservative,Oficial de préstamos y créditos
+user_005,30,50k-100k,moderate,Pulidor de metales y afilador de herramientas
+user_006,62,100k-150k,moderate,Maquinista de locomotoras
+user_007,21,150k+,aggressive,Planchador manuales
+user_008,38,150k+,aggressive,Receptor de apuestas
+user_009,40,50k-100k,moderate,Conductor de automóviles
+user_010,68,100k-150k,moderate,Demostrador de tiendas
+user_011,29,150k+,aggressive,Programador de aplicaciones
+user_012,45,100k-150k,moderate,Profesional de ventas de tecnología de la información y las comunicaciones
+user_013,48,100k-150k,moderate,Camarero de barra
+user_014,35,50k-100k,moderate,Operador de instalaciones de procesamiento de metales
+user_015,25,100k-150k,moderate,Profesional de ventas técnicas y médicas
+user_016,23,50k-100k,moderate,Profesional religioso
+user_017,43,150k+,aggressive,Curtidor
+user_018,59,100k-150k,moderate,Auxiliar de maestro
+user_019,45,150k+,aggressive,Director de empresas de construcción
+user_020,50,30k-50k,conservative,Miembro del poder legislativo
+user_021,33,150k+,aggressive,Mecánico y reparador de instrumentos de precisión
+user_022,56,50k-100k,moderate,Suboficial de las fuerzas armadas
+user_023,67,30k-50k,conservative,Vendedor de quioscos y de puestos de mercado
+user_024,51,100k-150k,moderate,Operador de instalaciones mineras
+user_025,53,30k-50k,conservative,Profesor de formación profesional
+user_026,27,150k+,aggressive,Diseñador multimedia
+user_027,35,150k+,aggressive,Cuidador de niños
+user_028,61,30k-50k,conservative,Entrevistador de investigaciones de mercados
+user_029,37,30k-50k,conservative,Cuidador de niños
+user_030,34,150k+,aggressive,Técnico forestal
+user_031,21,150k+,aggressive,Capitán decubierta
+user_032,46,50k-100k,moderate,Peletero
+user_033,24,50k-100k,moderate,Criador de ganado
+user_034,42,30k-50k,conservative,Analista financiero
+user_035,70,30k-50k,conservative,Profesional de enfermería
+user_036,45,150k+,aggressive,Agricultor
+user_037,67,50k-100k,moderate,Veterinario
+user_038,58,100k-150k,moderate,Recolector de dinero en aparatos de venta automática y lector de medidores
+user_039,25,30k-50k,conservative,Director de servicios de bienestar social
+user_040,67,30k-50k,conservative,Entrevistador de investigaciones de mercados
+user_041,47,100k-150k,moderate,Deportista
+user_042,26,50k-100k,moderate,Controlador de instalaciones de procesamiento de productos químicos
+user_043,19,150k+,aggressive,Profesional de la protección medioambiental
+user_044,63,50k-100k,moderate,Mecánico y reparador de vehículos de motor
+user_045,32,30k-50k,conservative,Zapatero
+user_046,52,100k-150k,moderate,Peón de obras públicas y mantenimiento
+user_047,52,150k+,aggressive,Operador de telar y otras máquinas tejedoras
+user_048,37,50k-100k,moderate,Analista financiero
+user_049,65,30k-50k,conservative,Trabajador comunitario de la salud
+user_050,41,30k-50k,conservative,Supervisor de la construcción
+user_051,53,30k-50k,conservative,Farmacéutico
+user_052,18,30k-50k,conservative,Árbitro deportivo
+user_053,30,100k-150k,moderate,Traductor e intérprete
+user_054,26,30k-50k,conservative,Operador de máquinas para fabricar productos de material plástico
+user_055,66,50k-100k,moderate,Ayudante de ambulancia
+user_056,25,30k-50k,conservative,Fabricante de instrumentos musicales
+user_057,49,150k+,aggressive,Tapicero
+user_058,24,30k-50k,conservative,Gerente general
+user_059,61,50k-100k,moderate,Optometrista
+user_060,32,30k-50k,conservative,Operador de máquinas para fabricar productos de material plástico
+user_061,52,30k-50k,conservative,Agente de maniobras
+user_062,56,30k-50k,conservative,Instalador y reparador de líneas eléctricas
+user_063,46,150k+,aggressive,Instalador y reparador en tecnología de la información y las comunicaciones
+user_064,62,100k-150k,moderate,Entrenador deportivo
+user_065,25,50k-100k,moderate,Tasador
+user_066,67,150k+,aggressive,Operario en cemento armado y enfoscador
+user_067,44,30k-50k,conservative,Recepcionista
+user_068,49,30k-50k,conservative,Empleado del servicio de personal
+user_069,61,30k-50k,conservative,Director de investigación y desarrollo
+user_070,68,50k-100k,moderate,Productor y trabajador calificado de explotaciones agropecuarias mixtas
+user_071,18,30k-50k,conservative,Conductor de motocicletas
+user_072,48,30k-50k,conservative,Profesor de enseñanza secundaria
+user_073,23,50k-100k,moderate,Director de empresas de abastecimiento distribución y afines
+user_074,68,150k+,aggressive,Operador de plantas y máquinas de productos químicos
+user_075,42,30k-50k,conservative,Pintor y empapelador
+user_076,40,150k+,aggressive,Locutor de radio
+user_077,58,30k-50k,conservative,Operador de telar y otras máquinas tejedoras
+user_078,33,100k-150k,moderate,Operador de máquinas para elaborar alimentos y productos afines
+user_079,57,150k+,aggressive,Fotógrafo
+user_080,20,50k-100k,moderate,Director de explotaciones de minería
+user_081,51,150k+,aggressive,Compositor
+user_082,47,100k-150k,moderate,Ingeniero químico
+user_083,35,30k-50k,conservative,Oficial de las fuerzas armadas
+user_084,37,100k-150k,moderate,Instalador y reparador de líneas eléctricas
+user_085,37,150k+,aggressive,Secretario (general)
+user_086,54,100k-150k,moderate,Oficinista general
+user_087,61,30k-50k,conservative,Fabricante de instrumentos musicales
+user_088,49,100k-150k,moderate,Representante comercial
+user_089,22,50k-100k,moderate,Profesional de la salud y la higiene laboral y ambiental
+user_090,35,50k-100k,moderate,Catador de bebidas
+user_091,48,100k-150k,moderate,Mandader
+user_092,27,30k-50k,conservative,Suboficial de las fuerzas armadas
+user_093,34,150k+,aggressive,Demostrador de tiendas
+user_094,69,30k-50k,conservative,Agente de empleo
+user_095,37,100k-150k,moderate,Vendedor ambulantes (excluyendo de comida)
+user_096,55,150k+,aggressive,Curador de museos
+user_097,28,100k-150k,moderate,Agente de bolsa
+user_098,18,30k-50k,conservative,Secretario administrativo
+user_099,50,150k+,aggressive,Modelador de vidrio
+user_100,51,30k-50k,conservative,Conductor de camiones pesados

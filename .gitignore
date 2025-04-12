@@ -6,7 +6,6 @@ env/
 
 # Documentos de planificación interna
 03.Modelo/plan_modelo_crosselling_completo.md
-03.Modelo/plan_modelo_crosselling_optimizado.md
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/

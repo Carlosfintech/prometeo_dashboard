@@ -1,0 +1,38 @@
+# Entorno virtual
+jupyter_env/
+venv/
+env/
+.env/
+
+# Documentos de planificación interna
+03.Modelo/plan_modelo_crosselling_completo.md
+03.Modelo/plan_modelo_crosselling_optimizado.md
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.log
+
+# Archivos específicos del sistema
+.vscode/
+.idea/
+*.swp
+*.swo 

@@ -896,6 +896,6 @@ ggplot(demo_transacciones, aes(x = risk_profile)) +
 # - Es relevante cruzar con frecuencia de compra y ticket promedio para confirmar el nivel de valor por segmento.
 
 
-#Feature engineering 
+#Porximopasos Feature engineering 
 
 

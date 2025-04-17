@@ -35,10 +35,9 @@ La propuesta integra un proceso de I+D coherente con el flujo de trabajo de data
 
 - Configuración inicial del entorno, repositorios y dependencias.
 
-### Fase 1 – Observación e Investigación (incluye EDA)
+### Fase 1 – Observación e Investigación 
 
 - Investigación de productos, competidores y tendencias en Open Banking.  
-- Análisis Exploratorio de Datos para comprender la distribución y la calidad de la información disponible.
 
 ### Fase 2 – Definición y Focalización
 
@@ -46,7 +45,7 @@ La propuesta integra un proceso de I+D coherente con el flujo de trabajo de data
 
 ### Fase 3 – Ideación y Diseño
 
-- Diseño de la arquitectura analítica y desarrollo de variables clave (*Feature Engineering*).
+- Diseño 
 
 ### Fase 4 – Prototipado y Validación
 

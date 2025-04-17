@@ -7,9 +7,9 @@ library(lubridate)
 library(ggplot2)
 
 # Cargar archivos desde la ruta correcta
-transactions <- read_csv("03.Modelo/data/transactions.csv")
-demographics <- read_csv("03.Modelo/data/demographics.csv")
-products <- read_csv("03.Modelo/data/products.csv")
+transactions <- read_csv("03.Modelo/data/raw/transactions.csv")
+demographics <- read_csv("03.Modelo/data/raw/demographics.csv")
+products <- read_csv("03.Modelo/data/raw/products.csv")
 
 #Verificar limpieza de los datos
 
@@ -896,6 +896,44 @@ ggplot(demo_transacciones, aes(x = risk_profile)) +
 # - Es relevante cruzar con frecuencia de compra y ticket promedio para confirmar el nivel de valor por segmento.
 
 
-#Feature engineering 
+#Categora fav vs insurance
+
+table_insurance_categoria <- table(df_final2$insurance, df_final2$categoria_favorita_monto)
+prop_table <- prop.table(table_insurance_categoria, margin = 1)
+print(table_insurance_categoria)
+print(round(prop_table * 100, 2))  # Porcentajes
+
+df_plot <- df_final2 %>%
+  group_by(insurance, categoria_favorita_monto) %>%
+  summarise(count = n(), .groups = "drop") %>%
+  group_by(insurance) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+ggplot(df_plot, aes(x = insurance, y = percentage, fill = categoria_favorita_monto)) +
+  geom_bar(stat = "identity", position = "fill") +
+  labs(title = "Distribución de categoría favorita según Insurance",
+       x = "Tiene seguro",
+       y = "Proporción (%)",
+       fill = "Categoría favorita") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  theme_minimal()
+
+#Monto vs Insurance
+
+df_final2 %>%
+  group_by(insurance) %>%
+  summarise(
+    media = mean(monto_promedio_mensual.x, na.rm = TRUE),
+    mediana = median(monto_promedio_mensual.x, na.rm = TRUE),
+    sd = sd(monto_promedio_mensual.x, na.rm = TRUE),
+    n = n()
+  )
+
+ggplot(df_final2, aes(x = monto_promedio_mensual.x)) +
+  geom_histogram(bins = 30, fill = "skyblue") +
+  facet_wrap(~insurance, scales = "free") +
+  theme_minimal()
+
+#Porximopasos Feature engineering 
 
 

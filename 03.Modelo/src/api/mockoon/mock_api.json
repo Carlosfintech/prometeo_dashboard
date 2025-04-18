@@ -1,0 +1,211 @@
+{
+  "uuid": "57177570-5d11-49c8-a4a1-6943e28857fa",
+  "lastMigration": 33,
+  "name": "Prometeo Mock API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "b1b7da5a-0c76-4e3f-981e-2c5d33f41a6f",
+      "documentation": "Devuelve los datos demográficos de los clientes",
+      "method": "get",
+      "endpoint": "demographics",
+      "responses": [
+        {
+          "uuid": "5f1e85e9-5c38-43c4-9549-1a7c89b2eaf7",
+          "body": "[\n  {\n    \"user_id\": \"user_001\",\n    \"age\": 19,\n    \"income_range\": \"30k-50k\",\n    \"risk_profile\": \"conservative\",\n    \"occupation\": \"Sericultor\"\n  },\n  {\n    \"user_id\": \"user_002\",\n    \"age\": 54,\n    \"income_range\": \"100k-150k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Agente de aduanas\"\n  },\n  {\n    \"user_id\": \"user_003\",\n    \"age\": 23,\n    \"income_range\": \"100k-150k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Conductor de autobús\"\n  },\n  {\n    \"user_id\": \"user_004\",\n    \"age\": 63,\n    \"income_range\": \"30k-50k\",\n    \"risk_profile\": \"conservative\",\n    \"occupation\": \"Oficial de préstamos y créditos\"\n  },\n  {\n    \"user_id\": \"user_005\",\n    \"age\": 30,\n    \"income_range\": \"50k-100k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Pulidor de metales y afilador de herramientas\"\n  },\n  {\n    \"user_id\": \"user_006\",\n    \"age\": 62,\n    \"income_range\": \"100k-150k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Maquinista de locomotoras\"\n  },\n  {\n    \"user_id\": \"user_007\",\n    \"age\": 21,\n    \"income_range\": \"150k+\",\n    \"risk_profile\": \"aggressive\",\n    \"occupation\": \"Planchador manuales\"\n  },\n  {\n    \"user_id\": \"user_008\",\n    \"age\": 38,\n    \"income_range\": \"150k+\",\n    \"risk_profile\": \"aggressive\",\n    \"occupation\": \"Receptor de apuestas\"\n  },\n  {\n    \"user_id\": \"user_009\",\n    \"age\": 40,\n    \"income_range\": \"50k-100k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Conductor de automóviles\"\n  },\n  {\n    \"user_id\": \"user_010\",\n    \"age\": 68,\n    \"income_range\": \"100k-150k\",\n    \"risk_profile\": \"moderate\",\n    \"occupation\": \"Demostrador de tiendas\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos demográficos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "1a6a7c87-d09f-478d-a4dc-6351d0b79c5d",
+      "documentation": "Devuelve los productos contratados por los clientes",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "e8a9d6e5-0b44-4c4f-8e78-8b2c1f98a8b9",
+          "body": "[\n  {\n    \"user_id\": \"user_001\",\n    \"product_type\": \"checking_account\",\n    \"contract_date\": \"2021-06-01\"\n  },\n  {\n    \"user_id\": \"user_002\",\n    \"product_type\": \"checking_account\",\n    \"contract_date\": \"2021-09-11\"\n  },\n  {\n    \"user_id\": \"user_002\",\n    \"product_type\": \"investment_account\",\n    \"contract_date\": \"2021-10-16\"\n  },\n  {\n    \"user_id\": \"user_003\",\n    \"product_type\": \"savings_account\",\n    \"contract_date\": \"2021-02-07\"\n  },\n  {\n    \"user_id\": \"user_003\",\n    \"product_type\": \"insurance\",\n    \"contract_date\": \"2021-07-25\"\n  },\n  {\n    \"user_id\": \"user_004\",\n    \"product_type\": \"checking_account\",\n    \"contract_date\": \"2021-11-02\"\n  },\n  {\n    \"user_id\": \"user_005\",\n    \"product_type\": \"savings_account\",\n    \"contract_date\": \"2022-06-08\"\n  },\n  {\n    \"user_id\": \"user_005\",\n    \"product_type\": \"credit_card\",\n    \"contract_date\": \"2022-08-05\"\n  },\n  {\n    \"user_id\": \"user_006\",\n    \"product_type\": \"savings_account\",\n    \"contract_date\": \"2021-10-09\"\n  },\n  {\n    \"user_id\": \"user_006\",\n    \"product_type\": \"credit_card\",\n    \"contract_date\": \"2022-01-22\"\n  },\n  {\n    \"user_id\": \"user_007\",\n    \"product_type\": \"savings_account\",\n    \"contract_date\": \"2022-06-24\"\n  },\n  {\n    \"user_id\": \"user_008\",\n    \"product_type\": \"checking_account\",\n    \"contract_date\": \"2020-01-18\"\n  },\n  {\n    \"user_id\": \"user_008\",\n    \"product_type\": \"insurance\",\n    \"contract_date\": \"2021-10-11\"\n  },\n  {\n    \"user_id\": \"user_009\",\n    \"product_type\": \"checking_account\",\n    \"contract_date\": \"2020-02-07\"\n  },\n  {\n    \"user_id\": \"user_009\",\n    \"product_type\": \"insurance\",\n    \"contract_date\": \"2021-08-05\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos de productos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3c6b8d49-5e72-4f5a-9f7b-f5a7c9b2e8d1",
+      "documentation": "Devuelve las transacciones realizadas por los clientes",
+      "method": "get",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "9f7b5e72-4f5a-3c6b-8d49-9b2e8d1f5a7c",
+          "body": "[\n  {\n    \"transaction_id\": \"tx_00001\",\n    \"user_id\": \"user_001\",\n    \"date\": \"2023-01-10\",\n    \"amount\": 125.50,\n    \"merchant_category\": \"retail\"\n  },\n  {\n    \"transaction_id\": \"tx_00002\",\n    \"user_id\": \"user_001\",\n    \"date\": \"2023-01-15\",\n    \"amount\": 45.00,\n    \"merchant_category\": \"grocery\"\n  },\n  {\n    \"transaction_id\": \"tx_00003\",\n    \"user_id\": \"user_001\",\n    \"date\": \"2023-02-05\",\n    \"amount\": 78.25,\n    \"merchant_category\": \"entertainment\"\n  },\n  {\n    \"transaction_id\": \"tx_00004\",\n    \"user_id\": \"user_002\",\n    \"date\": \"2023-01-05\",\n    \"amount\": 230.00,\n    \"merchant_category\": \"retail\"\n  },\n  {\n    \"transaction_id\": \"tx_00005\",\n    \"user_id\": \"user_002\",\n    \"date\": \"2023-01-20\",\n    \"amount\": 65.75,\n    \"merchant_category\": \"grocery\"\n  },\n  {\n    \"transaction_id\": \"tx_00006\",\n    \"user_id\": \"user_002\",\n    \"date\": \"2023-02-10\",\n    \"amount\": 150.25,\n    \"merchant_category\": \"travel\"\n  },\n  {\n    \"transaction_id\": \"tx_00007\",\n    \"user_id\": \"user_003\",\n    \"date\": \"2023-01-18\",\n    \"amount\": 95.50,\n    \"merchant_category\": \"entertainment\"\n  },\n  {\n    \"transaction_id\": \"tx_00008\",\n    \"user_id\": \"user_003\",\n    \"date\": \"2023-02-15\",\n    \"amount\": 120.00,\n    \"merchant_category\": \"retail\"\n  },\n  {\n    \"transaction_id\": \"tx_00009\",\n    \"user_id\": \"user_004\",\n    \"date\": \"2023-01-08\",\n    \"amount\": 85.25,\n    \"merchant_category\": \"healthcare\"\n  },\n  {\n    \"transaction_id\": \"tx_00010\",\n    \"user_id\": \"user_004\",\n    \"date\": \"2023-01-25\",\n    \"amount\": 110.50,\n    \"merchant_category\": \"grocery\"\n  },\n  {\n    \"transaction_id\": \"tx_00011\",\n    \"user_id\": \"user_004\",\n    \"date\": \"2023-02-12\",\n    \"amount\": 200.00,\n    \"merchant_category\": \"travel\"\n  },\n  {\n    \"transaction_id\": \"tx_00012\",\n    \"user_id\": \"user_005\",\n    \"date\": \"2023-01-15\",\n    \"amount\": 75.50,\n    \"merchant_category\": \"retail\"\n  },\n  {\n    \"transaction_id\": \"tx_00013\",\n    \"user_id\": \"user_005\",\n    \"date\": \"2023-02-05\",\n    \"amount\": 45.25,\n    \"merchant_category\": \"grocery\"\n  },\n  {\n    \"transaction_id\": \"tx_00014\",\n    \"user_id\": \"user_006\",\n    \"date\": \"2023-03-10\",\n    \"amount\": 135.50,\n    \"merchant_category\": \"retail\"\n  },\n  {\n    \"transaction_id\": \"tx_00015\",\n    \"user_id\": \"user_007\",\n    \"date\": \"2023-03-15\",\n    \"amount\": 95.75,\n    \"merchant_category\": \"entertainment\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos de transacciones",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "2d0d6c4e-1dc5-4343-a66e-509b975dfb8a",
+      "documentation": "Recibe los resultados de las predicciones",
+      "method": "post",
+      "endpoint": "results",
+      "responses": [
+        {
+          "uuid": "3f62f578-cd0d-4d79-8e2b-f428a3c3c579",
+          "body": "{\n  \"status\": \"success\",\n  \"message\": \"Resultados recibidos correctamente\",\n  \"timestamp\": \"{{now}}\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Resultados recibidos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "callbacks": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "b1b7da5a-0c76-4e3f-981e-2c5d33f41a6f"
+    },
+    {
+      "type": "route",
+      "uuid": "1a6a7c87-d09f-478d-a4dc-6351d0b79c5d"
+    },
+    {
+      "type": "route",
+      "uuid": "3c6b8d49-5e72-4f5a-9f7b-f5a7c9b2e8d1"
+    },
+    {
+      "type": "route",
+      "uuid": "2d0d6c4e-1dc5-4343-a66e-509b975dfb8a"
+    }
+  ],
+  "folders": [],
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "data": []
+}

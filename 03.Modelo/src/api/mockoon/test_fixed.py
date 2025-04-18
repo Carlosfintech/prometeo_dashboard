@@ -196,47 +196,133 @@ def transform(demog, prod, tx):
     tx_full['share_fav'] = tx_full['total_spend_fav'] / tx_full['total_spend']
     del month, ma, diffs, pct; gc.collect()
 
-    # 3) Dataset final con left merges
+    # 5) Dataset final con left merges
     df = demog.merge(prod_agg, on='user_id', how='left') \
-              .merge(tx_full, on='user_id', how='left')
-
-    # limpieza final
-    drop_cols = [
-        'fecha_segundo_producto_ts','total_spend','monto_promedio_transaccion',
-        'hhi','share_fav','total_transacciones','categoria_favorita','insurance'
-    ]
+              .merge(tx_full,  on='user_id', how='left')
+    
+    # Eliminar irrelevantes
+    drop_cols = ['fecha_segundo_producto_ts','total_spend','monto_promedio_transaccion',
+                 'hhi','share_fav','total_transacciones','categoria_favorita','insurance']
     df.drop(columns=[c for c in drop_cols if c in df], inplace=True)
+    
+    # Fechas → ts - asegurarnos que los nombres sean exactamente como los espera el modelo
     for c in ['fecha_primer_producto','fecha_segundo_producto','mes_mas_compras','mes_mayor_monto']:
         if c in df:
             df[f'{c}_ts'] = df[c].astype(int)//10**9
             df.drop(columns=c, inplace=True)
-    df['dias_entre_productos']            = df['dias_entre_productos'].fillna(0)
-    df['variacion_mensual_promedio']     = df['variacion_mensual_promedio'].fillna(0)
-    df['variacion_mensual_promedio_pct'] = df['variacion_mensual_promedio_pct'].fillna(0)
-
-    to_scale = ['age','dias_entre_productos','antiguedad_cliente','numero_productos',
-                'recencia_transaccion','variacion_mensual_promedio','variacion_mensual_promedio_pct']
-    df[to_scale] = StandardScaler().fit_transform(df[to_scale])
-
-    if 'total_spend_fav' in df:
-        df['total_spend_fav'] = np.log1p(df['total_spend_fav'])
-
-    cat_vars = [
-        'income_range','risk_profile','occupation','age_range_sturges',
-        'primer_producto','segundo_producto','combinacion_productos','categoria_favorita_monto'
+    
+    # Manejar duplicados en columnas después del merge
+    for col in df.columns:
+        if '.x' in col or '.y' in col:
+            # Eliminar sufijo para columnas con .x o renombrar adecuadamente
+            base_col = col.split('.')[0]
+            if base_col + '.x' in df.columns and base_col + '.y' in df.columns:
+                # Mantener la versión .x y eliminar la .y
+                df[base_col] = df[base_col + '.x']
+                df.drop(columns=[base_col + '.x', base_col + '.y'], inplace=True)
+            elif base_col + '.x' in df.columns:
+                df[base_col] = df[base_col + '.x']
+                df.drop(columns=[base_col + '.x'], inplace=True)
+            elif base_col + '.y' in df.columns:
+                df[base_col] = df[base_col + '.y']
+                df.drop(columns=[base_col + '.y'], inplace=True)
+    
+    # Crear columna "transacciones_promedio_mensual" si no existe
+    if 'transacciones_promedio_mensual' not in df.columns and 'n_meses_activos' in df.columns and 'total_transacciones' in df.columns:
+        df['transacciones_promedio_mensual'] = df['total_transacciones'] / df['n_meses_activos'].replace(0, 1)
+    
+    # Verificación final de columnas esperadas según Pipeline_test2.csv
+    expected_columns = [
+        'user_id', 'age', 'income_range', 'risk_profile', 'occupation', 'age_range_sturges',
+        'primer_producto', 'segundo_producto', 'checking_account', 'credit_card', 'insurance',
+        'investment', 'savings_account', 'dias_entre_productos', 'antiguedad_cliente',
+        'numero_productos', 'n_meses_activos', 'recencia_transaccion', 'entertainment_count',
+        'food_count', 'health_count', 'shopping_count', 'supermarket_count', 'transport_count',
+        'travel_count', 'categoria_favorita_monto', 'total_spend_fav', 'variacion_mensual_promedio',
+        'variacion_mensual_promedio_pct', 'fecha_primer_producto_ts', 'fecha_segundo_producto_ts',
+        'mes_mas_compras_ts', 'mes_mayor_monto_ts'
     ]
-    for c in cat_vars:
-        if c in df:
-            df[c] = LabelEncoder().fit_transform(df[c].astype(str).fillna('unknown'))
-    df.drop(columns=['combinacion_productos'], inplace=True, errors='ignore')
-
-    for cat in ['food','health','shopping','transport','entertainment','other','travel','supermarket']:
-        df[f'{cat}_count'] = df.get(f'{cat}_count', 0)
-    for b in ['checking_account','savings_account','credit_card','investment','insurance']:
-        if b in df:
+    
+    # Verificar y corregir columnas faltantes
+    for col in expected_columns:
+        if col not in df.columns:
+            logging.warning(f"Columna esperada {col} no existe - añadiendo con valor cero o valores por defecto")
+            df[col] = 0
+            
+            # Manejo específico para columnas categóricas
+            if col in ['primer_producto', 'segundo_producto', 'age_range_sturges', 'categoria_favorita_monto']:
+                df[col] = df[col].astype(str)
+    
+    # Rellenar valores nulos en columnas booleanas
+    bool_cols = ['checking_account', 'credit_card', 'insurance', 'investment', 'savings_account']
+    for b in bool_cols:
+        if b in df.columns:
             df[b] = df[b].fillna(False).astype(int)
-
-    X = df.drop(columns=['user_id','insurance'], errors='ignore').fillna(0)
+    
+    # Rellenar valores nulos en columnas numéricas
+    for col in ['dias_entre_productos', 'variacion_mensual_promedio', 'variacion_mensual_promedio_pct']:
+        if col in df.columns:
+            df[col] = df[col].fillna(0)
+    
+    # Convertir columnas categóricas a numéricas para XGBoost
+    cat_cols = ['income_range', 'risk_profile', 'occupation', 'age_range_sturges', 
+               'primer_producto', 'segundo_producto', 'categoria_favorita_monto']
+    
+    for col in cat_cols:
+        if col in df.columns:
+            if df[col].dtype == 'category':
+                df[col] = df[col].astype(str)
+            df[col] = df[col].fillna('unknown')
+            # Usamos un simple mapeo numérico para las categorías
+            unique_values = df[col].unique()
+            value_map = {val: i for i, val in enumerate(unique_values)}
+            df[col] = df[col].map(value_map).astype(int)
+            logging.info(f"Columna categórica {col} convertida a tipo numérico.")
+    
+    # Agregar columnas específicas con sufijo .x requeridas por el modelo
+    # Estas son columnas que el modelo espera debido a cómo fue entrenado
+    needed_x_columns = [
+        'mes_mas_compras.x_ts', 
+        'variacion_mensual_promedio.x', 
+        'mes_mayor_monto.x_ts', 
+        'transacciones_promedio_mensual.x', 
+        'variacion_mensual_promedio_pct.x'
+    ]
+    
+    for col in needed_x_columns:
+        base_col = col.split('.x')[0]
+        if col not in df.columns and base_col in df.columns:
+            df[col] = df[base_col]
+            logging.info(f"Creada columna {col} usando valores de {base_col}")
+        elif col not in df.columns:
+            df[col] = 0
+            logging.info(f"Creada columna {col} con valores cero")
+    
+    # Extraer solo las columnas que sabemos que el modelo espera
+    # Obtenemos la lista exacta de columnas desde el modelo pre-entrenado
+    try:
+        with open(MODEL_PATH, 'rb') as f:
+            temp_model = pickle.load(f)
+        model_columns = temp_model.feature_names_in_
+        
+        # Crear las columnas faltantes que el modelo espera
+        for col in model_columns:
+            if col not in df.columns:
+                logging.warning(f"Columna requerida por el modelo {col} no existe - creando con ceros")
+                df[col] = 0
+                
+        # X final - solo incluir las columnas que el modelo espera en el mismo orden
+        X = df[model_columns].copy()
+        logging.info(f"Dataset ajustado para coincidir exactamente con las {len(model_columns)} columnas que el modelo espera")
+    except Exception as e:
+        logging.error(f"Error al obtener las columnas del modelo: {e}. Usando todas las columnas disponibles.")
+        X = df.copy()
+    
+    # Guardar el DataFrame final para verificación
+    X_with_ids = X.copy()
+    X_with_ids.to_csv("model_input_verification.csv", index=False)
+    logging.info(f"DataFrame para verificación guardado en model_input_verification.csv con shape {X.shape}")
+    
     return X, y, user_ids
 
 
@@ -253,20 +339,20 @@ def load_model_and_threshold():
     return model, threshold
 
 def predict(model, threshold, X):
-    # 1) Comprobar que X tenga todas las columnas esperadas
-    expected = set(model.feature_names_in_)
-    got      = set(X.columns)
-    missing_feats = expected - got
-    extra_feats   = got - expected
-    if missing_feats:
-        logging.warning(f"Faltan estas features en el DataFrame: {missing_feats}")
-    if extra_feats:
-        logging.warning(f"Estas features extra están en el DataFrame: {extra_feats}")
+    """Genera predicciones usando el modelo pre-entrenado XGBoost"""
+    # Ya no necesitamos reindexar porque hemos creado exactamente las columnas que el modelo espera
+    # en la función transform. Solo verificamos que los tipos sean correctos.
+    
+    # Asegurar que todos los datos son numéricos
+    for col in X.columns:
+        if X[col].dtype not in ['int64', 'float64', 'bool']:
+            logging.warning(f"Convirtiendo columna {col} de tipo {X[col].dtype} a float64")
+            X[col] = X[col].astype(float)
+            
+    # Verificación final de forma de datos
+    logging.info(f"Generando predicciones con {X.shape[0]} filas y {X.shape[1]} columnas")
 
-    # 2) Reindex para alinear con el modelo
-    X = X.reindex(columns=list(model.feature_names_in_), fill_value=0)
-
-    # 3) Generar probabilidades y etiquetas
+    # Generar probabilidades y etiquetas
     proba = model.predict_proba(X)[:,1]
     return proba, (proba >= threshold).astype(int)
 

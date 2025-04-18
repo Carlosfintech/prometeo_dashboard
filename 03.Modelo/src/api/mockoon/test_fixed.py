@@ -270,6 +270,7 @@ def predict(model, threshold, X):
     proba = model.predict_proba(X)[:,1]
     return proba, (proba >= threshold).astype(int)
 
+
 # --------- 4. Orquestador -----------------------------------------------------
 def main():
     logging.info("Iniciando proceso end-to-end")

@@ -253,11 +253,22 @@ def load_model_and_threshold():
     return model, threshold
 
 def predict(model, threshold, X):
-    feats = list(model.feature_names_in_)
-    X = X.reindex(columns=feats, fill_value=0)
+    # 1) Comprobar que X tenga todas las columnas esperadas
+    expected = set(model.feature_names_in_)
+    got      = set(X.columns)
+    missing_feats = expected - got
+    extra_feats   = got - expected
+    if missing_feats:
+        logging.warning(f"Faltan estas features en el DataFrame: {missing_feats}")
+    if extra_feats:
+        logging.warning(f"Estas features extra están en el DataFrame: {extra_feats}")
+
+    # 2) Reindex para alinear con el modelo
+    X = X.reindex(columns=list(model.feature_names_in_), fill_value=0)
+
+    # 3) Generar probabilidades y etiquetas
     proba = model.predict_proba(X)[:,1]
     return proba, (proba >= threshold).astype(int)
-
 
 # --------- 4. Orquestador -----------------------------------------------------
 def main():

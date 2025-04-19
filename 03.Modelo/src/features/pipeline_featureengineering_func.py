@@ -428,6 +428,10 @@ def generate_features(
         if c in df.columns:
             df[f"{c}_ts"] = df[c].astype('int64') // 10**9  # Más eficiente que convertir a int
             df.drop(columns=c, inplace=True)
+    
+    # Asegurar que fecha_segundo_producto_ts se elimine si existe
+    if "fecha_segundo_producto_ts" in df.columns:
+        df.drop(columns=["fecha_segundo_producto_ts"], inplace=True)
 
     # Imputaciones vectorizadas
     df["dias_entre_productos"] = df["dias_entre_productos"].fillna(0)

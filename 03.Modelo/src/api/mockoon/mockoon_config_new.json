@@ -1,0 +1,211 @@
+{
+  "uuid": "d51a3a5c-1c5d-4e2f-8f9b-9c8b7a6b5a4c",
+  "lastMigration": 33,
+  "name": "Prometeo Mock API - CSV Files",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "24f952b5-302a-4d63-b897-b31d00600c72",
+      "documentation": "Devuelve los datos demográficos de los clientes",
+      "method": "get",
+      "endpoint": "demographics",
+      "responses": [
+        {
+          "uuid": "edc5f2ee-0139-4821-82f2-97103acaa531",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos demográficos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "/Users/carloslandaverdealquicirez/Documents/Prometeo_reto/Prometeo_project copy/03.Modelo/data/raw/demographics.csv",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "FILE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b7f6761b-b7b3-4c83-b4d1-226c235ffb84",
+      "documentation": "Devuelve los productos contratados por los clientes",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "54c38fe5-b8e4-4a72-bf5d-767c46f809d0",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos de productos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "/Users/carloslandaverdealquicirez/Documents/Prometeo_reto/Prometeo_project copy/03.Modelo/data/raw/products.csv",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "FILE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "2d9d713d-9085-4c25-a68f-ec01b0b3afa4",
+      "documentation": "Devuelve las transacciones realizadas por los clientes",
+      "method": "get",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "2e005ef9-4081-489f-8f26-17c89d55c123",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Datos de transacciones",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "/Users/carloslandaverdealquicirez/Documents/Prometeo_reto/Prometeo_project copy/03.Modelo/data/raw/transactions.csv",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "FILE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "77e5506b-6e11-408d-9663-e585ecf98188",
+      "documentation": "Recibe los resultados de las predicciones",
+      "method": "post",
+      "endpoint": "results",
+      "responses": [
+        {
+          "uuid": "29f35f78-8ed5-4194-9d69-97e6bf8f12c6",
+          "body": "{\n  \"status\": \"success\",\n  \"message\": \"Resultados recibidos correctamente\",\n  \"timestamp\": \"{{now}}\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Resultados recibidos",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "callbacks": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "24f952b5-302a-4d63-b897-b31d00600c72"
+    },
+    {
+      "type": "route",
+      "uuid": "b7f6761b-b7b3-4c83-b4d1-226c235ffb84"
+    },
+    {
+      "type": "route",
+      "uuid": "2d9d713d-9085-4c25-a68f-ec01b0b3afa4"
+    },
+    {
+      "type": "route",
+      "uuid": "77e5506b-6e11-408d-9663-e585ecf98188"
+    }
+  ],
+  "folders": [],
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "data": []
+}

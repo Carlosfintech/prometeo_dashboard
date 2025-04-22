@@ -419,6 +419,7 @@ def generate_features(
         "total_spend", "monto_promedio_transaccion", "monto_promedio_mensual",
         "hhi", "share_fav", "total_transacciones", "categoria_favorita"
     ]
+    
     df.drop(columns=[c for c in drop_cols if c in df.columns], inplace=True)
 
     # Fechas -> timestamp (vectorizado)

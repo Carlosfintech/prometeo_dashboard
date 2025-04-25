@@ -1,0 +1,10 @@
+user_id,product_type,contract_date
+user_001,checking_account,2021-06-01
+user_002,checking_account,2021-09-11
+user_002,investment_account,2021-10-16
+user_003,savings_account,2021-02-07
+user_003,insurance,2021-07-25
+user_004,checking_account,2021-11-02
+user_005,savings_account,2022-06-08
+user_005,credit_card,2022-08-05
+user_006,savings_account,2021-10-09

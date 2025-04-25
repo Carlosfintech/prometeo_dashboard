@@ -78,6 +78,14 @@ class Cliente(Base):
     
     productos = relationship("ClienteProducto", back_populates="cliente")
 
+class Producto(Base):
+    __tablename__ = "productos"
+
+    id = Column(String, primary_key=True)
+    nombre = Column(String, nullable=False)
+    descripcion = Column(String, nullable=True)
+    tipo = Column(String, nullable=False)
+    
 class ClienteProducto(Base):
     __tablename__ = "cliente_productos"
 

@@ -13,7 +13,7 @@ from io import StringIO  # Añadido para StringIO
 
 # Agregar el directorio src al path para importar módulos de features
 sys.path.append(str(Path(__file__).parent.parent.parent.parent))
-from src.features.pipeline_featureengineering_func import generate_features
+from src.features.pipeline_featureengineering_func import generate_features, run_pipeline
 
 # --------- CONFIG ------------------------------------------------------------
 BASE_URL = "http://localhost:3002"  # Mockoon (puerto 3002 según mockoon_config_new.json)

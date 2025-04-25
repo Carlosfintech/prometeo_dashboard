@@ -1,0 +1,6 @@
+# Paquetes para desarrollo
+alembic>=1.13,<2.0
+black>=23.0.0,<24.0.0
+flake8>=7.0.0,<8.0.0
+pytest>=7.0.0,<8.0.0
+pytest-asyncio>=0.21.0,<0.22.0 

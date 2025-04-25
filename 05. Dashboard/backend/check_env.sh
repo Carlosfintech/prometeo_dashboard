@@ -65,6 +65,21 @@ if [ $? -ne 0 ]; then
 fi
 echo "✅ Dependencias de desarrollo instaladas"
 
+# Instalar el módulo src como paquete editable
+echo "🔄 Instalando el módulo ML como paquete editable..."
+if [ -d "../../03.Modelo/src" ]; then
+    pip install -e "../../03.Modelo/src"
+    if [ $? -ne 0 ]; then
+        echo "⚠️ Advertencia: No se pudo instalar el módulo src como paquete editable."
+        echo "   Es posible que algunas funcionalidades de ML no estén disponibles."
+    else
+        echo "✅ Módulo ML instalado correctamente"
+    fi
+else
+    echo "⚠️ Advertencia: Directorio de modelo (03.Modelo/src) no encontrado."
+    echo "   Es posible que algunas funcionalidades de ML no estén disponibles."
+fi
+
 echo "📊 Resumen de paquetes instalados:"
 pip list | grep -E "fastapi|uvicorn|sqlalchemy|asyncpg|psycopg2|pydantic|alembic"
 

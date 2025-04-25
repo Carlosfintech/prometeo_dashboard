@@ -1,6 +1,9 @@
 """
 Semilla inicial de datos.
-Ejecuta:  python -m backend.scripts.seed_data
+Ejecuta:  python -m scripts.seed_data
+
+Nota: Para que este script funcione, primero debes hacer:
+pip install -e "03.Modelo/src"   # hace importable src.features directamente
 """
 import asyncio, pandas as pd
 from pathlib import Path
@@ -13,6 +16,8 @@ DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "seed_clients.csv"
 async def main():
     if not DATA_PATH.exists():
         raise FileNotFoundError(f"{DATA_PATH} no existe")
+    
+    print(f"Leyendo datos desde: {DATA_PATH}")
     df = pd.read_csv(DATA_PATH)
 
     async with SessionLocal() as session:

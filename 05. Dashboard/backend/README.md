@@ -53,6 +53,12 @@ pip install -r requirements-dev.txt  # For development
 
 Make sure you have a PostgreSQL database named `prometeo_db` accessible by the user `postgres` with password `1111`.
 
+5. Install the ML pipeline as an editable package:
+
+```bash
+pip install -e "../../03.Modelo/src"  # Make src.features importable
+```
+
 ## Usage
 
 #### Testing Database Connection

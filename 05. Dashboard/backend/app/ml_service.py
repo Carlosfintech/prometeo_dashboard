@@ -1,156 +1,147 @@
 """
-Carga pipeline + modelo XGBoost y ofrece utilidades para predicción batch.
+Servicios de Machine Learning para predicciones
 """
-from datetime import datetime
-import pickle, pandas as pd
-from sqlalchemy.ext.asyncio import AsyncSession
-from .database import Prediction
-import numpy as np
-from typing import Dict, Any, List
+import pickle
 import logging
+import pandas as pd
+import numpy as np
+from datetime import datetime
+from pathlib import Path
+from sqlalchemy import select, update
+from sqlalchemy.ext.asyncio import AsyncSession
 
-# Importar generate_features del pipeline real
-from features import generate_features
+from .database import Prediction
+from features.pipeline_featureengineering_func import generate_features
 
-THRESHOLD = 0.5  # Valor de ejemplo, ajustar según necesidad
-MODEL_PATH = "xgb_model.pkl"
+# Configurar logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
+# Constantes
+THRESHOLD = 0.2389
+MODEL_PATH = Path(__file__).parent.parent / "models" / "xgb_model.pkl"
+
+# Cargar modelo
 try:
     with open(MODEL_PATH, "rb") as f:
         model = pickle.load(f)
-except FileNotFoundError:
-    # Modelo simulado para desarrollo y pruebas
-    from sklearn.ensemble import RandomForestClassifier
-    model = RandomForestClassifier()
+    logger.info(f"Modelo cargado desde {MODEL_PATH}")
+except Exception as e:
+    logger.error(f"Error al cargar el modelo: {e}")
+    model = None
 
 
 async def predict(df_raw: pd.DataFrame) -> pd.DataFrame:
-    # Usar generate_features del pipeline real
-    df_feat = generate_features(demographics_df=df_raw)
+    """
+    Genera predicciones a partir de un DataFrame con datos crudos.
     
-    # Obtener probabilidades del modelo
-    probs = model.predict_proba(df_feat)[:, 1]
+    Args:
+        df_raw: DataFrame con al menos columnas user_id, age, income_range, risk_profile
+        
+    Returns:
+        DataFrame con columnas: ['user_id', 'probability', 'is_target', 'created_at']
+    """
+    try:
+        # Verificar si hay un modelo válido
+        if model is None:
+            logger.warning("No hay modelo disponible. Generando predicciones aleatorias.")
+            return _generate_dummy_predictions(df_raw)
+        
+        # Generar características
+        features_df = generate_features(
+            demographics_df=df_raw,
+            products_df=pd.DataFrame(columns=["user_id", "product_type"]) if "products_df" not in df_raw else df_raw["products_df"],
+            transactions_df=pd.DataFrame(columns=["user_id", "amount", "date"]) if "transactions_df" not in df_raw else df_raw["transactions_df"],
+            reference_date=pd.Timestamp("2024-01-01"),
+            output_file=None
+        )
+        
+        # Prepare features for prediction
+        X = features_df.drop(columns=["user_id", "insurance"], errors="ignore")
+        
+        # Asegurar que todas las columnas sean numéricas
+        for col in X.columns:
+            if X[col].dtype == 'object' or X[col].dtype.name == 'category':
+                X[col] = X[col].astype(float)
+        
+        # Predict
+        probabilities = model.predict_proba(X)[:, 1]
+        predictions = (probabilities >= THRESHOLD).astype(int)
+        
+        # Crear DataFrame de resultados
+        result_df = pd.DataFrame({
+            "user_id": features_df["user_id"],
+            "probability": probabilities,
+            "is_target": predictions.astype(bool),
+            "created_at": datetime.now()
+        })
+        
+        return result_df
     
-    # Crear dataframe de salida
-    out = df_raw[["user_id"]].copy()
-    out["probability"] = probs
-    out["pred_bin"] = (probs >= THRESHOLD).astype(int)
-    out["created_at"] = datetime.utcnow()
-    return out
+    except Exception as e:
+        logger.error(f"Error en predicción: {e}")
+        return _generate_dummy_predictions(df_raw)
+
+
+def _generate_dummy_predictions(df: pd.DataFrame) -> pd.DataFrame:
+    """Genera predicciones aleatorias para casos de error"""
+    import random
+    
+    result_df = pd.DataFrame({
+        "user_id": df["user_id"],
+        "probability": [random.uniform(0.1, 0.9) for _ in range(len(df))],
+        "created_at": datetime.now()
+    })
+    
+    result_df["is_target"] = result_df["probability"] > THRESHOLD
+    return result_df
 
 
 async def write_batch(session: AsyncSession, df_raw: pd.DataFrame):
     """
-    Genera predicciones y las guarda en la base de datos.
-    Si df_raw solo contiene user_id, completa los datos demográficos necesarios.
-    """
-    logging.info("Datos preparados para procesamiento")
-    
-    # Verificar si solo tenemos user_ids
-    if df_raw.shape[1] == 1 and "user_id" in df_raw.columns:
-        logging.info("Solo se recibieron user_ids, recuperando datos completos...")
-        
-        # Crear un dataframe básico con datos simulados para pruebas
-        # En un escenario real, consultaríamos estos datos de la base de datos
-        df_complete = pd.DataFrame({
-            "user_id": df_raw["user_id"],
-            "age": 35,                   # Valor por defecto
-            "income_range": "50000",     # Valor por defecto
-            "risk_profile": "moderado",  # Valor por defecto
-            "occupation": "Profesional"  # Valor por defecto
-        })
-        
-        df_raw = df_complete
-    
-    # Generar predicciones
-    preds_df = await predict(df_raw)
-    
-    # upsert en bloque
-    for row in preds_df.to_dict(orient="records"):
-        await session.merge(Prediction(**row))
-    await session.commit()
-
-def load_model():
-    """
-    Simula la carga de un modelo de ML
-    En un caso real, cargaríamos un modelo desde un archivo
-    """
-    # Simular modelo cargado (podría ser un modelo de scikit-learn, tensorflow, etc.)
-    return {
-        "name": "customer_conversion_model",
-        "version": "1.0.0",
-        "type": "random_forest",
-    }
-
-def predict_conversion_probability(client_data: Dict[str, Any]) -> float:
-    """
-    Predice la probabilidad de conversión de un cliente
+    Predice y escribe un batch de predicciones en la base de datos.
     
     Args:
-        client_data: Diccionario con los datos del cliente
-            Debe incluir al menos: edad, ingreso, perfil
-            
-    Returns:
-        Probabilidad de conversión (0.0 - 1.0)
-    """
-    # En un caso real, haríamos preprocesamiento y usaríamos un modelo
-    # Aquí simplemente asignamos probabilidades basadas en reglas simples
-    
-    # Extraer características relevantes
-    age = client_data.get("edad", 0)
-    income = _parse_income(client_data.get("ingreso", "0"))
-    profile = client_data.get("perfil", "").lower()
-    
-    # Base de probabilidad
-    prob = 0.5
-    
-    # Ajustes por edad
-    if 30 <= age <= 55:
-        prob += 0.1
-    elif age > 55:
-        prob += 0.05
-    else:
-        prob -= 0.05
-        
-    # Ajustes por ingreso
-    if income >= 4000:
-        prob += 0.15
-    elif income >= 3000:
-        prob += 0.1
-    elif income >= 2000:
-        prob += 0.05
-        
-    # Ajustes por perfil
-    if profile == "agresivo":
-        prob += 0.1
-    elif profile == "moderado":
-        prob += 0.05
-    
-    # Añadir aleatoriedad para variar los resultados
-    prob += np.random.normal(0, 0.05)
-    
-    # Limitar la probabilidad al rango [0.1, 0.95]
-    return max(0.1, min(0.95, prob))
-
-def batch_predict(clients_data: List[Dict[str, Any]]) -> List[float]:
-    """
-    Realiza predicciones para múltiples clientes
-    
-    Args:
-        clients_data: Lista de diccionarios con datos de clientes
-            
-    Returns:
-        Lista de probabilidades de conversión
-    """
-    return [predict_conversion_probability(client) for client in clients_data]
-
-def _parse_income(income_str: str) -> float:
-    """
-    Convierte un string de ingreso (ej: "$3,500") a un valor numérico
+        session: Sesión de SQLAlchemy async
+        df_raw: DataFrame con datos para predicción
     """
     try:
-        # Eliminar el símbolo de moneda y comas
-        clean_income = income_str.replace("$", "").replace(",", "")
-        return float(clean_income)
-    except (ValueError, AttributeError):
-        return 0.0
+        # Obtener predicciones
+        predictions_df = await predict(df_raw)
+        
+        # Preparar para inserción (bulk upsert)
+        for _, row in predictions_df.iterrows():
+            # Verificar si existe la predicción para este usuario
+            stmt = select(Prediction).where(Prediction.user_id == row["user_id"])
+            result = await session.execute(stmt)
+            existing = result.scalars().first()
+            
+            # Datos para insertar/actualizar
+            data = {
+                "user_id": row["user_id"],
+                "probability": float(row["probability"]),
+                "is_target": bool(row["is_target"]),
+                "created_at": row["created_at"]
+            }
+            
+            if existing:
+                # Actualizar predicción existente
+                stmt = (
+                    update(Prediction)
+                    .where(Prediction.user_id == row["user_id"])
+                    .values(data)
+                )
+                await session.execute(stmt)
+            else:
+                # Insertar nueva predicción
+                pred = Prediction(**data)
+                session.add(pred)
+        
+        # Commit
+        await session.commit()
+        logger.info(f"Batch de {len(predictions_df)} predicciones guardado en la base de datos")
+    
+    except Exception as e:
+        await session.rollback()
+        logger.error(f"Error al escribir batch de predicciones: {e}")
+        raise

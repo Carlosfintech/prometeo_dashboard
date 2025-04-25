@@ -1,0 +1,96 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Trabaja en una rama aparte
+
+Antes de tocar nada, crea una rama para tus cambios de UI/UX, por ejemplo:
+
+git checkout -b feature/dashboard-ui-tweaks
+
+Así podrás aislar tus experimentos y volver atrás si algo falla.
+
+
+2. Ajusta los componentes
+	1.	Localiza el componente 
+	2.	Haz la accion del componente que quieres modificar
+	3.	Modifica los otros componentes según tu nuevo diseño si es que aplica.
+	4.	Prueba en modo desarrollo:
+
+# en el directorio frontend
+npm run dev
+
+Asegúrate de que la app arranca, navegas y las tablas se ven como quieres.
+
+3. Alinea tus tests con los cambios de UI
+
+Tus tests back-end seguirán funcionando sin cambios (miden la API). Pero si cambias IDs, clases CSS o el DOM, los tests de frontend (unitarios o e2e) podrían romperse.
+
+Si sólo haces cambios de presentación (clases, estilos) y no tocas lógica de React-Query ni api.get:
+	•	No necesitas modificar tus tests de datos.
+	•	Sólo revisa manualmente.
+
+Si cambias props o elimina algún atributo del componente (por ejemplo de <PriorityTable />), entonces:
+	1.	Actualiza tus tests unitarios de React (por ejemplo con Jest/Testing Library):
+	•	Cambia selectores (getByRole, getByText) para que coincidan con el nuevo markup.
+	2.	Corre:
+
+cd frontend
+npm test
+
+y ajusta hasta que todos pasen.
+
+⸻
+
+4. Ejecución completa de tests
+
+Tras cada batch de cambios:
+	1.	En tu máquina, desde la raíz del proyecto:
+
+# Backend
+cd 05.\ Dashboard/backend
+make test-all
+
+# Frontend
+cd ../05.\ Dashboard/frontend
+npm test
+
+
+	2.	Si todo pasa, tu refactor es seguro.
+
+⸻
+
+5. Prueba en Docker Compose
+
+Cuando ya esté todo bien en local:
+	1.	Asegúrate de estar en tu rama feature/....
+	2.	Reconstruye contenedores:
+
+docker compose down --volumes
+docker compose up --build
+
+
+	3.	Verifica:
+	•	Que la UI refleja tus cambios (visita http://localhost).
+	•	Que los endpoints siguen respondiendo (desde la consola o curl).
+
+⸻
+
+6. Merge y CI/CD
+	1.	Abre un Pull Request con tus cambios.
+	2.	En tu pipeline (GitHub Actions, GitLab CI, etc.), configura:
+	•	docker-compose up --build -d
+	•	make test-all (backend)
+	•	npm test (frontend)
+para que se valide todo automáticamente.
+
+⸻
+
+Resumen
+	•	Rama aislada → cambios UI/UX.
+	•	Pruebas locales: backend (make test-all) + frontend (npm test).
+	•	Docker: reconstruir y validar en contenedor.
+	•	CI: automatizar esos pasos antes de mergear.
+
+De este modo cualquier alteración queda cubierta, tus tests siguen fieles al código de producción y tendrás la tranquilidad de no “romper” nada al avanzar. 

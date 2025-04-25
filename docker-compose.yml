@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: prometeo
+      POSTGRES_PASSWORD: prometeo
+      POSTGRES_DB: prometeo
+    ports:
+      - "5433:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./05. Dashboard/backend
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+asyncpg://prometeo:prometeo@db:5432/prometeo
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./05. Dashboard/frontend
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - api
+    ports:
+      - "80:80"
+
+volumes:
+  db_data: 

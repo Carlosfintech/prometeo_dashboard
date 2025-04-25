@@ -1,4 +1,5 @@
 import pytest, pandas as pd
+import numpy as np
 from unittest.mock import patch, MagicMock
 from app.ml_service import predict
 
@@ -6,7 +7,7 @@ from app.ml_service import predict
 async def test_predict_returns_expected_columns():
     df_dummy = pd.DataFrame({'user_id': [1, 2]})
     with patch('app.ml_service.generate_features', return_value=df_dummy) as mock_gen:
-        dummy_probs = [[0.1, 0.9], [0.8, 0.2]]
+        dummy_probs = np.array([[0.1, 0.9], [0.8, 0.2]])
         mock_model = MagicMock()
         mock_model.predict_proba.return_value = dummy_probs
         with patch('app.ml_service.model', mock_model):

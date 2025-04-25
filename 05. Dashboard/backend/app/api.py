@@ -6,6 +6,7 @@ from fastapi import FastAPI, Depends, Query, HTTPException, status
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from .database import SessionLocal, Client, Prediction, Contact
 from .schemas  import ClientOut, StatusIn, KPISummary

@@ -77,7 +77,7 @@ async def update_client_status(client_id: int, status_data: Dict[str, str]):
     # Buscar cliente por ID
     for client in CLIENTS:
         if client["id"] == client_id:
-            client["status"] = status_data.get("new_status", "contacted")
+            client["status"] = status_data.get("status", "pending")
             return {
                 "id": client["id"],
                 "user_id": client["user_id"],

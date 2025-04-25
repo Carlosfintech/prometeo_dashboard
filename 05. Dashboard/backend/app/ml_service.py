@@ -2,27 +2,25 @@
 Carga pipeline + modelo XGBoost y ofrece utilidades para predicción batch.
 """
 from datetime import datetime
-import os, sys
 import pickle, pandas as pd
 from sqlalchemy.ext.asyncio import AsyncSession
 from .database import Prediction
 import numpy as np
 from typing import Dict, Any, List
 
-# Ensure pipeline code is importable
-PIPELINE_SRC = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../03.Modelo/src"))
-if PIPELINE_SRC not in sys.path:
-    sys.path.insert(0, PIPELINE_SRC)
-from features.pipeline_featureengineering_func import run_pipeline
+# Importar la función de generación de características del pipeline real
+from src.features.pipeline_featureengineering_func import generate_features
 
-THRESHOLD = "(COLOCAR AQUI EL ARCHIVO DE THRESHOLD)"
+THRESHOLD = 0.5  # Valor temporal, debe ser ajustado según el modelo
 MODEL_PATH = "xgb_model.pkl"
 
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
 
+
 async def predict(df_raw: pd.DataFrame) -> pd.DataFrame:
-    x = run_pipeline(df_raw)
+    # Usar la función de generación de características del pipeline real
+    x = generate_features(demographics_df=df_raw)
     probs = model.predict_proba(x)[:, 1]
     out = df_raw[["user_id"]].copy()
     out["probability"] = probs

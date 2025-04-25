@@ -3,36 +3,34 @@ Carga pipeline + modelo XGBoost y ofrece utilidades para predicción batch.
 """
 from datetime import datetime
 import pickle, pandas as pd
-import os
 from sqlalchemy.ext.asyncio import AsyncSession
 from .database import Prediction
 import numpy as np
 from typing import Dict, Any, List
 
-# Importar la función de generación de características del pipeline real
+# Importar generate_features del pipeline real
 from src.features.pipeline_featureengineering_func import generate_features
 
-THRESHOLD = 0.5  # Valor temporal, debe ser ajustado según el modelo
+THRESHOLD = 0.5  # Valor de ejemplo, ajustar según necesidad
 MODEL_PATH = "xgb_model.pkl"
 
-# Cargar el modelo solo si existe el archivo
-model = None
-if os.path.exists(MODEL_PATH):
+try:
     with open(MODEL_PATH, "rb") as f:
         model = pickle.load(f)
+except FileNotFoundError:
+    # Modelo simulado para desarrollo y pruebas
+    from sklearn.ensemble import RandomForestClassifier
+    model = RandomForestClassifier()
 
 
 async def predict(df_raw: pd.DataFrame) -> pd.DataFrame:
-    # Usar la función de generación de características del pipeline real
-    x = generate_features(demographics_df=df_raw)
+    # Usar generate_features del pipeline real
+    df_feat = generate_features(demographics_df=df_raw)
     
-    # Si el modelo está cargado, usarlo; de lo contrario, generar probabilidades aleatorias para pruebas
-    if model is not None:
-        probs = model.predict_proba(x)[:, 1]
-    else:
-        # Generar probabilidades aleatorias para pruebas
-        probs = np.random.random(len(df_raw))
+    # Obtener probabilidades del modelo
+    probs = model.predict_proba(df_feat)[:, 1]
     
+    # Crear dataframe de salida
     out = df_raw[["user_id"]].copy()
     out["probability"] = probs
     out["pred_bin"] = (probs >= THRESHOLD).astype(int)

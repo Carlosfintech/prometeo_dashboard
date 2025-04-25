@@ -53,12 +53,6 @@ pip install -r requirements-dev.txt  # For development
 
 Make sure you have a PostgreSQL database named `prometeo_db` accessible by the user `postgres` with password `1111`.
 
-5. Install the ML pipeline as an editable package:
-
-```bash
-pip install -e "../../03.Modelo/src"  # Make src.features importable
-```
-
 ## Usage
 
 #### Testing Database Connection
@@ -81,20 +75,6 @@ Start the development server with:
 
 The API will be available at http://localhost:8000
 
-#### Populating the Database with Demo Data
-
-You can populate the database with sample client data and generate predictions using:
-
-```bash
-cd "05. Dashboard/backend"
-source venv/bin/activate
-python -m scripts.seed_data
-```
-
-This will:
-1. Insert 20 demo clients into the database
-2. Generate ML predictions for each client
-
 #### API Documentation
 
 Once the server is running, you can access the API documentation at:
@@ -110,10 +90,6 @@ Once the server is running, you can access the API documentation at:
   - `schemas.py` - Pydantic models for API
   - `ml_service.py` - Machine learning services
 - `alembic/` - Database migration scripts
-- `data/` - Data files for seeding and testing
-- `scripts/` - Utility scripts
-  - `seed_data.py` - Script to populate the database with demo data
-- `tests/` - Unit and integration tests
 - `db_connect.sh` - Database connection testing script
 - `start_dev.sh` - Development server startup script
 - `check_env.sh` - Environment setup and verification script

@@ -14,4 +14,4 @@ async def test_predict_returns_expected_columns():
             result = await predict(df_dummy)
     mock_gen.assert_called_once()
     assert set(result.columns) == {'user_id','probability','pred_bin','created_at'}
-    assert len(result) == 2 
+    assert len(result) == 2

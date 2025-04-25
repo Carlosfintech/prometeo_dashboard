@@ -1,111 +1,69 @@
 """
-Seed completo usando la API Mockoon:
-  • Consume directamente desde Mockoon API en localhost:3002
-  • Inserta/actualiza los datos en las tablas adecuadas
-  • Ejecuta el pipeline ML y guarda predicciones
+Seed definitivo:
+  • Opción 1 (por defecto): lee los CSV reales de 05.Dashboard/backend/data/raw
+  • Opción 2: --from-api descarga CSV desde Mockoon (localhost:3002)
+  • Inserta/actualiza Demographic, Product, Transaction
+  • Llama generate_features() y write_batch() => prediction_results
+Ejemplos:
+    python -m scripts.seed_data              # CSV locales
+    python -m scripts.seed_data --from-api   # Mockoon
 """
-import asyncio, argparse, logging, os, sys, pandas as pd, requests, re
-from datetime import datetime
+import asyncio, argparse, logging, os, pandas as pd, requests
 from io import StringIO
 from pathlib import Path
-from app.database import SessionLocal
-from app.models import Client, Prediction
-from app.ml_service import write_batch
+from sqlalchemy import insert
+from app.database import SessionLocal, Demographic, Product, Transaction
+from app.ml_service import write_batch   # usa generate_features auténtico
 
-# ---------- Configuración ----------
-BASE_URL = "http://localhost:3002"          # Mockoon
+DATA_DIR = Path(__file__).parent.parent / "data" / "raw"
+BASE_URL = "http://localhost:3002"
+
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s ▶ %(levelname)s | %(message)s")
 
-def _get_mock_csv(endpoint: str) -> pd.DataFrame:
-    """
-    Obtiene datos en formato CSV desde un endpoint de Mockoon y los convierte a DataFrame.
-    """
-    url = f"{BASE_URL}{endpoint}"
-    response = requests.get(url)
-    
-    if response.status_code == 200:
-        logging.info(f"✅ {endpoint} cargado correctamente")
-        return pd.read_csv(StringIO(response.text))
+def csv_local(name: str) -> pd.DataFrame:
+    f = DATA_DIR / name
+    if not f.exists():
+        raise FileNotFoundError(f"CSV no hallado: {f}")
+    return pd.read_csv(f)
+
+def csv_api(endpoint: str) -> pd.DataFrame:
+    r = requests.get(f"{BASE_URL}{endpoint}")
+    r.raise_for_status()
+    return pd.read_csv(StringIO(r.text))
+
+async def upsert_table(session, model, df, keys):
+    await session.execute(
+        insert(model).values(df.to_dict("records"))
+        .on_conflict_do_update(index_elements=keys,
+                               set_={c: getattr(insert(model).excluded, c)
+                                     for c in df.columns if c not in keys})
+    )
+
+async def main(from_api: bool):
+    if from_api:
+        demog = csv_api("/demographics")
+        prod  = csv_api("/products")
+        tx    = csv_api("/transactions")
     else:
-        logging.error(f"❌ Error al cargar {endpoint}: {response.status_code}")
-        return pd.DataFrame()
-
-def load_sources():
-    """
-    Descarga todas las tablas necesarias desde la API Mockoon
-    """
-    logging.info("⤵ Descargando CSV desde Mockoon …")
-    demo = _get_mock_csv("/demographics")
-    
-    # Verificar que se obtuvieron datos
-    if demo.empty:
-        logging.warning("⚠️ No se pudieron cargar los datos demográficos")
-        return None
-    
-    logging.info(f"Demographics: {len(demo)} registros")
-    return demo
-
-def parse_income(income_str):
-    """
-    Parsea diferentes formatos de ingresos a un valor numérico
-    """
-    try:
-        # Eliminar cualquier símbolo de moneda, comas, etc.
-        income_str = str(income_str).replace('$', '').replace(',', '')
-        
-        # Verificar si es un rango (3000-5000)
-        if '-' in income_str:
-            return float(income_str.split('-')[0].strip())
-        
-        # Verificar si tiene 'k' (30k)
-        if 'k' in income_str.lower():
-            return float(income_str.lower().replace('k', '')) * 1000
-            
-        # Si no, convertir directamente
-        return float(income_str)
-    except Exception as e:
-        logging.warning(f"⚠️ Error al convertir ingreso '{income_str}': {e}")
-        return 3000.0  # Valor predeterminado en caso de error
-
-# ---------------- main ----------------
-async def main():
-    # Cargar datos desde Mockoon
-    demo = load_sources()
-    
-    if demo is None:
-        logging.error("❌ Error al cargar datos. Abortando.")
-        return
+        demog = csv_local("demographics.csv")
+        prod  = csv_local("products.csv")
+        tx    = csv_local("transactions.csv")
 
     async with SessionLocal() as ses:
-        # Insertar datos demográficos
-        for r in demo.itertuples():
-            try:
-                # Convertir el ingreso
-                income = parse_income(r.income_range)
-                
-                # Crear o actualizar el cliente
-                client = Client(
-                    id=r.user_id,
-                    name=f"Cliente {r.user_id}",
-                    age=r.age,
-                    income=income,
-                    profile=r.risk_profile
-                )
-                await ses.merge(client)
-                
-            except Exception as e:
-                logging.error(f"Error al procesar cliente {r.user_id}: {e}")
-        
+        await upsert_table(ses, Demographic, demog, ["user_id"])
+        await upsert_table(ses, Product,      prod,  ["user_id", "product_type"])
+        await upsert_table(ses, Transaction,  tx,    ["transaction_id"])
         await ses.commit()
-        logging.info("✓ Datos demográficos insertados")
-        
-        # ---------- Predicciones ----------
-        logging.info("Generando predicciones...")
-        await write_batch(ses, demo[["user_id"]])
-        logging.info("✓ Predicciones generadas y guardadas")
-        
-        logging.info("✓ Proceso de seed completado exitosamente")
+        logging.info("✓ Tablas crudas pobladas")
+
+        # ---------- Predicción ----------
+        await write_batch(ses, demog[["user_id"]])
+        logging.info("✓ Predicciones guardadas en prediction_results")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    p = argparse.ArgumentParser()
+    p.add_argument("--from-api", action="store_true",
+                   help="Usar Mockoon en vez de CSV locales")
+    args = p.parse_args()
+    asyncio.run(main(args.from_api))

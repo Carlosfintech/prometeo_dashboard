@@ -6,6 +6,9 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
 from .models import Base, Client, Prediction, Contact, Product, Transaction, Goal
 
+# Alias para mantener compatibilidad con scripts
+Demographic = Client
+
 # Obtener la URL de la base de datos desde las variables de entorno
 DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql+asyncpg://postgres:postgres@localhost:5432/prometeo_db")
 

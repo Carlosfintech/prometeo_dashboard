@@ -10,7 +10,7 @@ from typing import Dict, Any, List
 import logging
 
 # Importar generate_features del pipeline real
-from src.features import generate_features
+from features import generate_features
 
 THRESHOLD = 0.5  # Valor de ejemplo, ajustar según necesidad
 MODEL_PATH = "xgb_model.pkl"

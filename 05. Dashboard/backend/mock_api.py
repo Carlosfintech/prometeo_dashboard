@@ -98,5 +98,22 @@ async def update_client_status(client_id: int, status_data: Dict[str, str]):
     return {"success": False, "message": "Cliente no encontrado"}
 
 
+@app.get("/api/v1/metrics/probability-distribution")
+async def get_probability_distribution():
+    """Obtiene la distribución de probabilidades en buckets de 10% para contactados vs no contactados"""
+    # Definir rangos de buckets (0-10, 10-20, ..., 90-100)
+    buckets = []
+    for i in range(10):
+        low = i / 10
+        high = (i + 1) / 10
+        label = f"{int(low*100)}-{int(high*100)}%"
+        no_count = sum(1 for c in CLIENTS if c["probability"] >= low and c["probability"] < high and c["status"] == "pending")
+        yes_count = sum(1 for c in CLIENTS if c["probability"] >= low and c["probability"] < high and c["status"] != "pending")
+        buckets.append({"range": label, "no_contacted": no_count, "contacted": yes_count})
+    # Umbral fijo o dinámico (23.89%)
+    threshold = 0.2389
+    return {"buckets": buckets, "threshold": threshold}
+
+
 if __name__ == "__main__":
     uvicorn.run("mock_api:app", host="0.0.0.0", port=8001, reload=True) 

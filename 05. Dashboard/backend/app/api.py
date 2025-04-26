@@ -97,8 +97,8 @@ async def get_priority_list(
             select(Client)
             .order_by(desc(Client.probability))
             .offset(offset)
-            .limit(size)
-        )
+        .limit(size)
+    )
         
         result = await db.execute(query)
         clients = result.scalars().all()
@@ -176,9 +176,9 @@ async def update_client_status(
                 contacted_at=datetime.now(),
                 notes="Actualización de estado vía API"
             )
-            db.add(contact)
+        db.add(contact)
         
-        await db.commit()
+    await db.commit()
         
         # Devolver un diccionario simple en lugar de un modelo Pydantic
         return {

@@ -37,4 +37,23 @@ def test_metrics_summary():
     assert isinstance(data["potential_clients"], int)
     assert isinstance(data["expected_conversion"], int)
     assert isinstance(data["financial_opportunity"], int)
-    assert isinstance(data["contact_progress"], int) 
+    assert isinstance(data["contact_progress"], int)
+
+def test_probability_distribution():
+    """Prueba el endpoint /api/v1/metrics/probability-distribution"""
+    response = client.get("/api/v1/metrics/probability-distribution")
+    # Verificar código de respuesta
+    assert response.status_code == 200
+    data = response.json()
+    # Verificar estructura básica
+    assert "buckets" in data
+    assert "threshold" in data
+    # Tipos
+    assert isinstance(data["buckets"], list)
+    assert isinstance(data["threshold"], float)
+    # Cada bucket debe tener keys y tipos correctos
+    for bucket in data["buckets"]:
+        assert "range" in bucket and "no_contacted" in bucket and "contacted" in bucket
+        assert isinstance(bucket["range"], str)
+        assert isinstance(bucket["no_contacted"], int)
+        assert isinstance(bucket["contacted"], int) 

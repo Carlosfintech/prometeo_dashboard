@@ -47,16 +47,26 @@ CLIENTS.sort(key=lambda x: x["probability"], reverse=True)
 async def get_metrics_summary():
     """Obtiene un resumen de los indicadores clave de rendimiento"""
     total = len(CLIENTS)
-    churn_risk_mean = sum(c["probability"] for c in CLIENTS) / total
+    churn_risk_mean = sum(c["probability"] for c in CLIENTS) / total if total else 0
     contacted = sum(1 for c in CLIENTS if c["status"] == "contacted")
-    at_risk = sum(1 for c in CLIENTS if c["probability"] > 0.23)
+    at_risk_count = sum(1 for c in CLIENTS if c["probability"] > 0.23)
+    # Business metrics
+    potential_clients = at_risk_count
+    expected_conversion = int(potential_clients * 0.20)
+    financial_opportunity = potential_clients * 1000  # in USD
+    contact_progress = sum(1 for c in CLIENTS if c["status"] != "pending")
     
     return {
         "total_clients": total,
         "churn_risk_mean": churn_risk_mean,
         "contacted": contacted,
         "conversion_rate": 0.0,
-        "at_risk_count": at_risk
+        "at_risk_count": at_risk_count,
+        # New business metrics
+        "potential_clients": potential_clients,
+        "expected_conversion": expected_conversion,
+        "financial_opportunity": financial_opportunity,
+        "contact_progress": contact_progress
     }
 
 

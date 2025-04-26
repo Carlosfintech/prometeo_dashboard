@@ -22,9 +22,19 @@ def test_metrics_summary():
     assert "churn_risk_mean" in data
     assert "contacted" in data
     assert "at_risk_count" in data
+    # Business metrics
+    assert "potential_clients" in data
+    assert "expected_conversion" in data
+    assert "financial_opportunity" in data
+    assert "contact_progress" in data
     
     # Verificar tipos de datos
     assert isinstance(data["total_clients"], int)
     assert isinstance(data["churn_risk_mean"], float)
     assert isinstance(data["contacted"], int)
-    assert isinstance(data["at_risk_count"], int) 
+    assert isinstance(data["at_risk_count"], int)
+    # Verify new types
+    assert isinstance(data["potential_clients"], int)
+    assert isinstance(data["expected_conversion"], int)
+    assert isinstance(data["financial_opportunity"], int)
+    assert isinstance(data["contact_progress"], int) 

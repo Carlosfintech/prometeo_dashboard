@@ -29,7 +29,14 @@ services:
     depends_on:
       - api
     ports:
-      - "80:80"
+      - "8082:8082"
+    volumes:
+      - ./05. Dashboard/frontend:/web
+      - /web/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
 
 volumes:
   db_data: 

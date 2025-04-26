@@ -4,9 +4,10 @@ API mock simple para proporcionar datos de prueba a la UI
 import random
 import uvicorn
 from datetime import datetime
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional, Dict, Any
+from enum import Enum
 
 # Crear aplicación FastAPI
 app = FastAPI(
@@ -41,6 +42,20 @@ CLIENTS = [
 
 # Ordenar por probabilidad (riesgo) descendente
 CLIENTS.sort(key=lambda x: x["probability"], reverse=True)
+
+# Definir las variables válidas para los ejes del mapa de calor
+VALID_AXES = ["age", "income_range", "risk_profile", "status"]
+
+# Definir categorías para cada variable
+AXIS_CATEGORIES = {
+    "age": ["18-25", "26-35", "36-45", "46-55", "56+"],
+    "income_range": ["0-50k", "50k-100k", "100k-150k", "150k+"],
+    "risk_profile": ["conservative", "moderate", "aggressive"],
+    "status": ["pending", "contacted"]
+}
+
+# Umbral de probabilidad
+PROBABILITY_THRESHOLD = 0.23
 
 
 @app.get("/api/v1/metrics/summary")
@@ -113,6 +128,106 @@ async def get_probability_distribution():
     # Umbral fijo o dinámico (23.89%)
     threshold = 0.2389
     return {"buckets": buckets, "threshold": threshold}
+
+
+@app.get("/api/v1/metrics/heatmap")
+async def get_heatmap_data(
+    x: str = Query(..., description="Variable para el eje X"),
+    y: str = Query(..., description="Variable para el eje Y"),
+    metric: str = Query("probability", description="Métrica a calcular: 'probability' o 'count'")
+):
+    """
+    Obtiene datos para el mapa de calor cruzando dos variables.
+    
+    - x: Variable para el eje X (age, income_range, risk_profile, status)
+    - y: Variable para el eje Y (age, income_range, risk_profile, status)
+    - metric: Métrica a calcular ('probability' o 'count')
+    
+    Retorna matriz de valores según las categorías de cada variable.
+    """
+    # Validar que las variables estén en la lista permitida
+    if x not in VALID_AXES:
+        raise HTTPException(status_code=400, detail=f"Variable 'x' no válida. Opciones: {', '.join(VALID_AXES)}")
+    
+    if y not in VALID_AXES:
+        raise HTTPException(status_code=400, detail=f"Variable 'y' no válida. Opciones: {', '.join(VALID_AXES)}")
+        
+    if metric not in ["probability", "count"]:
+        raise HTTPException(status_code=400, detail="Métrica no válida. Debe ser 'probability' o 'count'")
+    
+    # Obtener categorías para los ejes
+    x_categories = AXIS_CATEGORIES.get(x, [])
+    y_categories = AXIS_CATEGORIES.get(y, [])
+    
+    # Función para convertir una edad numérica a su categoría correspondiente
+    def age_to_category(age):
+        if 18 <= age <= 25:
+            return "18-25"
+        elif 26 <= age <= 35:
+            return "26-35"
+        elif 36 <= age <= 45:
+            return "36-45"
+        elif 46 <= age <= 55:
+            return "46-55"
+        else:
+            return "56+"
+    
+    # Inicializar matriz de valores
+    values = []
+    
+    # Para cada categoría en el eje Y
+    for y_cat in y_categories:
+        row = []
+        # Para cada categoría en el eje X
+        for x_cat in x_categories:
+            # Filtrar clientes que coinciden con ambas categorías
+            matching_clients = []
+            
+            for client in CLIENTS:
+                # Obtener los valores reales para comparar, transformando si es necesario
+                client_x_value = client.get(x)
+                client_y_value = client.get(y)
+                
+                # Convertir la edad a categoría si es necesario
+                if x == "age" and isinstance(client_x_value, int):
+                    client_x_value = age_to_category(client_x_value)
+                
+                if y == "age" and isinstance(client_y_value, int):
+                    client_y_value = age_to_category(client_y_value)
+                
+                # Comparar con las categorías objetivo
+                if str(client_x_value) == x_cat and str(client_y_value) == y_cat:
+                    matching_clients.append(client)
+            
+            # Calcular valor según la métrica
+            if metric == "probability":
+                if matching_clients:
+                    avg_probability = sum(c["probability"] for c in matching_clients) / len(matching_clients)
+                    row.append(round(avg_probability, 2))
+                else:
+                    row.append(0)
+            else:  # count
+                row.append(len(matching_clients))
+        
+        values.append(row)
+    
+    # Devolver datos estructurados para el mapa de calor
+    return {
+        "x_categories": x_categories,
+        "y_categories": y_categories,
+        "values": values,
+        "threshold": PROBABILITY_THRESHOLD
+    }
+
+
+# Endpoint para obtener las variables disponibles para el mapa de calor
+@app.get("/api/v1/metrics/heatmap/variables")
+async def get_heatmap_variables():
+    """Obtiene las variables disponibles para los ejes del mapa de calor"""
+    return {
+        "variables": VALID_AXES,
+        "categories": AXIS_CATEGORIES
+    }
 
 
 if __name__ == "__main__":

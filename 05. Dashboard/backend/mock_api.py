@@ -3,11 +3,13 @@ API mock simple para proporcionar datos de prueba a la UI
 """
 import random
 import uvicorn
-from datetime import datetime
+import math
+from datetime import datetime, timedelta
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional, Dict, Any
 from enum import Enum
+import os
 
 # Crear aplicación FastAPI
 app = FastAPI(
@@ -57,31 +59,111 @@ AXIS_CATEGORIES = {
 # Umbral de probabilidad
 PROBABILITY_THRESHOLD = 0.23
 
+# Configuración para el componente ContactProgress - Ahora es un dict para poder modificarlo
+CONTACT_PROGRESS_CONFIG = {
+    "monthly_target": 100  # Meta mensual inicial
+}
+
+# Datos de prueba para el componente ContactProgress
+CONTACT_DATA = {
+    "contacted_this_month": 123  # Número de clientes contactados este mes
+}
+
 
 @app.get("/api/v1/metrics/summary")
 async def get_metrics_summary():
     """Obtiene un resumen de los indicadores clave de rendimiento"""
     total = len(CLIENTS)
+    # Consistent calculation: use >= threshold
+    potential_clients = sum(1 for c in CLIENTS if c["probability"] >= PROBABILITY_THRESHOLD)
+    contacted = sum(1 for c in CLIENTS if c["status"] != "pending")
     churn_risk_mean = sum(c["probability"] for c in CLIENTS) / total if total else 0
-    contacted = sum(1 for c in CLIENTS if c["status"] == "contacted")
-    at_risk_count = sum(1 for c in CLIENTS if c["probability"] > 0.23)
-    # Business metrics
-    potential_clients = at_risk_count
-    expected_conversion = int(potential_clients * 0.20)
-    financial_opportunity = potential_clients * 1000  # in USD
-    contact_progress = sum(1 for c in CLIENTS if c["status"] != "pending")
-    
+    expected_conversion = int(potential_clients * 0.20) # Example conversion rate
+    financial_opportunity = potential_clients * 1000  # Example value per client
+
     return {
         "total_clients": total,
-        "churn_risk_mean": churn_risk_mean,
+        "churn_risk_mean": round(churn_risk_mean, 2),
         "contacted": contacted,
-        "conversion_rate": 0.0,
-        "at_risk_count": at_risk_count,
-        # New business metrics
+        "conversion_rate": 0.0, # Placeholder
+        "at_risk_count": potential_clients, # Use consistent term/calculation
         "potential_clients": potential_clients,
         "expected_conversion": expected_conversion,
         "financial_opportunity": financial_opportunity,
-        "contact_progress": contact_progress
+        "contact_progress": contacted # Renamed for clarity?
+    }
+
+
+@app.put("/api/v1/contacts/config")
+async def update_contact_config(config_update: Dict[str, Any]):
+    """Simula la actualización de la configuración de contactos (ej. meta mensual)."""
+    global CONTACT_PROGRESS_CONFIG
+    new_target = config_update.get("monthly_target")
+    if new_target is not None and isinstance(new_target, int) and new_target > 0:
+        CONTACT_PROGRESS_CONFIG["monthly_target"] = new_target
+        print(f"Updated monthly target to: {new_target}")
+        return {"success": True, "monthly_target": new_target}
+    else:
+        raise HTTPException(status_code=400, detail="Invalid monthly_target value provided.")
+
+
+@app.get("/api/v1/contacts/progress")
+async def get_contact_progress():
+    """
+    Obtiene información sobre el progreso de contactos. Usa el umbral consistente.
+    """
+    # Clientes prioritarios/potenciales (probabilidad >= umbral)
+    total_prioritized = sum(1 for c in CLIENTS if c["probability"] >= PROBABILITY_THRESHOLD)
+    
+    # Clientes contactados (status no es 'pending')
+    total_contacted = sum(1 for c in CLIENTS if c["status"] != "pending")
+    
+    # Asumimos contactados este mes = total contactados (para el mock)
+    contacted_this_month = total_contacted
+
+    # Obtener meta mensual actual
+    monthly_target = CONTACT_PROGRESS_CONFIG["monthly_target"]
+    
+    # Cálculos de fecha
+    now = datetime.now()
+    current_day = now.day
+    year = now.year
+    month = now.month
+    if month == 12:
+        last_day_dt = datetime(year + 1, 1, 1) - timedelta(days=1)
+    else:
+        last_day_dt = datetime(year, month + 1, 1) - timedelta(days=1)
+    last_day_of_month = last_day_dt.day
+    days_remaining = max(1, last_day_of_month - current_day)
+    
+    # Calculamos los contactos restantes para la meta mensual
+    remaining_contacts = max(0, monthly_target - contacted_this_month)
+    
+    # Cálculos de ritmo
+    daily_needed = math.ceil(remaining_contacts / days_remaining) if days_remaining > 0 else 0
+    days_passed = max(1, current_day)
+    daily_expected = math.floor(contacted_this_month / days_passed)
+    difference = daily_expected - daily_needed
+    
+    # Mensaje de proyección
+    if contacted_this_month >= monthly_target:
+        projection_message = f"¡Meta mensual de {monthly_target} contactos alcanzada!"
+    elif difference >= 0:
+        projection_message = f"Ritmo actual ({daily_expected}/día) suficiente para alcanzar la meta."
+    else:
+        projection_message = f"Ritmo actual ({daily_expected}/día) insuficiente. Necesitas {daily_needed}/día."
+
+    return {
+        "total_contacted": total_contacted,
+        "total_prioritized": total_prioritized,
+        "monthly_target": monthly_target,
+        "contacted_this_month": contacted_this_month,
+        "days_remaining": days_remaining,
+        "daily_needed": daily_needed,
+        "daily_expected": daily_expected,
+        "difference": difference,
+        "remaining_contacts": remaining_contacts,
+        "projection_message": projection_message
     }
 
 
@@ -98,19 +180,31 @@ async def get_priority_list(
 
 @app.patch("/api/v1/clients/{client_id}/status")
 async def update_client_status(client_id: int, status_data: Dict[str, str]):
-    """Actualiza el estado de un cliente"""
-    # Buscar cliente por ID
+    """Actualiza el estado de un cliente sin restricciones de valor."""
+    print(f"Received status update request for client {client_id}: {status_data}")
+    
+    client_found = False
     for client in CLIENTS:
         if client["id"] == client_id:
-            client["status"] = status_data.get("status", "pending")
-            return {
-                "id": client["id"],
-                "user_id": client["user_id"],
-                "status": client["status"],
-                "success": True
-            }
-    
-    return {"success": False, "message": "Cliente no encontrado"}
+            # Acepta cualquier valor de estado sin validación
+            new_status = status_data.get("status")
+            if new_status is not None:
+                # Guardar el estado tal cual viene del frontend
+                client["status"] = new_status
+                client_found = True
+                print(f"Updated client {client_id} status to: {new_status}")
+                break
+            else:
+                raise HTTPException(status_code=400, detail="Status field is required")
+
+    if not client_found:
+        raise HTTPException(status_code=404, detail="Cliente no encontrado")
+
+    return {
+        "id": client_id,
+        "status": client["status"],
+        "success": True
+    }
 
 
 @app.get("/api/v1/metrics/probability-distribution")
@@ -231,4 +325,7 @@ async def get_heatmap_variables():
 
 
 if __name__ == "__main__":
-    uvicorn.run("mock_api:app", host="0.0.0.0", port=8001, reload=True) 
+    port = 8001
+    # Ensure clean start
+    os.system(f"lsof -i :{port} -t | xargs kill -9 2>/dev/null || true") 
+    uvicorn.run("mock_api:app", host="0.0.0.0", port=port, reload=True) 

@@ -11,7 +11,7 @@ from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from .database import Prediction
-from features.pipeline_featureengineering_func import generate_features
+from app.features.pipeline_featureengineering_func import generate_features
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")

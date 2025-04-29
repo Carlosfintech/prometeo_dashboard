@@ -1,17 +1,83 @@
 # Prometeo API Backend
 
-This is the backend service for the Prometeo Dashboard application, providing an API for client data analysis and management.
+Backend para el Dashboard de Prometeo, proporcionando una API RESTful para análisis y gestión de datos de clientes.
 
-## Setup
+## Tecnologías
 
-### Prerequisites
+- **FastAPI**: Framework moderno para APIs de alto rendimiento
+- **PostgreSQL**: Base de datos relacional para almacenamiento persistente
+- **Alembic**: Herramienta de migración de base de datos
+- **SQLAlchemy**: ORM para interacción con la base de datos
+- **Pydantic**: Validación de datos y serialización
+- **uvicorn**: Servidor ASGI de alto rendimiento
+- **XGBoost**: Biblioteca para modelos de aprendizaje automático
 
-- Python 3.8 or higher
-- PostgreSQL 14 or higher
+## Endpoints Principales
 
-### Automatic Setup (Recommended)
+El backend proporciona los siguientes endpoints principales:
 
-Use the automated setup script to configure your environment:
+- `/api/v1/metrics/summary`: Resumen de KPIs generales del sistema
+- `/api/v1/clients/priority-list`: Lista de clientes prioritarios con paginación
+- `/api/v1/clients/{client_id}/status`: Actualización del estado de contacto del cliente
+- `/api/v1/metrics/probability-distribution`: Distribución de probabilidades para visualización
+- `/api/v1/metrics/heatmap`: Datos para análisis de correlación en formato de mapa de calor
+- `/api/v1/metrics/heatmap/variables`: Variables disponibles para el mapa de calor
+- `/api/v1/contacts/progress`: Seguimiento del progreso de contactos y proyección
+
+## Estructura del Proyecto
+
+```
+backend/
+├── app/                    # Código principal de la aplicación
+│   ├── api.py              # Definiciones de API y endpoints
+│   ├── database.py         # Configuración de conexión a base de datos
+│   ├── models.py           # Modelos SQLAlchemy (ORM)
+│   └── schemas.py          # Modelos Pydantic para validación
+├── alembic/                # Migraciones de base de datos
+├── models/                 # Modelos de machine learning
+├── mock_api.py             # API mock para desarrollo
+├── requirements.txt        # Dependencias de producción
+├── requirements-dev.txt    # Dependencias de desarrollo
+└── ...
+```
+
+## Configuración de Desarrollo
+
+### Requisitos Previos
+
+- Python 3.8+
+- PostgreSQL 14+
+- Paquetes del sistema: `build-essential`, `libpq-dev` (Linux)
+
+### Variables de Entorno
+
+Cree un archivo `.env` con las siguientes variables:
+
+```
+# Configuración de base de datos
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=1111
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=prometeo_db
+DATABASE_URL=postgresql+asyncpg://postgres:1111@localhost:5432/prometeo_db
+
+# Seguridad
+SECRET_KEY=prometeo_secret_key_dev
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Aplicación
+APP_NAME="Prometeo Dashboard"
+APP_VERSION="1.0.0"
+APP_ENVIRONMENT=development
+```
+
+### Instalación
+
+Opciones de instalación:
+
+#### Instalación Automática (Recomendada)
 
 ```bash
 cd "05. Dashboard/backend"
@@ -19,93 +85,52 @@ chmod +x check_env.sh
 ./check_env.sh
 ```
 
-This script will:
-1. Check if Python is installed
-2. Create a virtual environment if it doesn't exist
-3. Install all required dependencies
-4. Configure the development environment
-
-### Manual Installation
-
-If you prefer a manual setup:
-
-1. Clone the repository and navigate to the backend directory:
+#### Instalación Manual
 
 ```bash
 cd "05. Dashboard/backend"
-```
-
-2. Create and activate a virtual environment:
-
-```bash
 python -m venv venv
-source venv/bin/activate  # On Unix/macOS
-```
-
-3. Install dependencies:
-
-```bash
+source venv/bin/activate  # En Unix/macOS
 pip install -r requirements.txt
-pip install -r requirements-dev.txt  # For development
+pip install -r requirements-dev.txt  # Para desarrollo
 ```
 
-4. Configure the database:
-
-Make sure you have a PostgreSQL database named `prometeo_db` accessible by the user `postgres` with password `1111`.
-
-## Usage
-
-#### Testing Database Connection
-
-Run the database connection test script:
+### Iniciar el Servidor
 
 ```bash
-./db_connect.sh
+cd "05. Dashboard/backend"
+python mock_api.py
 ```
 
-This script will verify that your database connection is working and show the available tables.
+El servidor estará disponible en [http://localhost:8001](http://localhost:8001).
 
-#### Starting the Development Server
+La documentación de la API estará disponible en:
+- [http://localhost:8001/docs](http://localhost:8001/docs) (Swagger UI)
+- [http://localhost:8001/redoc](http://localhost:8001/redoc) (ReDoc)
 
-Start the development server with:
+### Pruebas
+
+Para ejecutar las pruebas:
 
 ```bash
-./start_dev.sh
+cd "05. Dashboard/backend"
+pytest
 ```
 
-The API will be available at http://localhost:8000
+## Despliegue
 
-#### API Documentation
+Para desplegar el backend:
 
-Once the server is running, you can access the API documentation at:
-- http://localhost:8000/docs (Swagger UI)
-- http://localhost:8000/redoc (ReDoc)
-
-## Project Structure
-
-- `app/` - Application code
-  - `api.py` - FastAPI application and endpoints
-  - `database.py` - Database configuration
-  - `models.py` - SQLAlchemy ORM models
-  - `schemas.py` - Pydantic models for API
-  - `ml_service.py` - Machine learning services
-- `alembic/` - Database migration scripts
-- `db_connect.sh` - Database connection testing script
-- `start_dev.sh` - Development server startup script
-- `check_env.sh` - Environment setup and verification script
-
-## Development
-
-### Database Migrations
-
-To create a new migration:
+1. Construir imagen Docker:
 
 ```bash
-alembic revision --autogenerate -m "description"
+docker build -f Dockerfile.dev -t prometeo-backend .
 ```
 
-To apply migrations:
+2. Ejecutar el contenedor:
 
 ```bash
-alembic upgrade head
-``` 
+docker run -p 8001:8001 --env-file .env prometeo-backend
+```
+
+También puede desplegarse en plataformas como Render, Heroku o AWS utilizando la configuración proporcionada. 

@@ -34,6 +34,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Endpoint raíz para mensaje de bienvenida
+@app.get("/")
+async def root():
+    """Endpoint raíz que muestra un mensaje de bienvenida"""
+    return {"message": "🚀 API Prometeo funcionando correctamente"}
+
 # Router versionado
 api_v1 = APIRouter(prefix="/api/v1")
 

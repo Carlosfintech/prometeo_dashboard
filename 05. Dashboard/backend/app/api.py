@@ -147,28 +147,25 @@ async def get_priority_list(
 
 @api_v1.patch("/clients/{client_id}/status")
 async def update_client_status(
+    status_data: StatusIn,
     client_id: int = Path(..., description="ID del cliente"),
-    status_data: StatusIn = None,
     db: AsyncSession = Depends(get_db)
 ):
-    """Actualiza el estado de un cliente"""
+    """Actualiza el estado de un cliente."""
     try:
-        # Verificar si el cliente existe
+        # Verificar existencia del cliente
         query = select(Client).where(Client.id == client_id)
         result = await db.execute(query)
         client = result.scalars().first()
-        
         if not client:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail=f"Cliente con ID {client_id} no encontrado"
             )
-        
-        # Actualizar estado
+        # Actualizar estado y fecha
         client.status = status_data.new_status
         client.last_contact_date = datetime.now()
-        
-        # Si es contactado, registrar contacto
+        # Registrar contacto si corresponde
         if status_data.new_status == "contacted":
             contact = Contact(
                 client_id=client.id,
@@ -176,18 +173,16 @@ async def update_client_status(
                 contacted_at=datetime.now(),
                 notes="Actualización de estado vía API"
             )
-        db.add(contact)
-        
-    await db.commit()
-        
-        # Devolver un diccionario simple en lugar de un modelo Pydantic
+            db.add(contact)
+        # Confirmar cambios en la base de datos
+        await db.commit()
+        # Retornar respuesta sencilla
         return {
             "id": client.id,
             "user_id": client.user_id,
             "status": client.status,
             "success": True
         }
-    
     except HTTPException:
         raise
     except Exception as e:

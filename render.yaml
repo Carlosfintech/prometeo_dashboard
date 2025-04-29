@@ -1,0 +1,60 @@
+services:
+  # Backend service (FastAPI)
+  - type: web
+    name: prometeo-backend
+    runtime: python
+    rootDir: 05. Dashboard/backend
+    buildCommand: pip install --no-cache-dir -r requirements.txt
+    startCommand: uvicorn app.api:app --host 0.0.0.0 --port $PORT --workers 4
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+        # En producción, referencia la base de datos PostgreSQL de Render
+        # value: postgresql+asyncpg://postgres:${POSTGRES_PASSWORD}@prometeo-db:5432/prometeo_db
+      - key: SECRET_KEY
+        generateValue: true
+      - key: APP_ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: APP_NAME
+        value: Prometeo Dashboard
+      - key: APP_VERSION
+        value: 1.0.0
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
+  
+  # Frontend service (React/Vite)
+  - type: web
+    name: prometeo-frontend
+    runtime: static
+    rootDir: 05. Dashboard/frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    buildFilter:
+      paths:
+        - src/**
+        - public/**
+        - index.html
+        - vite.config.ts
+        - package.json
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: prometeo-backend
+          type: web
+          property: url
+
+# Database service (PostgreSQL)
+databases:
+  - name: prometeo-db
+    plan: free
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: everywhere 

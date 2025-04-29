@@ -26,7 +26,7 @@ import sqlalchemy
 from sqlalchemy import create_engine, inspect, Table, MetaData, insert, select, text
 from sqlalchemy.orm import sessionmaker, Session
 from app.models import Base, Client, Prediction, Contact, Product, Transaction, Goal
-from features.pipeline_featureengineering_func import generate_features
+from app.features.pipeline_featureengineering_func import generate_features
 import pickle
 
 # Alias para mantener compatibilidad con scripts

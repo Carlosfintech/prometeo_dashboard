@@ -4,11 +4,14 @@ API FastAPI para el dashboard de predicción de seguros
 from typing import List
 from datetime import datetime
 import logging
+import os
+import numpy as np
+from sqlalchemy import select, update, func, desc, text
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from fastapi import FastAPI, Depends, HTTPException, Query, Path, status, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import select, update, func, desc
-from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi.responses import JSONResponse
 
 from .database import get_db, Client, Prediction, Contact
 from .schemas import ClientOut, StatusIn, KPISummary, ClienteDetalle
@@ -25,14 +28,49 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configurar CORS
+# Obtener el entorno de la aplicación
+app_environment = os.environ.get("APP_ENVIRONMENT", "development")
+logger.info(f"Aplicación iniciada en entorno: {app_environment}")
+
+# Configurar CORS con los dominios permitidos
+if app_environment == "production":
+    # En producción, permitir solo dominios específicos
+    allowed_origins = [
+        "https://prometeo-dashboard.vercel.app",
+        "https://prometeo-dashboard-mdqdqqc4y-carlosfintechs-projects.vercel.app",
+        # Añadir cualquier dominio de Vercel donde se despliegue el frontend
+        "https://*.vercel.app",  # Permitir cualquier subdominio de vercel.app
+    ]
+    logger.info(f"CORS configurado para dominios de producción: {allowed_origins}")
+else:
+    # En desarrollo, permitir cualquier origen (más flexible)
+    allowed_origins = ["*"]
+    logger.info("CORS configurado para permitir cualquier origen (entorno de desarrollo)")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permitir todos los orígenes
-    allow_credentials=True,
+    allow_origins=allowed_origins,
+    allow_credentials=False,  # Mantener en False para evitar problemas con '*' y credentials
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Middleware adicional para asegurar que se envíen los encabezados CORS
+@app.middleware("http")
+async def add_cors_headers(request, call_next):
+    response = await call_next(request)
+    # Si estamos en desarrollo o la solicitud es de un origen permitido,
+    # añadir encabezados CORS explícitamente
+    if app_environment == "development" or any(origin in request.headers.get("origin", "") for origin in allowed_origins if "*" not in origin):
+        response.headers["Access-Control-Allow-Origin"] = request.headers.get("origin", "*")
+    else:
+        # En otros casos, usar el comodín
+        response.headers["Access-Control-Allow-Origin"] = "*"
+    
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    
+    return response
 
 # Endpoint raíz para mensaje de bienvenida
 @app.get("/")
@@ -199,6 +237,208 @@ async def update_client_status(
             detail=f"Error al procesar la solicitud: {str(e)}"
         )
 
+
+@api_v1.get("/metrics/probability-distribution", response_model=List[dict])
+async def get_probability_distribution(db: AsyncSession = Depends(get_db)):
+    """
+    Obtener la distribución de probabilidades de clientes
+    
+    Returns:
+        List[dict]: Lista con la distribución de probabilidades
+    """
+    try:
+        # Definir los rangos para la distribución
+        ranges = [
+            {"min": 0.0, "max": 0.2, "label": "0-20%"},
+            {"min": 0.2, "max": 0.4, "label": "20-40%"},
+            {"min": 0.4, "max": 0.6, "label": "40-60%"},
+            {"min": 0.6, "max": 0.8, "label": "60-80%"},
+            {"min": 0.8, "max": 1.0, "label": "80-100%"}
+        ]
+        
+        # Consulta para obtener todas las probabilidades
+        query = select(Client.probability)
+        result = await db.execute(query)
+        probabilities = [float(row[0]) for row in result.fetchall()]
+        
+        # Calcular la distribución
+        distribution = []
+        for r in ranges:
+            count = len([p for p in probabilities if r["min"] <= p < r["max"]])
+            distribution.append({
+                "range": r["label"],
+                "count": count,
+                "percentage": round(count / len(probabilities) * 100, 2) if probabilities else 0
+            })
+            
+        return distribution
+    except Exception as e:
+        logger.error(f"Error al obtener distribución de probabilidades: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error al procesar la distribución de probabilidades: {str(e)}"
+        )
+
+
+@api_v1.get("/metrics/heatmap/variables")
+async def get_heatmap_variables():
+    """
+    Obtener las variables disponibles para el mapa de calor
+    
+    Returns:
+        List[dict]: Lista de variables disponibles
+    """
+    # Definir variables disponibles para el mapa de calor
+    variables = [
+        {"id": "age", "name": "Edad", "type": "numeric"},
+        {"id": "income_range", "name": "Rango de Ingresos", "type": "categorical"},
+        {"id": "risk_profile", "name": "Perfil de Riesgo", "type": "categorical"},
+        {"id": "occupation", "name": "Ocupación", "type": "categorical"},
+        {"id": "segment", "name": "Segmento", "type": "categorical"},
+        {"id": "probability", "name": "Probabilidad", "type": "numeric"}
+    ]
+    
+    return variables
+
+
+@api_v1.get("/metrics/heatmap")
+async def get_heatmap_data(
+    x_var: str = Query(..., description="Variable para el eje X"),
+    y_var: str = Query(..., description="Variable para el eje Y"),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Obtener datos para el mapa de calor según variables seleccionadas
+    
+    Args:
+        x_var: Variable para el eje X
+        y_var: Variable para el eje Y
+        
+    Returns:
+        dict: Datos para el mapa de calor
+    """
+    try:
+        # Validar variables
+        valid_vars = ["age", "income_range", "risk_profile", "occupation", "segment", "probability"]
+        if x_var not in valid_vars or y_var not in valid_vars:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Variables no válidas. Debe ser una de: {', '.join(valid_vars)}"
+            )
+        
+        # Consulta para obtener datos según las variables seleccionadas
+        query = select(getattr(Client, x_var), getattr(Client, y_var), func.count(Client.id))
+        query = query.group_by(getattr(Client, x_var), getattr(Client, y_var))
+        result = await db.execute(query)
+        
+        # Procesar resultados
+        heatmap_data = []
+        for row in result.fetchall():
+            x_value = str(row[0]) if row[0] is not None else "N/A"
+            y_value = str(row[1]) if row[1] is not None else "N/A"
+            count = row[2]
+            
+            heatmap_data.append({
+                "x": x_value,
+                "y": y_value,
+                "value": count
+            })
+        
+        # Obtener valores únicos para ejes X e Y
+        x_values = sorted(list(set(d["x"] for d in heatmap_data)))
+        y_values = sorted(list(set(d["y"] for d in heatmap_data)))
+        
+        return {
+            "data": heatmap_data,
+            "xAxis": x_values,
+            "yAxis": y_values
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error al generar datos de mapa de calor: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error al procesar datos del mapa de calor: {str(e)}"
+        )
+
+
+@api_v1.get("/contacts/progress")
+async def get_contacts_progress(
+    start_date: str = Query(None, description="Fecha de inicio (YYYY-MM-DD)"),
+    end_date: str = Query(None, description="Fecha de fin (YYYY-MM-DD)"),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Obtener el progreso de contactos a lo largo del tiempo
+    
+    Args:
+        start_date: Fecha de inicio para filtrar
+        end_date: Fecha de fin para filtrar
+        
+    Returns:
+        dict: Datos de progreso de contactos
+    """
+    try:
+        # Construir query base
+        query = select(
+            func.date_trunc('day', Contact.contacted_at).label('date'),
+            Contact.outcome,
+            func.count().label('count')
+        )
+        
+        # Aplicar filtros de fecha si están presentes
+        if start_date:
+            query = query.where(Contact.contacted_at >= start_date)
+        if end_date:
+            query = query.where(Contact.contacted_at <= end_date)
+            
+        # Agrupar por fecha y resultado
+        query = query.group_by(
+            text('date'),
+            Contact.outcome
+        ).order_by(text('date'))
+        
+        # Ejecutar consulta
+        result = await db.execute(query)
+        rows = result.fetchall()
+        
+        # Preparar datos de series temporales
+        dates = sorted(list(set(str(row.date.date()) for row in rows if row.date)))
+        
+        # Categorías de resultados
+        outcomes = ["success", "pending", "not_interested", "unreachable", "other"]
+        
+        # Preparar estructura de datos
+        series_data = {outcome: [0] * len(dates) for outcome in outcomes}
+        
+        # Llenar datos
+        for row in rows:
+            if row.date:
+                date_str = str(row.date.date())
+                date_idx = dates.index(date_str)
+                outcome = row.outcome if row.outcome in outcomes else "other"
+                series_data[outcome][date_idx] = row.count
+        
+        # Formatear para la respuesta
+        series = [
+            {
+                "name": outcome.replace("_", " ").title(),
+                "data": series_data[outcome]
+            }
+            for outcome in outcomes
+        ]
+        
+        return {
+            "categories": dates,
+            "series": series
+        }
+    except Exception as e:
+        logger.error(f"Error al obtener progreso de contactos: {str(e)}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error al procesar datos de progreso de contactos: {str(e)}"
+        )
 
 # Incluir router versionado
 app.include_router(api_v1)

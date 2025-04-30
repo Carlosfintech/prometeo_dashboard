@@ -1,0 +1,6 @@
+FROM node:20
+WORKDIR /web
+COPY . .
+RUN npm install
+EXPOSE 8082
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "8082"] 

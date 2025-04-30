@@ -13,8 +13,8 @@ interface ImportMeta {
 // Configuración del cliente axios
 export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
-  // No enviar cookies para peticiones cross-origin
-  withCredentials: false,
+  // Enviar cookies para peticiones cross-origin cuando sea necesario
+  withCredentials: true,
   // Asegurar que los headers CORS estén configurados correctamente
   headers: {
     'Content-Type': 'application/json',
